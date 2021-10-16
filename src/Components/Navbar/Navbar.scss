@@ -1,0 +1,8 @@
+@import "../../global.scss";
+
+.logo-wrapper {
+  width: 5rem;
+  img {
+    @include fit-image;
+  }
+}
