@@ -39,13 +39,13 @@ const Navbar = () => {
         </div>
         <div className="links-wrapper">
           <ul>
-            <li>O Projektu</li>
-            <li>Radionice</li>
-            <li>Agenda</li>
-            <li>FAQ</li>
-            <li>Iskustva</li>
-            <li>Tim</li>
-            <li>Partneri</li>
+            <li dataContent="O Projektu">O Projektu</li>
+            <li dataContent="Radionice">Radionice</li>
+            <li dataContent="Agenda">Agenda</li>
+            <li dataContent="FAQ">FAQ</li>
+            <li dataContent="Iskustva">Iskustva</li>
+            <li dataContent="Tim">Tim</li>
+            <li dataContent="Partneri">Partneri</li>
             <li>
               <Link to="/prijava">Prijavi se</Link>
             </li>

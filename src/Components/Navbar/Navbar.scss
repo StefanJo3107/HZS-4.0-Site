@@ -26,6 +26,7 @@ nav {
     white-space: nowrap;
     color: $tekst_tamna;
     cursor: pointer;
+    position: relative;
     a {
       color: $dugme_tamna;
       border: 3px solid $dugme_tamna;
@@ -76,33 +77,49 @@ nav {
         padding: 0.2rem 1.2rem;
       }
     }
-    li::before {
-      content: attr(datacontent);
-      position: absolute;
-      border-bottom: 3px solid $dugme_tamna;
-      top: 50%;
-      transform: translateY(-50%) translateY(1.5px);
-      left: 0;
-      color: $dugme_tamna;
-      width: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: width 0.7s ease-in-out;
-    }
-    li:hover::before {
-      width: 100%;
-    }
-    li:last-child {
-      padding-top: 1.2rem;
-      transition: all 0.5s ease-in-out;
-    }
-    li:last-child::before {
-      border-bottom: none;
-    }
-    li:hover:last-child {
-      transform: scale(1.05) translateY(-0.5rem);
-    }
   }
+}
+
+.links-wrapper {
+  li::before {
+    left: 1rem !important;
+  }
+  li:hover::before {
+    width: 70% !important;
+  }
+}
+
+.menu,
+.links-wrapper {
+  li::before {
+    content: attr(datacontent);
+    position: absolute;
+    border-bottom: 3px solid $dugme_tamna;
+    top: 50%;
+    transform: translateY(-50%) translateY(1.5px);
+    left: 0;
+    color: $dugme_tamna;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out;
+  }
+  li:hover::before {
+    width: 100%;
+  }
+  li:last-child {
+    transition: all 0.4s ease-in-out;
+  }
+  li:last-child::before {
+    border-bottom: none;
+  }
+  li:hover:last-child {
+    transform: scale(1.05);
+  }
+}
+
+.menu li:last-child {
+  padding-top: 1.2rem;
 }
 
 @media only screen and (max-width: 1100px) {
