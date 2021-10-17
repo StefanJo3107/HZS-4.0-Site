@@ -4,8 +4,29 @@
     @include box-center(column, center);
 
     .podsetnik-prijave {
+        @include box-center(row, space-between);
+        align-items: flex-start;
+
         background-color: $pozadina_bela;
-        padding-top: 8rem;
+        padding: 8rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.podsetnik-info {
+    .naslov {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        .podvuceno {
+            border-bottom: 0.3rem solid $dugme_bela;
+        }
+    }
+
+    .info-opis {
+        color: #a6a8ab;
+        width: 80%;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -42,5 +63,71 @@
 
     .statistika-item:last-child {
         border: none;
+    }
+}
+
+.kalendar {
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 20px 15px #eeeff2a8;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    .kalendar-header {
+        border-radius: 1.5rem 1.5rem 0 0;
+        background-color: $pozadina_bela;
+        padding: 0.2rem;
+        padding-top: 1rem;
+
+        .mesec-godina {
+            @include box-center(row, space-evenly);
+            padding-bottom: 1rem;
+        }
+
+        .mesec,
+        .godina {
+            background-color: $dugme_bela;
+            color: white;
+            padding: 0.2rem 1rem 0.2rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .dani {
+            display: grid;
+            grid-template-columns: repeat(7, 3rem);
+            justify-items: center;
+            align-items: center;
+            color: $dugme_bela;
+        }
+    }
+
+    .kalendar-body {
+        border-radius: 0 0 1.5rem 1.5rem;
+        padding: 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(7, 3rem);
+        grid-template-rows: repeat(5, 3rem);
+        justify-items: center;
+        align-items: center;
+        background-color: #eeeff2;
+
+        .dan-projekat {
+            background-color: $dugme_bela;
+            color: white;
+            border-radius: 0.4rem;
+            padding: 0.2rem;
+        }
+
+        :first-child {
+            color: #d5cbde;
+        }
+        :nth-child(2) {
+            color: #d5cbde;
+        }
+        :last-child {
+            color: #d5cbde;
+        }
+        :nth-last-child(2) {
+            color: #d5cbde;
+        }
     }
 }
