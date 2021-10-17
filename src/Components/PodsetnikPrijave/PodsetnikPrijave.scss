@@ -1,13 +1,20 @@
 @import "../../global.scss";
 
 .podsetnik {
-    @include box-center(row, center);
+    @include box-center(column, center);
+
+    .podsetnik-prijave {
+        background-color: $pozadina_bela;
+        padding-top: 8rem;
+    }
 }
 
 .statistika {
+    background-color: $pozadina_bela;
     @include box-center(row, space-between);
+    transform: translateY(50%);
     border-radius: 2rem;
-    box-shadow: 0px 15px 10px 10px $tekst_tamna;
+    box-shadow: 0px 20px 15px 0px #eeeff2a8;
     width: 90%;
     min-height: 10rem;
 
