@@ -4,83 +4,105 @@ import logo from "../../Assets/fonis_logo.png";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    return (
-        <>
-            <nav>
-                <div className="logo-wrapper">
-                    <img src={logo} alt="Fonis Logo" />
-                </div>
-                <div
-                    className="hamburger-menu"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    <motion.div
-                        className="line line-1"
-                        animate={{
-                            y: menuOpen
-                                ? ["0rem", "0.4rem", "0.4rem"]
-                                : ["0.4rem", "0.4rem", "0rem"],
-                            rotate: menuOpen ? [0, 0, 45] : [45, 0, 0],
-                        }}
-                        transition={{ duration: 1 }}
-                    ></motion.div>
-                    <motion.div
-                        className="line line-2"
-                        animate={{
-                            opacity: menuOpen ? [1, 0, 0] : [0, 0, 1],
-                        }}
-                        transition={{ duration: 1 }}
-                    ></motion.div>
-                    <motion.div
-                        className="line line-3"
-                        animate={{
-                            y: menuOpen
-                                ? ["0rem", "-0.4rem", "-0.4rem"]
-                                : ["-0.4rem", "-0.4rem", "0rem"],
-                            rotate: menuOpen ? [0, 0, -45] : [-45, 0, 0],
-                        }}
-                        transition={{ duration: 1 }}
-                    ></motion.div>
-                </div>
-                <div className="links-wrapper">
-                    <ul>
-                        <li dataContent="O Projektu">O Projektu</li>
-                        <li dataContent="Radionice">Radionice</li>
-                        <li dataContent="Agenda">Agenda</li>
-                        <li dataContent="FAQ">FAQ</li>
-                        <li dataContent="Iskustva">Iskustva</li>
-                        <li dataContent="Tim">Tim</li>
-                        <li dataContent="Partneri">Partneri</li>
-                        <li>
-                            <Link to="/prijava">Prijavi se</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+export const scrollFunc = (sectionName) => {
+  sectionName.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "end",
+  });
+};
 
-            <motion.div
-                className="menu"
-                animate={{ x: menuOpen ? 0 : "100%" }}
-                initial={{ x: "100%" }}
-                transition={{ duration: 1 }}
-            >
-                <ul>
-                    <li dataContent="O Projektu">O Projektu</li>
-                    <li dataContent="Radionice">Radionice</li>
-                    <li dataContent="Agenda">Agenda</li>
-                    <li dataContent="FAQ">FAQ</li>
-                    <li dataContent="Iskustva">Iskustva</li>
-                    <li dataContent="Tim">Tim</li>
-                    <li dataContent="Partneri">Partneri</li>
-                    <li>
-                        <Link to="/prijava">Prijavi se</Link>
-                    </li>
-                </ul>
-            </motion.div>
-        </>
-    );
+const Navbar = (props) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  const links = [
+    "O Projektu",
+    "Radionice",
+    "Agenda",
+    "FAQ",
+    "Iskustva",
+    "Tim",
+    "Partneri",
+  ];
+
+  const linksList = (
+    <ul>
+      {links.map((link, index) => (
+        <li
+          key={index}
+          datacontent={link}
+          onClick={() => scrollFunc(props.sections[index])}
+        >
+          {link}
+        </li>
+      ))}
+      <li>
+        <Link to="/prijava">Prijavi se</Link>
+      </li>
+    </ul>
+  );
+
+  return (
+    <>
+      <nav>
+        <div className="logo-wrapper">
+          <img src={logo} alt="Fonis Logo" />
+        </div>
+        <div
+          className="hamburger-menu"
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+            setShouldAnimate(true);
+          }}
+        >
+          <motion.div
+            className="line line-1"
+            animate={
+              shouldAnimate && {
+                y: menuOpen
+                  ? ["0rem", "0.4rem", "0.4rem"]
+                  : ["0.4rem", "0.4rem", "0rem"],
+                rotate: menuOpen ? [0, 0, 45] : [45, 0, 0],
+              }
+            }
+            transition={{ duration: 1 }}
+          ></motion.div>
+          <motion.div
+            className="line line-2"
+            animate={
+              shouldAnimate && {
+                opacity: menuOpen ? [1, 0, 0] : [0, 0, 1],
+              }
+            }
+            transition={{ duration: 1 }}
+          ></motion.div>
+          <motion.div
+            className="line line-3"
+            animate={
+              shouldAnimate && {
+                y: menuOpen
+                  ? ["0rem", "-0.4rem", "-0.4rem"]
+                  : ["-0.4rem", "-0.4rem", "0rem"],
+                rotate: menuOpen ? [0, 0, -45] : [-45, 0, 0],
+              }
+            }
+            transition={{ duration: 1 }}
+          ></motion.div>
+        </div>
+        <div className="links-wrapper">{linksList}</div>
+      </nav>
+
+      <motion.div
+        className="menu"
+        animate={{ x: menuOpen ? 0 : "100%" }}
+        initial={{ x: "100%" }}
+        transition={{ duration: 1 }}
+      >
+        {linksList}
+      </motion.div>
+    </>
+  );
 };
 
 export default Navbar;

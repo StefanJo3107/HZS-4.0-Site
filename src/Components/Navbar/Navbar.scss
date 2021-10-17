@@ -3,9 +3,11 @@
 nav {
   @include box-center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   padding: 1rem 2rem;
+  width: 100vw;
+  background: $pozadina_tamna;
 }
 
 .logo-wrapper {
