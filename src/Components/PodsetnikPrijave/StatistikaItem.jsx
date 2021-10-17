@@ -1,12 +1,20 @@
 import React from "react";
+import { IoIosAddCircle } from "react-icons/io";
+import CountUp from "react-countup";
 
-const StatistikaItem = (slika, broj, opis) => {
+const StatistikaItem = (props) => {
     return (
         <div className="statistika-item">
-            <img src={slika} className="statistika-img" />
+            <IoIosAddCircle size={60} color="#d5cbde" />
             <div className="statistika-text">
-                <div className="statistika-broj">{broj}</div>
-                <div className="statistika-opis">{opis}</div>
+                <CountUp
+                    end={props.broj}
+                    duration={1.5}
+                    useEasing={true}
+                    suffix="+"
+                    className="statistika-broj"
+                />
+                <div className="statistika-opis">{props.opis}</div>
             </div>
         </div>
     );

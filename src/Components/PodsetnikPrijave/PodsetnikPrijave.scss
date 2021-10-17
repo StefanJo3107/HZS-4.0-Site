@@ -1,0 +1,39 @@
+@import "../../global.scss";
+
+.podsetnik {
+    @include box-center(row, center);
+}
+
+.statistika {
+    @include box-center(row, space-between);
+    border-radius: 2rem;
+    box-shadow: 0px 15px 10px 10px $tekst_tamna;
+    width: 90%;
+    min-height: 10rem;
+
+    .statistika-item {
+        @include box-center(row, center);
+        flex: 1;
+        border-right: 2px solid #eeeff2;
+        padding: 2rem;
+
+        .statistika-text {
+            margin-left: 2rem;
+        }
+
+        .statistika-broj {
+            font-family: "Archivo Black";
+            font-size: 2rem;
+        }
+
+        .statistika-opis {
+            color: #575b60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+
+    .statistika-item:last-child {
+        border: none;
+    }
+}
