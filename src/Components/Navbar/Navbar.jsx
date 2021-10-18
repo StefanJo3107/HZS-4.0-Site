@@ -45,6 +45,7 @@ const Navbar = (props) => {
 
   return (
     <>
+      <div className="bg-container"></div>
       <nav>
         <div className="logo-wrapper">
           <img src={logo} alt="Fonis Logo" />
