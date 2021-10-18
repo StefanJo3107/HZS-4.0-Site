@@ -92,7 +92,6 @@ const Navbar = (props) => {
         </div>
         <div className="links-wrapper">{linksList}</div>
       </nav>
-
       <motion.div
         className="menu"
         animate={{ x: menuOpen ? 0 : "100%" }}
