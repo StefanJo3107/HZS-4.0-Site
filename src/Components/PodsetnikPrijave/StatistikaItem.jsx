@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 const StatistikaItem = (props) => {
+    const [loaded, setLoaded] = useState(false);
+
     return (
         <div className="statistika-item">
             <IoIosAddCircle size={60} color="#d5cbde" />
@@ -15,7 +17,16 @@ const StatistikaItem = (props) => {
                     suffix="+"
                 >
                     {({ countUpRef, start }) => (
-                        <VisibilitySensor onChange={start} delayedCall>
+                        <VisibilitySensor
+                            onChange={(isVisible) => {
+                                if (isVisible && !loaded) {
+                                    setLoaded(true);
+                                    start();
+                                }
+                                return;
+                            }}
+                            delayedCall
+                        >
                             <span
                                 className="statistika-broj"
                                 ref={countUpRef}
