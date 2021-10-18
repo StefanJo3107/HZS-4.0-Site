@@ -13,7 +13,7 @@ const Kalendar = () => {
             <div
                 key={num}
                 className={
-                    num == 11 || num == 12 ? "datum dan-projekat" : "datum"
+                    num === 11 || num === 12 ? "datum dan-projekat" : "datum"
                 }
             >
                 {num}

@@ -2,6 +2,60 @@
 
 .hero {
   height: 100vh;
-  width: 100vw;
+  width: 80vw;
+  margin-left: 10vw;
   background: $pozadina_tamna;
+  @include box-center;
+  align-items: flex-start;
+  padding-top: 10rem;
+  .site-info {
+    width: 40%;
+    min-width: 20rem;
+    .title {
+      font-size: 3.6rem;
+      font-weight: 600;
+      color: $naslov_tamna;
+      margin-bottom: 1.5rem;
+    }
+    .description {
+      color: $tekst_tamna;
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+    }
+    .buttons-wrapper {
+      @include box-center;
+      align-items: flex-start;
+    }
+    button:first-child {
+      flex: 3;
+      margin-right: 1rem;
+    }
+    button:last-child {
+      flex: 2;
+    }
+  }
+  .laptop {
+    width: 60%;
+  }
+  .front-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 5%;
+    width: 95%;
+    height: 10rem;
+    z-index: 50;
+  }
+  .hero-front-image {
+    @include fit-image;
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .hero {
+    padding-top: 4rem;
+  }
 }

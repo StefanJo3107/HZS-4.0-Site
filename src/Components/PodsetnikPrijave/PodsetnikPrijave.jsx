@@ -1,8 +1,8 @@
 import React from "react";
 import Statistika from "./Statistika";
 import "./PodsetnikPrijave.scss";
-import DugmeBela from "../Utilities/DugmeBela.jsx";
 import Kalendar from "./Kalendar";
+import CustomButton from './../Utilities/CustomButton';
 
 const PodsetnikPrijave = () => {
     return (
@@ -25,7 +25,7 @@ const PodsetnikPrijave = () => {
                             consequatur cum non, nostrum culpa aspernatur a?
                             Fugiat obcaecati qui ratione cupiditate voluptatum.
                         </p>
-                        <DugmeBela>Prijavi se</DugmeBela>
+                        <CustomButton variant="bela">Prijavi se</CustomButton>
                     </div>
                     <div className="podsetnik-kalendar">
                         <Kalendar />
