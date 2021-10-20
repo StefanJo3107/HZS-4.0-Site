@@ -20,109 +20,114 @@ import { FiUser, FiUsers } from "react-icons/fi";
 import { CgFileDocument } from "react-icons/cg";
 
 const Hero = () => {
-  const [laptopVisible, setLaptopVisible] = useState(false);
-  return (
-    <main className="hero">
-      <div className="front-img-wrapper">
-        <img
-          src={onesAndZeroes}
-          alt="Ones And Zeroes"
-          className="hero-front-image"
-        />
-      </div>
-      <div className="hero-content">
-        <div className="site-info">
-          <div className="title">Lorem ipsum dolor sit amet</div>
-          <div className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-          <div className="buttons-wrapper">
-            <CustomButton variant="tamna">Prijavi se</CustomButton>
-            <CustomButton variant="tamna2">O projektu</CustomButton>
-          </div>
-        </div>
-        <VisibilitySensor
-          onChange={(isVisible) => {
-            if (isVisible && !laptopVisible) {
-              setLaptopVisible(true);
-            }
-            return;
-          }}
-          delayedCall
-        >
-          <div className="laptop">
-            <div
-              className={
-                laptopVisible
-                  ? "mockup animate mockup-macbook loaded opened"
-                  : "mockup mockup-macbook loaded opened"
-              }
-            >
-              <div className="part top">
-                <img src={mackbookTop} alt="macbook-top" className="top" />
+    const [laptopVisible, setLaptopVisible] = useState(false);
+    return (
+        <main className="hero">
+            <div className="front-img-wrapper">
                 <img
-                  src={mackbookCover}
-                  alt="macbook-cover"
-                  className="cover"
+                    src={onesAndZeroes}
+                    alt="Ones And Zeroes"
+                    className="hero-front-image"
                 />
-
-                <div className="hzs-logo">
-                  <img src={hzsLogo} alt="hzs-logo" />
+            </div>
+            <div className="hero-content">
+                <div className="site-info">
+                    <div className="title">Lorem ipsum dolor sit amet</div>
+                    <div className="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </div>
+                    <div className="buttons-wrapper">
+                        <CustomButton variant="tamna">Prijavi se</CustomButton>
+                        <CustomButton variant="tamna2">O projektu</CustomButton>
+                    </div>
                 </div>
-              </div>
-              <div className="part bottom">
-                <img
-                  src={mackbookCover}
-                  alt="macbook-cover"
-                  className="cover"
-                />
-                <img
-                  src={mackbookBottom}
-                  alt="macbook-bottom"
-                  className="bottom"
-                />
-              </div>
+                <VisibilitySensor
+                    onChange={(isVisible) => {
+                        if (isVisible && !laptopVisible) {
+                            setLaptopVisible(true);
+                        }
+                        return;
+                    }}
+                    delayedCall
+                >
+                    <div className="laptop">
+                        <div
+                            className={
+                                laptopVisible
+                                    ? "mockup animate mockup-macbook loaded opened"
+                                    : "mockup mockup-macbook loaded opened"
+                            }
+                        >
+                            <div className="part top">
+                                <img
+                                    src={mackbookTop}
+                                    alt="macbook-top"
+                                    className="top"
+                                />
+                                <img
+                                    src={mackbookCover}
+                                    alt="macbook-cover"
+                                    className="cover"
+                                />
+
+                                <div className="hzs-logo">
+                                    <img src={hzsLogo} alt="hzs-logo" />
+                                </div>
+                            </div>
+                            <div className="part bottom">
+                                <img
+                                    src={mackbookCover}
+                                    alt="macbook-cover"
+                                    className="cover"
+                                />
+                                <img
+                                    src={mackbookBottom}
+                                    alt="macbook-bottom"
+                                    className="bottom"
+                                />
+                            </div>
+                        </div>
+                        <div className="laptop-icons">
+                            <LaptopIcon
+                                icon={<AiOutlineLaptop />}
+                                background="purple"
+                                iconName="Programiranje"
+                                x="-11rem"
+                                y="-3rem"
+                                shouldAnimate={laptopVisible && true}
+                            />
+                            <LaptopIcon
+                                icon={<FiUser />}
+                                background="green"
+                                iconName="Mentori"
+                                x="-5rem"
+                                y="-11rem"
+                                shouldAnimate={laptopVisible && true}
+                            />
+                            <LaptopIcon
+                                icon={<CgFileDocument />}
+                                background="purple"
+                                iconName="Radionice"
+                                x="7.5rem"
+                                y="-8rem"
+                                shouldAnimate={laptopVisible && true}
+                            />
+                            <LaptopIcon
+                                icon={<FiUsers />}
+                                background="green"
+                                iconName="Networking"
+                                x="8rem"
+                                y="-1rem"
+                                shouldAnimate={laptopVisible && true}
+                            />
+                        </div>
+                    </div>
+                </VisibilitySensor>
             </div>
-            <div className="laptop-icons">
-              <LaptopIcon
-                icon={<AiOutlineLaptop />}
-                background="purple"
-                iconName="Programiranje"
-                x="-11rem"
-                y="-3rem"
-                shouldAnimate={laptopVisible && true}
-              />
-              <LaptopIcon
-                icon={<FiUser />}
-                background="green"
-                iconName="Mentori"
-                x="-5rem"
-                y="-11rem"
-                shouldAnimate={laptopVisible && true}
-              />
-              <LaptopIcon
-                icon={<CgFileDocument />}
-                background="purple"
-                iconName="Radionice"
-                x="7.5rem"
-                y="-8rem"
-                shouldAnimate={laptopVisible && true}
-              />
-              <LaptopIcon
-                icon={<FiUsers />}
-                background="green"
-                iconName="Networking"
-                x="8rem"
-                y="-1rem"
-                shouldAnimate={laptopVisible && true}
-              />
-            </div>
-          </div>
-        </VisibilitySensor>
-      </div>
-    </main>
-  );
+        </main>
+    );
 };
 
 export default Hero;

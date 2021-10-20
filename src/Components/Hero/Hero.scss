@@ -1,230 +1,231 @@
 @import "../../global.scss";
 
 .hero {
-  min-height: 100vh;
-  width: 80vw;
-  margin-left: 10vw;
-  background: $pozadina_tamna;
-  @include box-center;
-  align-items: flex-start;
-  padding-top: 10rem;
-  .site-info {
-    width: 60%;
-    min-width: 15rem;
-    max-width: 25rem;
-    .title {
-      font-size: 3.6rem;
-      font-weight: 600;
-      color: $naslov_tamna;
-      margin-bottom: 1.5rem;
+    min-height: 100vh;
+    width: 80vw;
+    margin-left: 10vw;
+    background: $pozadina_tamna;
+    @include box-center;
+    align-items: flex-start;
+    padding-top: 10rem;
+    .site-info {
+        width: 60%;
+        min-width: 15rem;
+        max-width: 25rem;
+        .title {
+            font-size: 3.6rem;
+            font-weight: 600;
+            color: $naslov_tamna;
+            margin-bottom: 1.5rem;
+        }
+        .description {
+            color: $tekst_tamna;
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        .buttons-wrapper {
+            @include box-center;
+            align-items: flex-start;
+        }
+        button:first-child {
+            flex: 3;
+            margin-right: 1rem;
+        }
+        button:last-child {
+            flex: 2;
+        }
     }
-    .description {
-      color: $tekst_tamna;
-      font-weight: 300;
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      letter-spacing: 2px;
+    .hero-content {
+        @include box-center($justify: space-between);
     }
-    .buttons-wrapper {
-      @include box-center;
-      align-items: flex-start;
+    .laptop {
+        width: 35%;
     }
-    button:first-child {
-      flex: 3;
-      margin-right: 1rem;
+    .front-img-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 5%;
+        width: 95%;
+        height: 10rem;
+        z-index: 50;
     }
-    button:last-child {
-      flex: 2;
+    .hero-front-image {
+        @include fit-image;
+        opacity: 0.6;
     }
-  }
-  .hero-content {
-    @include box-center($justify: space-between);
-  }
-  .laptop {
-    width: 35%;
-  }
-  .front-img-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 5%;
-    width: 95%;
-    height: 10rem;
-    z-index: 50;
-  }
-  .hero-front-image {
-    @include fit-image;
-    opacity: 0.6;
-  }
 }
 
 .laptop-icons {
-  transform: translateY(-3rem);
-  position: relative;
-  @include box-center;
-  z-index: 10;
+    transform: translateY(-3rem);
+    position: relative;
+    @include box-center;
+    z-index: 10;
 }
 
 .mockup {
-  display: inline-block;
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  font-size: 0;
-  perspective: 2400px;
-  perspective-origin: 50% 100%;
-  opacity: 0;
-  transition: 500ms opacity;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-size: 0;
+    perspective: 2400px;
+    perspective-origin: 50% 100%;
+    opacity: 0;
+    transition: 500ms opacity;
 }
 
 .mockup.loaded {
-  opacity: 1;
+    opacity: 1;
 }
 
 .mockup .part .top,
 .mockup .part .bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .mockup .part.top {
-  transform: translate3d(0, 0, 0) translateY(3px) rotateX(-90deg);
+    transform: translate3d(0, 0, 0) translateY(3px) rotateX(-90deg);
 }
 
 .mockup.animate .part.top {
-  transform: translate3d(0, 0, 0) rotateX(0deg);
+    transform: translate3d(0, 0, 0) rotateX(0deg);
 }
 
 .mockup .part {
-  display: inline-block;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transform-origin: 50% 100%;
-  transition: 900ms;
+    display: inline-block;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: 50% 100%;
+    transition: 900ms;
 }
 
 .mockup.opened .part .top {
-  transform: translate3d(0, 0, -11px) rotateX(90deg) scale(1, 1);
+    transform: translate3d(0, 0, -11px) rotateX(90deg) scale(1, 1);
 }
 
 .mockup .part .top {
-  transform-origin: 50% 0;
-  transform: translate3d(0, 0, -11px) rotateX(90deg);
-  transition: 900ms;
+    transform-origin: 50% 0;
+    transform: translate3d(0, 0, -11px) rotateX(90deg);
+    transition: 900ms;
 }
 
 .mockup img {
-  display: block;
-  max-width: 100%;
-  backface-visibility: hidden;
+    display: block;
+    max-width: 100%;
+    backface-visibility: hidden;
 }
 
 .mockup .part .cover {
-  position: relative;
+    position: relative;
 }
 
 .mockup .hzs-logo {
-  display: block;
-  position: absolute;
-  top: 1.5%;
-  left: 1%;
-  width: 98%;
-  height: 99%;
-  border-radius: 6px;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 1px);
+    display: block;
+    position: absolute;
+    top: 1.5%;
+    left: 1%;
+    width: 98%;
+    height: 99%;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 1px);
 }
 
 .mockup .part.bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate3d(0, 0, 0) rotateX(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0) rotateX(-90deg);
 }
 
 .mockup .part .bottom {
-  transform-origin: 50% 0;
-  transform: translate3d(0, 0, 0) rotateX(90deg);
+    transform-origin: 50% 0;
+    transform: translate3d(0, 0, 0) rotateX(90deg);
 }
 
 .hzs-logo img {
-  object-fit: cover;
-  width: 100%;
-  border-top-left-radius: 0.6rem;
-  border-top-right-radius: 0.6rem;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
 }
 
 @media screen and (max-width: 1150px) {
-  .hero {
-    padding-top: 8rem;
-    .hero-content {
-      flex-direction: column;
-      width: 100%;
-      .site-info {
-        width: 85%;
-        max-width: initial;
-      }
+    .hero {
+        padding-top: 8rem;
+        margin-bottom: 8rem;
+        .hero-content {
+            flex-direction: column;
+            width: 100%;
+            .site-info {
+                width: 85%;
+                max-width: initial;
+            }
+        }
+        .buttons-wrapper {
+            justify-content: flex-start !important;
+            button:first-child {
+                max-width: 13rem;
+                min-width: 9rem;
+            }
+            button:last-child {
+                max-width: 10rem;
+                min-width: 8rem;
+            }
+        }
     }
-    .buttons-wrapper {
-      justify-content: flex-start !important;
-      button:first-child {
-        max-width: 13rem;
-        min-width: 9rem;
-      }
-      button:last-child {
-        max-width: 10rem;
-        min-width: 8rem;
-      }
+    .laptop {
+        width: 55% !important;
+        margin-top: 4rem;
     }
-  }
-  .laptop {
-    width: 55% !important;
-    margin-top: 4rem;
-  }
 }
 
 @media screen and (max-width: 860px) {
-  .laptop {
-    margin-top: 6rem;
-  }
+    .laptop {
+        margin-top: 6rem;
+    }
 }
 
 @media screen and (max-width: 650px) {
-  .site-info {
-    width: 85%;
-    .title {
-      font-size: 2.5rem !important;
+    .site-info {
+        width: 85%;
+        .title {
+            font-size: 2.5rem !important;
+        }
+        .buttons-wrapper {
+            flex-direction: column !important;
+            button:last-child {
+                margin-top: 1rem;
+            }
+        }
     }
-    .buttons-wrapper {
-      flex-direction: column !important;
-      button:last-child {
-        margin-top: 1rem;
-      }
+    .laptop {
+        width: 85% !important;
+        margin-top: 6rem;
     }
-  }
-  .laptop {
-    width: 85% !important;
-    margin-top: 6rem;
-  }
 }
 
 @media screen and (max-width: 650px) {
-  .laptop-icon:nth-child(1) {
-    left: 9rem;
-    bottom: -4rem;
-  }
-  .laptop-icon:nth-child(2) {
-    left: 4rem;
-    top: 4rem;
-  }
-  .laptop-icon:nth-child(3) {
-    right: 8rem;
-    top: 2rem;
-  }
-  .laptop-icon:nth-child(4) {
-    right: 8rem;
-    top: 2rem;
-  }
+    .laptop-icon:nth-child(1) {
+        left: 9rem;
+        bottom: -4rem;
+    }
+    .laptop-icon:nth-child(2) {
+        left: 4rem;
+        top: 4rem;
+    }
+    .laptop-icon:nth-child(3) {
+        right: 8rem;
+        top: 2rem;
+    }
+    .laptop-icon:nth-child(4) {
+        right: 8rem;
+        top: 2rem;
+    }
 }

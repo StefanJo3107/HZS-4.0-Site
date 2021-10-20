@@ -8,7 +8,11 @@ const StatistikaItem = (props) => {
 
     return (
         <div className="statistika-item">
-            <IoIosAddCircle size={60} color="#d5cbde" />
+            <IoIosAddCircle
+                className="statistika-icon"
+                size={60}
+                color="#d5cbde"
+            />
             <div className="statistika-text">
                 <CountUp
                     end={props.broj}
