@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/fonis_logo.png";
+import logo from "../../Assets/Images/fonis_logo.png";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 

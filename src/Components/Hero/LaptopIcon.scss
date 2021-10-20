@@ -1,0 +1,36 @@
+@import "../../global.scss";
+
+.laptop-icon {
+  position: absolute;
+  width: 10rem;
+  height: 3rem;
+  background: $tekst_tamna;
+  border-radius: 1rem;
+  @include box-center($justify: space-around);
+  padding-left: 1rem;
+  .icon-name {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    color: $tekst_bela;
+  }
+  .icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    @include box-center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .laptop-icon {
+    width: 6.5rem;
+    height: 2.5rem;
+    border-radius: 0.8rem;
+    padding-left: 0.5rem;
+    .icon-name {
+      width: 80%;
+      font-size: 0.6rem;
+    }
+  }
+}
