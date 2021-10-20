@@ -1,25 +1,48 @@
 import React from "react";
 
-const Kalendar = () => {
-    const brojevi = [29, 30];
+const Kalendar = (props) => {
+    const brojevi = [];
     const slova = ["P", "U", "S", "Č", "P", "S", "N"];
-    for (let i = 1; i <= 31; i++) {
+    for (let i = 1; i <= props.brDana; i++) {
         brojevi.push(i);
     }
-    brojevi.push(1, 2);
 
-    const datumi = brojevi.map((num) => {
+    let prosliDatumi, tekuciDatumi, naredniDatumi;
+    if (props.prosli != null)
+        prosliDatumi = props.prosli.map((num) => {
+            return (
+                <div key={num} className={"datum prosli-datumi"}>
+                    {num}
+                </div>
+            );
+        });
+    else prosliDatumi = <div></div>;
+
+    tekuciDatumi = brojevi.map((num) => {
         return (
             <div
                 key={num}
                 className={
-                    num === 11 || num === 12 ? "datum dan-projekat" : "datum"
+                    props.mesec === "DECEMBAR" && (num === 11 || num === 12)
+                        ? "datum dan-projekat"
+                        : "datum"
                 }
             >
                 {num}
             </div>
         );
     });
+
+    if (props.naredni != null)
+        naredniDatumi = props.naredni.map((num) => {
+            return (
+                <div key={num} className={"datum naredni-datumi"}>
+                    {num}
+                </div>
+            );
+        });
+    else naredniDatumi = <div></div>;
+
     const dani = slova.map((s, i) => {
         return (
             <div key={i} className="dan">
@@ -32,12 +55,16 @@ const Kalendar = () => {
         <div className="kalendar">
             <div className="kalendar-header">
                 <div className="mesec-godina">
-                    <div className="mesec">DECEMBAR</div>
+                    <div className="mesec">{props.mesec}</div>
                     <div className="godina">2021</div>
                 </div>
                 <div className="dani">{dani}</div>
             </div>
-            <div className="kalendar-body">{datumi}</div>
+            <div className="kalendar-body">
+                {prosliDatumi}
+                {tekuciDatumi}
+                {naredniDatumi}
+            </div>
         </div>
     );
 };

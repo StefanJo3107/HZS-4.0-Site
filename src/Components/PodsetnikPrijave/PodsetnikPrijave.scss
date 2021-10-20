@@ -75,6 +75,15 @@
     }
 }
 
+.podsetnik-kalendar {
+    display: grid;
+}
+
+.kalendar-wrapper {
+    grid-column: 1;
+    grid-row: 1;
+}
+
 .kalendar {
     border-radius: 1.5rem;
     box-shadow: 0px 0px 20px 10px #caccd398;
@@ -126,16 +135,8 @@
             padding: 0.3rem;
         }
 
-        :first-child {
-            color: #d5cbde;
-        }
-        :nth-child(2) {
-            color: #d5cbde;
-        }
-        :last-child {
-            color: #d5cbde;
-        }
-        :nth-last-child(2) {
+        .prosli-datumi,
+        .naredni-datumi {
             color: #d5cbde;
         }
     }
