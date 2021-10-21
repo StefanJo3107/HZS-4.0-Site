@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Hero.scss";
 import VisibilitySensor from "react-visibility-sensor";
 import CustomButton from "./../Utilities/CustomButton";
+import {motion} from 'framer-motion';
 
 //top-image
 import onesAndZeroes from "../../Assets/Images/onesAndZeroes.png";
@@ -31,7 +32,7 @@ const Hero = () => {
                 />
             </div>
             <div className="hero-content">
-                <div className="site-info">
+                <motion.div className="site-info" animate={{x: 0}} initial={{x: "-40rem"}} transition={{duration: 1}}>
                     <div className="title">Lorem ipsum dolor sit amet</div>
                     <div className="description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -42,7 +43,7 @@ const Hero = () => {
                         <CustomButton variant="tamna">Prijavi se</CustomButton>
                         <CustomButton variant="tamna2">O projektu</CustomButton>
                     </div>
-                </div>
+                </motion.div>
                 <VisibilitySensor
                     onChange={(isVisible) => {
                         if (isVisible && !laptopVisible) {

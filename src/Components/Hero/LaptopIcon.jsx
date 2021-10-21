@@ -8,7 +8,7 @@ const LaptopIcon = (props) => {
       className="laptop-icon"
       initial={{ opacity: 0 }}
       animate={props.shouldAnimate && { x: props.x, y: props.y, opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+      transition={{ ease: "easeOut", duration: 1, delay: 1.2 }}
     >
       <div
         className="icon-wrapper"
