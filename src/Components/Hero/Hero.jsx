@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
             <div className="hero-content">
                 <motion.div className="site-info" animate={{x: 0}} initial={{x: "-40rem"}} transition={{duration: 1}}>
-                    <div className="title">Lorem ipsum dolor sit amet</div>
+                    <h1 className="title">Lorem ipsum dolor sit amet</h1>
                     <div className="description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore

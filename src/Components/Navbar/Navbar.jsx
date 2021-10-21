@@ -32,7 +32,7 @@ const Navbar = (props) => {
         <li
           key={index}
           datacontent={link}
-          onClick={() => scrollFunc(props.sections[index])}
+          onClick={() => {scrollFunc(props.sections[index]); setMenuOpen(false)}}
         >
           {link}
         </li>

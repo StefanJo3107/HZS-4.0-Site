@@ -1,0 +1,48 @@
+@import "../../global.scss";
+
+.agenda-item {
+  @include box-center($justify: flex-start);
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 6rem;
+  }
+  .vectors {
+    width: 2.5rem;
+    height: 100%;
+    .square {
+      width: 0.7rem;
+      height: 0.7rem;
+      border: 0.15rem solid $dugme_tamna;
+      border-radius: 3px;
+      transform: rotate(45deg);
+      box-shadow: 0 0 10px $dugme_tamna, 0px 0px 4px $dugme_tamna inset;
+      margin: 6px 0 0 3px;
+    }
+    .vertical-line {
+      height: 6rem;
+      width: 3px;
+      background-color: $dugme_tamna;
+      opacity: 0.25;
+      border-radius: 3px;
+      box-shadow: 0 0 5px $dugme_tamna;
+      margin: 12px 0 0 9px;
+    }
+  }
+
+  .item-date {
+    font-size: 0.95rem;
+    color: $dugme_tamna;
+  }
+
+  .item-title {
+    color: $naslov_tamna;
+    font-size: 1.65rem;
+    margin: 0.4rem 0;
+  }
+
+  .item-description {
+    color: #858585;
+    font-size: 1.2rem;
+  }
+}

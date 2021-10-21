@@ -3,6 +3,7 @@
   position: relative;
   padding-left: 5rem;
   padding-top: 4rem;
+  padding-right: 5rem;
   .front-img-wrapper {
     position: absolute;
     top: 0;
@@ -18,5 +19,12 @@
     width: 100%;
     height: 100%;
     opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .agenda {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

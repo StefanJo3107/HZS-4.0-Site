@@ -6,7 +6,7 @@ const SectionTitle = (props) => {
     <>
       <h2
         className="naslov"
-        style={{ color: props.text === "black" ? "#000" : "#c9d1d9" }}
+        style={{ color: props.text === "black" ? "#000" : "#fff" }}
       >
         {props.children}
       </h2>
