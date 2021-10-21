@@ -5,6 +5,7 @@ import Kalendar from "./Kalendar";
 import CustomButton from "./../Utilities/CustomButton";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
+import SectionTitle from "../Utilities/SectionTitle";
 
 const PodsetnikPrijave = () => {
     const [calendarVisible, setCalendarVisible] = useState(false);
@@ -36,9 +37,7 @@ const PodsetnikPrijave = () => {
                 <Statistika />
                 <div className="podsetnik-prijave">
                     <div className="podsetnik-info">
-                        <h2 className="naslov">
-                            <span className="podvuceno">POSL</span>EDNJI POZIV
-                        </h2>
+                        <SectionTitle>poslednji poziv</SectionTitle>
                         <p className="info-opis">
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Recusandae provident illo cumque obcaecati

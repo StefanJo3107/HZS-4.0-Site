@@ -191,6 +191,11 @@
     width: 55% !important;
     margin-top: 4rem;
   }
+  .mockup,
+  .mockup .part,
+  .mockup .part .top {
+    transition-delay: 0 !important;
+  }
 }
 
 @media screen and (max-width: 860px) {
