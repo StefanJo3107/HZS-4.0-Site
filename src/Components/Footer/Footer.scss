@@ -1,0 +1,146 @@
+@import "../../global.scss";
+
+.section-transition {
+    width: 100vw;
+    min-width: 60rem;
+    background-color: white;
+}
+
+.powered-text {
+    text-align: center;
+    color: #b7b9bb;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.fonis-logo {
+    width: 3rem;
+}
+
+.footer {
+    @include box-center(row, space-evenly);
+    align-items: flex-start;
+    padding-bottom: 2rem;
+
+    .hzs-logoi {
+        @include box-center(column, center);
+
+        .hzs-strelica {
+            width: 5rem;
+            filter: drop-shadow(0px 0px 0 #00ffa3)
+                drop-shadow(0px 0px 0 #00ffa3) drop-shadow(0px 0px 0 #00ffa3)
+                drop-shadow(0px 0px 0 #00ffa3);
+        }
+
+        .hzs-sporedni-logo {
+            width: 5rem;
+            filter: drop-shadow(0px 0px 0 #00ffa3);
+        }
+    }
+
+    .footer-info {
+        .footer-naslov {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .footer-underline {
+            width: 8ch;
+            border-bottom: 0.2rem solid;
+            margin-bottom: 1rem;
+            border-color: #00ffa3;
+        }
+
+        .footer-tekst {
+            font-size: 1.2rem;
+            color: #b7b9bb;
+            margin-top: 0;
+            line-height: 1.5rem;
+        }
+
+        .footer-tekst > a {
+            color: #b7b9bb;
+        }
+
+        .footer-nav ul {
+            @include box-center(column, space-evenly);
+            align-items: flex-start;
+            line-height: 1.5rem;
+        }
+        .footer-nav ul > li {
+            white-space: nowrap;
+            color: $tekst_tamna;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 0.2rem;
+
+            &::before {
+                content: attr(datacontent);
+                position: absolute;
+                border-bottom: 3px solid $dugme_tamna;
+                top: 50%;
+                transform: translateY(-50%) translateY(1.5px);
+                left: 0;
+                color: $dugme_tamna;
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: width 0.7s ease-in-out;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    .pitanje-forma {
+        @include box-center(column, center);
+
+        * {
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+
+        input,
+        textarea {
+            font-family: "Roboto";
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            padding: 0.2rem 0.4rem;
+            border: 2px solid #c9d0d8;
+            box-shadow: none;
+            background-color: #c9d0d8;
+            color: white;
+            resize: none;
+
+            &::placeholder {
+                font-family: "Roboto";
+                font-style: italic;
+            }
+
+            &:focus {
+                outline: #00ffa3;
+            }
+        }
+
+        .button {
+            font-size: 1rem;
+            padding: 0.6rem;
+            margin-top: 0.6rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .footer {
+        @include box-center(column, center);
+    }
+
+    .footer-info {
+        margin: 2rem;
+    }
+
+    .footer-navigacija {
+        display: none;
+    }
+}

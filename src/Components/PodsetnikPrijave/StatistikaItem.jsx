@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { IoIosAddCircle } from "react-icons/io";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 const StatistikaItem = (props) => {
     const [loaded, setLoaded] = useState(false);
-
+    const Icon = props.slika;
     return (
         <div className="statistika-item">
-            <IoIosAddCircle
-                className="statistika-icon"
-                size={60}
-                color="#d5cbde"
-            />
+            <Icon className="statistika-icon" size={60} viewBox="-8 -8 32 32" />
             <div className="statistika-text">
                 <CountUp
                     end={props.broj}

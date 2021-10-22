@@ -3,26 +3,46 @@ import Navbar from "../Components/Navbar/Navbar";
 import PodsetnikPrijave from "../Components/PodsetnikPrijave/PodsetnikPrijave";
 import Hero from "./../Components/Hero/Hero";
 import Agenda from "./../Components/Agenda/Agenda";
+import Footer from "../Components/Footer/Footer";
 
 const Home = () => {
-  const oProjektu = useRef();
-  const radionice = useRef();
-  const agenda = useRef();
-  const faq = useRef();
-  const iskustva = useRef();
-  const tim = useRef();
-  const partneri = useRef();
+    const oProjektu = useRef();
+    const radionice = useRef();
+    const agenda = useRef();
+    const faq = useRef();
+    const iskustva = useRef();
+    const tim = useRef();
+    const partneri = useRef();
 
-  return (
-    <>
-      <Navbar
-        sections={[oProjektu, radionice, agenda, faq, iskustva, tim, partneri]}
-      />
-      <Hero />
-      <Agenda section={agenda} />
-      <PodsetnikPrijave />
-    </>
-  );
+    return (
+        <>
+            <Navbar
+                sections={[
+                    oProjektu,
+                    radionice,
+                    agenda,
+                    faq,
+                    iskustva,
+                    tim,
+                    partneri,
+                ]}
+            />
+            <Hero />
+            <Agenda section={agenda} />
+            <PodsetnikPrijave />
+            <Footer
+                sections={[
+                    oProjektu,
+                    radionice,
+                    agenda,
+                    faq,
+                    iskustva,
+                    tim,
+                    partneri,
+                ]}
+            />
+        </>
+    );
 };
 
 export default Home;
