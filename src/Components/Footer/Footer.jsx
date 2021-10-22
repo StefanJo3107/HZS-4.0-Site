@@ -5,8 +5,6 @@ import FonisLogo from "../../Assets/Images/fonis_logo.png";
 import SporedniLogo from "../../Assets/Images/hzs-sporednilogo.png";
 import { scrollFunc } from "../Navbar/Navbar";
 import LayeredWaves from "../../Assets/Images/layered-waves3.svg";
-import CustomButton from "../Utilities/CustomButton";
-import { motion } from "framer-motion";
 import Envelope from "./Envelope";
 
 const Footer = (props) => {

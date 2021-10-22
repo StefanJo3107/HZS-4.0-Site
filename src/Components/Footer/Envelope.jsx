@@ -13,7 +13,6 @@ const Envelope = () => {
         initialLetter: { y: "0rem", height: "100%" },
         animateLidOne: {
             rotateX: 90,
-
             transition: {
                 duration: 0.2,
             },
