@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/HZS-4.0-Site/static/css/main.40ca8ba0.chunk.css",
+    "main.js": "/HZS-4.0-Site/static/js/main.05d77e19.chunk.js",
+    "main.js.map": "/HZS-4.0-Site/static/js/main.05d77e19.chunk.js.map",
+    "runtime-main.js": "/HZS-4.0-Site/static/js/runtime-main.2a7c7022.js",
+    "runtime-main.js.map": "/HZS-4.0-Site/static/js/runtime-main.2a7c7022.js.map",
+    "static/js/2.21051604.chunk.js": "/HZS-4.0-Site/static/js/2.21051604.chunk.js",
+    "static/js/2.21051604.chunk.js.map": "/HZS-4.0-Site/static/js/2.21051604.chunk.js.map",
+    "index.html": "/HZS-4.0-Site/index.html",
+    "static/css/main.40ca8ba0.chunk.css.map": "/HZS-4.0-Site/static/css/main.40ca8ba0.chunk.css.map",
+    "static/js/2.21051604.chunk.js.LICENSE.txt": "/HZS-4.0-Site/static/js/2.21051604.chunk.js.LICENSE.txt",
+    "static/media/fonis_logo.45afe2f5.png": "/HZS-4.0-Site/static/media/fonis_logo.45afe2f5.png",
+    "static/media/hzs-logo-transparentno.9b03cba3.png": "/HZS-4.0-Site/static/media/hzs-logo-transparentno.9b03cba3.png",
+    "static/media/hzs-sporednilogo.96ca0ebc.png": "/HZS-4.0-Site/static/media/hzs-sporednilogo.96ca0ebc.png",
+    "static/media/layered-waves3.8727d1d9.svg": "/HZS-4.0-Site/static/media/layered-waves3.8727d1d9.svg",
+    "static/media/onesAndZeroes.a9d8c430.png": "/HZS-4.0-Site/static/media/onesAndZeroes.a9d8c430.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a7c7022.js",
+    "static/js/2.21051604.chunk.js",
+    "static/css/main.40ca8ba0.chunk.css",
+    "static/js/main.05d77e19.chunk.js"
+  ]
+}
