@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .o-projektu {
-    height: 100vh;
+    min-height: 100vh;
     background: $pozadina_tamna;
     background-image: url("../../Assets/Images/pattern-brojevi.png");
     background-repeat: no-repeat;
@@ -16,6 +16,7 @@
         border-top-left-radius: 2rem;
         box-shadow: 0 2px 15px $dugme_tamna;
         padding: 4rem 10rem 4rem 4rem;
+        margin: 3rem 0;
         @include box-center($direction: column, $justify: space-between);
         align-items: flex-start;
         p {
