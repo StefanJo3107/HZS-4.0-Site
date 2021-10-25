@@ -4,7 +4,7 @@ import PodsetnikPrijave from "../Components/PodsetnikPrijave/PodsetnikPrijave";
 import Hero from "./../Components/Hero/Hero";
 import Agenda from "./../Components/Agenda/Agenda";
 import Footer from "../Components/Footer/Footer";
-import OProjektu from "../Components/OProjektu/OProjektu"
+import OProjektu from "../Components/OProjektu/OProjektu";
 
 const Home = () => {
     const oProjektuSection = useRef();
@@ -29,7 +29,7 @@ const Home = () => {
                 ]}
             />
             <Hero />
-            <OProjektu />
+            <OProjektu section={oProjektuSection} />
             <Agenda section={agendaSection} />
             <PodsetnikPrijave />
             <Footer
