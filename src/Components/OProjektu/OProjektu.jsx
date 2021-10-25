@@ -19,20 +19,24 @@ const OProjektu = (props) => {
             },
         },
     };
-
+    let init = true;
     return (
-        <motion.div className="o-projektu" ref={props.section}>
+        <motion.div
+            className="o-projektu"
+            animate={{ backgroundPositionX: ["0vh", "254vh"] }}
+            transition={{ repeat: Infinity, duration: 120, ease: "linear" }}
+            ref={props.section}
+        >
             <motion.div
                 className="o-projektu-wrapper"
                 variants={variants}
                 initial="initial"
-                animate={oProjektuVisible ? "animate" : "initial"}
+                animate={oProjektuVisible && "animate"}
             >
                 <SectionTitle>o projektu</SectionTitle>
 
                 <VisibilitySensor
                     onChange={(isVisible) => {
-                        console.log(isVisible);
                         if (isVisible && !oProjektuVisible) {
                             setOProjektuVisible(true);
                         }

@@ -4,7 +4,7 @@
     min-height: 100vh;
     background: $pozadina_tamna;
     background-image: url("../../Assets/Images/pattern-brojevi.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     @include box-center($justify: flex-end);
     .o-projektu-wrapper {
         background-color: $pozadina_tamna;
