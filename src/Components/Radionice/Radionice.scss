@@ -1,14 +1,15 @@
 @import "../../global.scss";
 
 .radionice {
-  min-height: 100vh;
+  min-height: 200vh;
   padding-left: 5rem;
   padding-top: 4rem;
   padding-right: 5rem;
+  position: relative;
 }
 
 .web-browser {
-  width: 60%;
+  width: 68vw;
   height: 70vh;
   border-radius: 2rem;
   position: relative;
@@ -18,6 +19,7 @@
     left: 0;
     background: #202124;
     height: 2.4rem;
+    width: 100%;
     @include box-center($justify: flex-start);
     align-items: flex-end;
     border-top-left-radius: 0.5rem;
@@ -53,4 +55,8 @@
       margin-right: 1rem;
     }
   }
+}
+
+.radionica-content {
+  width: 100%;
 }
