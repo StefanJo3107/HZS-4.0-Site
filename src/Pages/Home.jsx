@@ -5,6 +5,7 @@ import Hero from "./../Components/Hero/Hero";
 import Agenda from "./../Components/Agenda/Agenda";
 import Footer from "../Components/Footer/Footer";
 import OProjektu from "../Components/OProjektu/OProjektu"
+import Radionice from "../Components/Radionice/Radionice";
 
 const Home = () => {
     const oProjektuSection = useRef();
@@ -30,6 +31,7 @@ const Home = () => {
             />
             <Hero />
             <OProjektu />
+            <Radionice />
             <Agenda section={agendaSection} />
             <PodsetnikPrijave />
             <Footer
