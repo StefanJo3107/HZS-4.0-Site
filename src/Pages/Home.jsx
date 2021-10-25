@@ -4,41 +4,43 @@ import PodsetnikPrijave from "../Components/PodsetnikPrijave/PodsetnikPrijave";
 import Hero from "./../Components/Hero/Hero";
 import Agenda from "./../Components/Agenda/Agenda";
 import Footer from "../Components/Footer/Footer";
+import OProjektu from "../Components/OProjektu/OProjektu"
 
 const Home = () => {
-    const oProjektu = useRef();
-    const radionice = useRef();
-    const agenda = useRef();
-    const faq = useRef();
-    const iskustva = useRef();
-    const tim = useRef();
-    const partneri = useRef();
+    const oProjektuSection = useRef();
+    const radioniceSection = useRef();
+    const agendaSection = useRef();
+    const faqSection = useRef();
+    const iskustvaSection = useRef();
+    const timSection = useRef();
+    const partneriSection = useRef();
 
     return (
         <>
             <Navbar
                 sections={[
-                    oProjektu,
-                    radionice,
-                    agenda,
-                    faq,
-                    iskustva,
-                    tim,
-                    partneri,
+                    oProjektuSection,
+                    radioniceSection,
+                    agendaSection,
+                    faqSection,
+                    iskustvaSection,
+                    timSection,
+                    partneriSection,
                 ]}
             />
             <Hero />
-            <Agenda section={agenda} />
+            <OProjektu />
+            <Agenda section={agendaSection} />
             <PodsetnikPrijave />
             <Footer
                 sections={[
-                    oProjektu,
-                    radionice,
-                    agenda,
-                    faq,
-                    iskustva,
-                    tim,
-                    partneri,
+                    oProjektuSection,
+                    radioniceSection,
+                    agendaSection,
+                    faqSection,
+                    iskustvaSection,
+                    timSection,
+                    partneriSection,
                 ]}
             />
         </>

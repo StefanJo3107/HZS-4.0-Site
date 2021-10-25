@@ -10,7 +10,7 @@ const CustomButton = (props) => {
   } else if (props.variant === "bela") {
     buttonStyle = { color: "#fff", backgroundColor: "#795298" };
   } else if (props.variant === "tamna2") {
-    buttonStyle = { color: "#10151d", backgroundColor: "#c9d1d9" };
+    buttonStyle = { color: "#10151d", backgroundColor: "#fff" };
   }
   return (
     <motion.button
