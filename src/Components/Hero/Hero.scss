@@ -44,6 +44,7 @@
   }
   .laptop {
     width: 35%;
+    z-index: 10;
   }
   .front-img-wrapper {
     position: absolute;
@@ -55,7 +56,7 @@
     z-index: 50;
   }
   .hero-front-image {
-    @include fit-image;
+    @include contain-image;
     opacity: 0.6;
   }
 }
