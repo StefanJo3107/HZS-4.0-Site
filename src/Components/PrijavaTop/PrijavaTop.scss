@@ -1,0 +1,51 @@
+@import "../../global.scss";
+
+#prijava-top {
+    background: $pozadina_tamna;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 65vh;
+
+    .prijava-image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        z-index: 99;
+
+        .prijava-background-image {
+            @include contain-image;
+        }
+
+    }
+
+    .prijava-sadrzaj {
+        @include box-center;
+
+        .prijava-info {
+            // POSTAVLJENA FIKSNA VREDNOST WIDTH JER NE POSEDUJEM KOMPONENTU TIMER
+            width: 40%;
+            padding-top: 15rem;
+
+            .prijava-title {
+                color: $naslov_tamna;
+                font-size: 7rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .prijava-opis {
+                color: $tekst_tamna;
+                font-size: 1.25rem;
+                text-align: justify;
+            }
+        }
+
+        .timer {
+            // STAVLJENO NA WIDTH 50% JER NE POSEDUJEM KOMPONENTU TIMER
+            width: 50%;
+        }
+
+    }
+}
