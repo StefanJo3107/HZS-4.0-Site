@@ -80,28 +80,7 @@ const Footer = (props) => {
                         </div>
                     </div>
                     <div className="footer-info">
-                        {/* <h3 className="footer-naslov">Postavi nam pitanje</h3>
-                        <div className="footer-underline"></div> */}
                         <Envelope />
-                        {/* <div className="pitanje-forma">
-                            <motion.input
-                                whileFocus={{ scale: 1.1 }}
-                                type="text"
-                                placeholder="Ime"
-                            />
-                            <motion.input
-                                whileFocus={{ scale: 1.1 }}
-                                type="email"
-                                placeholder="E-mail"
-                            />
-                            <motion.textarea
-                                whileFocus={{ scale: 1.1 }}
-                                id="poruka"
-                                rows="4"
-                                placeholder="Poruka"
-                            />
-                            <CustomButton variant="tamna">POŠALJI</CustomButton> 
-                        </div>*/}
                     </div>
                 </div>
                 <div className="powered-text">

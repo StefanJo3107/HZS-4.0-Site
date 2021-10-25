@@ -1,38 +1,36 @@
 @import "../../global.scss";
 
 .o-projektu {
-  background: $pozadina_tamna;
-  @include box-center($justify: flex-end);
-  .o-projektu-wrapper {
-    min-height: 60vh;
-    width: 60%;
-    min-width: 20rem;
-    border-bottom-left-radius: 2rem;
-    border-top-left-radius: 2rem;
-    box-shadow: 0 2px 15px $dugme_tamna;
-    padding: 4rem 10rem 4rem 4rem;
-    @include box-center($direction: column, $justify: space-between);
-    align-items: flex-start;
-    p {
-      color: $tekst_tamna;
-      margin-bottom: 1rem;
-    }
-    button {
-      margin-top: 1rem;
-    }
-  }
-  .bg-image-o-projektu {
-    width: 100vw;
     height: 100vh;
-    img {
-      @include fit-image;
+    background: $pozadina_tamna;
+    background-image: url("../../Assets/Images/pattern-brojevi.png");
+    background-repeat: no-repeat;
+    @include box-center($justify: flex-end);
+    .o-projektu-wrapper {
+        background-color: $pozadina_tamna;
+        z-index: 1;
+        min-height: 60vh;
+        width: 60%;
+        min-width: 20rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        box-shadow: 0 2px 15px $dugme_tamna;
+        padding: 4rem 10rem 4rem 4rem;
+        @include box-center($direction: column, $justify: space-between);
+        align-items: flex-start;
+        p {
+            color: $tekst_tamna;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin-top: 1rem;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 1050px) {
-  .o-projektu-wrapper {
-    padding: 2rem 4rem 2rem 2rem !important;
-    width: 85% !important;
-  }
+    .o-projektu-wrapper {
+        padding: 2rem 4rem 2rem 2rem !important;
+        width: 85% !important;
+    }
 }
