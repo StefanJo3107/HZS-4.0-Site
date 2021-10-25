@@ -5,13 +5,13 @@ import Prijava from "./Pages/Prijava";
 import Error from "./Pages/Error";
 
 const App = () => {
-  return (
-    <Switch>
-      <Route path="/" exact component={Home}></Route>
-      <Route path="/prijava" exact component={Prijava}></Route>
-      <Route path="*" component={Error}></Route>
-    </Switch>
-  );
+    return (
+        <Switch>
+            <Route path="/" exact component={Home}></Route>
+            <Route path="/prijava" exact component={Prijava}></Route>
+            <Route path="*" component={Error}></Route>
+        </Switch>
+    );
 };
 
 export default App;
