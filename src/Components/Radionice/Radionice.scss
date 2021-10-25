@@ -6,6 +6,46 @@
   padding-top: 4rem;
   padding-right: 5rem;
   position: relative;
+  .time-line {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    min-height: 200vh;
+    .line-v {
+      width: 0.5rem;
+      height: calc(40vh - 1rem);
+      &.line-3,
+      &.line-7 {
+        margin-left: 4.5rem;
+      }
+    }
+    .line-h {
+      width: 5rem;
+      height: 0.5rem;
+    }
+    .line {
+      background: $dugme_tamna;
+      box-shadow: 0 0 10px #00ffa287;
+    }
+    .line-1 {
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
+    }
+    .line-2,
+    .line-6,
+    .line-10 {
+      border-bottom-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
+    }
+    .line-4,
+    .line-8 {
+      border-bottom-right-radius: 0.4rem;
+      border-top-left-radius: 0.4rem;
+    }
+    .line-10 {
+      border-bottom-right-radius: 0.4rem;
+    }
+  }
 }
 
 .web-browser {

@@ -19,7 +19,6 @@ const OProjektu = (props) => {
             },
         },
     };
-    let init = true;
     return (
         <motion.div
             className="o-projektu"
@@ -34,7 +33,6 @@ const OProjektu = (props) => {
                 animate={oProjektuVisible && "animate"}
             >
                 <SectionTitle>o projektu</SectionTitle>
-
                 <VisibilitySensor
                     onChange={(isVisible) => {
                         if (isVisible && !oProjektuVisible) {
