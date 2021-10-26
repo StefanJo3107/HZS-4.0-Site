@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import PodsetnikPrijave from "../Components/PodsetnikPrijave/PodsetnikPrijave";
-import Hero from "./../Components/Hero/Hero";
-import Agenda from "./../Components/Agenda/Agenda";
-import Footer from "../Components/Footer/Footer";
-import OProjektu from "../Components/OProjektu/OProjektu";
-import Radionice from "../Components/Radionice/Radionice";
+import React, {useRef} from 'react';
+import Navbar from '../Components/Navbar/Navbar';
+import PodsetnikPrijave from '../Components/PodsetnikPrijave/PodsetnikPrijave';
+import Hero from './../Components/Hero/Hero';
+import Agenda from './../Components/Agenda/Agenda';
+import Footer from '../Components/Footer/Footer';
+import OProjektu from '../Components/OProjektu/OProjektu';
+import Radionice from '../Components/Radionice/Radionice';
+import Iskustva from '../Components/Iskustva/Iskustva';
 
 const Home = () => {
   const oProjektuSection = useRef();
@@ -29,16 +30,16 @@ const Home = () => {
           partneriSection,
         ]}
         links={[
-          "O Projektu",
-          "Radionice",
-          "Agenda",
-          "FAQ",
-          "Iskustva",
-          "Tim",
-          "Partneri",
+          'O Projektu',
+          'Radionice',
+          'Agenda',
+          'FAQ',
+          'Iskustva',
+          'Tim',
+          'Partneri',
         ]}
-        mainLink="prijava"
-        mainLinkName="Prijavi se"
+        mainLink='prijava'
+        mainLinkName='Prijavi se'
       />
       <Hero />
       <OProjektu section={oProjektuSection} />
