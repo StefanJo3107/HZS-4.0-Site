@@ -63,7 +63,18 @@ const Radionice = () => {
             />
           </div>
         </div>
-      <div className="visibility-line" style={{width: "3rem", height: "1rem", opacity: 0}}></div>
+      <div className="time-line">
+        <div className="line-v line-1 line"></div>
+        <div className="line-h line-2 line"></div>
+        <div className="line-v line-3 line"></div>
+        <div className="line-h line-4 line"></div>
+        <div className="line-v line-5 line"></div>
+        <div className="line-h line-6 line"></div>
+        <div className="line-v line-7 line"></div>
+        <div className="line-h line-8 line"></div>
+        <div className="line-v line-9 line"></div>
+        <div className="line-h line-10 line"></div>
+      </div>
     </div>
   );
 };

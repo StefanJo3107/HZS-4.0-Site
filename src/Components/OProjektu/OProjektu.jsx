@@ -33,7 +33,6 @@ const OProjektu = (props) => {
                 animate={oProjektuVisible && "animate"}
             >
                 <SectionTitle>o projektu</SectionTitle>
-
                 <VisibilitySensor
                     onChange={(isVisible) => {
                         if (isVisible && !oProjektuVisible) {
