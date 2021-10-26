@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import SectionTitle from "./../Utilities/SectionTitle";
 import "./Radionice.scss";
 import { BsPlusLg } from "react-icons/bs";
@@ -8,10 +8,25 @@ import SingleTab from "./SingleTab";
 import Radionica from "./Radionica";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiPostman } from "react-icons/si";
+import VisibilitySensor from 'react-visibility-sensor'
 
 const Radionice = () => {
+  const [helperOneVisible, setHelperOneVisible] = useState(false)
+  const [helperTwoVisible, setHelperTwoVisible] = useState(false)
+
   return (
     <div className="radionice">
+      <VisibilitySensor
+      onChange={(isVisible) => {
+        if (isVisible && !helperOneVisible) {
+          setHelperOneVisible(true);
+        }
+        return;
+      }}
+      delayedCall
+    >
+      <div className="helper-line helper-1"></div>
+      </VisibilitySensor>
       <SectionTitle underline="green" text="white">
         radionice
       </SectionTitle>
@@ -75,6 +90,7 @@ const Radionice = () => {
         <div className="line-v line-9 line"></div>
         <div className="line-h line-10 line"></div>
       </div>
+      <div className="helper-line helper-2"></div>
     </div>
   );
 };
