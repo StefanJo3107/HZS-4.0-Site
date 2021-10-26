@@ -1,57 +1,57 @@
 @import "../../global.scss";
 
 .radionica {
-  @include box-center($justify: space-around);
-  color: $tekst_tamna;
-  height: 70vh;
-  width: 100%;
-  background: #35363a;
-  border-radius: 0.5rem;
-  h4 {
-    font-size: 1.6rem;
-    text-align: left;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  .radionica-info {
-    width: 40%;
-    height: 100%;
-    @include box-center($direction: column);
-    align-items: flex-start;
-    .radionica-description {
-      margin-bottom: 2rem;
-    }
-  }
-  .predavac {
-    padding: 0 1rem;
-    margin-top: 2rem;
-    height: 80%;
-    @include box-center($direction: column);
-    width: 30%;
-    background: #202124;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px #000;
-    .predavac-name {
-      color: $naslov_tamna;
-      margin-bottom: 1rem;
-    }
-    .predavac-img {
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-  }
-  h5 {
-    color: $naslov_tamna;
-    font-size: 1.1rem;
-  }
-  .technologies-list {
     @include box-center($justify: space-around);
-    margin-top: 1rem;
-  }
-  .o-predavacu {
-    text-align: center;
-  }
+    color: $tekst_tamna;
+    height: 70vh;
+    width: 100%;
+    background: #35363a;
+    border-radius: 0.5rem;
+    h4 {
+        font-size: 1.6rem;
+        text-align: left;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .radionica-info {
+        width: 40%;
+        height: 100%;
+        @include box-center($direction: column);
+        align-items: flex-start;
+        .radionica-description {
+            margin-bottom: 2rem;
+        }
+    }
+    .predavac {
+        padding: 0 1rem;
+        margin-top: 2rem;
+        height: 80%;
+        @include box-center($direction: column);
+        width: 30%;
+        background: #202124;
+        border-radius: 1rem;
+        box-shadow: 0 2px 15px #000;
+        .predavac-name {
+            color: $naslov_tamna;
+            margin-bottom: 1rem;
+        }
+        .predavac-img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+    }
+    h5 {
+        color: $naslov_tamna;
+        font-size: 1.1rem;
+    }
+    .technologies-list {
+        @include box-center($justify: space-around);
+        margin-top: 1rem;
+    }
+    .o-predavacu {
+        text-align: center;
+    }
 }

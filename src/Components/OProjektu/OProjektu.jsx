@@ -19,7 +19,6 @@ const OProjektu = (props) => {
             },
         },
     };
-    let init = true;
     return (
         <motion.div
             className="o-projektu"

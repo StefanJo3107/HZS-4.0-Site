@@ -1,62 +1,62 @@
 @import "../../global.scss";
 
 .radionice {
-  min-height: 200vh;
-  padding-left: 5rem;
-  padding-top: 4rem;
-  padding-right: 5rem;
-  position: relative;
+    min-height: 200vh;
+    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-right: 5rem;
+    position: relative;
 }
 
 .web-browser {
-  width: 68vw;
-  height: 70vh;
-  border-radius: 2rem;
-  position: relative;
-  .top-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #202124;
-    height: 2.4rem;
-    width: 100%;
-    @include box-center($justify: flex-start);
-    align-items: flex-end;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    .icons-bar {
-      @include box-center($justify: space-around);
-      height: 100%;
-      margin-left: 0.4rem;
-      margin-right: 0.4rem;
+    width: 68vw;
+    height: 70vh;
+    border-radius: 2rem;
+    position: relative;
+    .top-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #202124;
+        height: 2.4rem;
+        width: 100%;
+        @include box-center($justify: flex-start);
+        align-items: flex-end;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        .icons-bar {
+            @include box-center($justify: space-around);
+            height: 100%;
+            margin-left: 0.4rem;
+            margin-right: 0.4rem;
+        }
+        .circle {
+            width: 0.6rem;
+            height: 0.6rem;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+            &.red {
+                background: #ff5b52;
+            }
+            &.green {
+                background: #50c329;
+            }
+            &.yellow {
+                background: #e6c129;
+            }
+        }
+        .tab-bar {
+            @include box-center($justify: flex-start);
+        }
+        .new-tab {
+            height: 2rem;
+            @include box-center;
+            margin: 0 0.4rem;
+            margin-right: 1rem;
+        }
     }
-    .circle {
-      width: 0.6rem;
-      height: 0.6rem;
-      border-radius: 50%;
-      margin-right: 0.4rem;
-      &.red {
-        background: #ff5b52;
-      }
-      &.green {
-        background: #50c329;
-      }
-      &.yellow {
-        background: #e6c129;
-      }
-    }
-    .tab-bar {
-      @include box-center($justify: flex-start);
-    }
-    .new-tab {
-      height: 2rem;
-      @include box-center;
-      margin: 0 0.4rem;
-      margin-right: 1rem;
-    }
-  }
 }
 
 .radionica-content {
-  width: 100%;
+    width: 100%;
 }
