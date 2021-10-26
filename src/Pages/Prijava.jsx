@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
+import PrijavaTop from "../Components/PrijavaTop/PrijavaTop";
+
 
 const Prijava = () => {
+
     return (
-        <div>
-            
-        </div>
+        <>
+            <Navbar/>
+            <PrijavaTop/>
+            <Footer/>
+        </>
     )
 }
 
