@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
-import BsFillArrowLeftCircleFill from 'react-icons';
-import BsFillArrowRightCircleFill from 'react-icons';
+import {BsFillArrowLeftCircleFill} from 'react-icons/bs';
+import {BsFillArrowRightCircleFill} from 'react-icons/bs';
+import {AnimatePresence, motion} from 'framer-motion';
 import Iskustvo from './Iskustvo';
 import './Iskustva.scss';
 
@@ -38,11 +39,19 @@ const Iskustva = () => {
     <Fragment>
       <div className='iskustva-wrapper'>
         <div className='iskustva-slider'>
-          <Iskustvo
-            iskustvoTekst={iskustvaContent[iskustvoIndex].iskustvoTekst}
-            autorIme={iskustvaContent[iskustvoIndex].autorIme}
-            autorSlika={iskustvaContent[iskustvoIndex].autorSlika}
-          />
+          <AnimatePresence>
+            <motion.div
+              initial={{opacity: 0, y: 50}}
+              animate={{opacity: 0, y: 0}}
+              exit={{opacity: 0, y: 50}}
+              transition={{duration: 1}}>
+              <Iskustvo
+                iskustvoTekst={iskustvaContent[iskustvoIndex].iskustvoTekst}
+                autorIme={iskustvaContent[iskustvoIndex].autorIme}
+                autorSlika={iskustvaContent[iskustvoIndex].autorSlika}
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
         <div className='iskustva-buttons'>
           <div onCLick={() => setIskustvoIndex - 1}>
