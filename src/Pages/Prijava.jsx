@@ -5,10 +5,9 @@ import PrijavaTop from "../Components/PrijavaTop/PrijavaTop";
 
 
 const Prijava = () => {
-
     return (
         <>
-            <Navbar/>
+            <Navbar links={[]} mainLink="" mainLinkName="Početna"/>
             <PrijavaTop/>
             <Footer/>
         </>

@@ -16,19 +16,9 @@ const Navbar = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
-  const links = [
-    "O Projektu",
-    "Radionice",
-    "Agenda",
-    "FAQ",
-    "Iskustva",
-    "Tim",
-    "Partneri",
-  ];
-
   const linksList = (
     <ul>
-      {links.map((link, index) => (
+      {props.links.map((link, index) => (
         <li
           key={index}
           datacontent={link}
@@ -38,7 +28,7 @@ const Navbar = (props) => {
         </li>
       ))}
       <li>
-        <Link to="/prijava">Prijavi se</Link>
+        <Link to={`/${props.mainLink}`}>{props.mainLinkName}</Link>
       </li>
     </ul>
   );
