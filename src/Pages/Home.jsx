@@ -8,56 +8,56 @@ import OProjektu from "../Components/OProjektu/OProjektu";
 import Radionice from "../Components/Radionice/Radionice";
 
 const Home = () => {
-  const oProjektuSection = useRef();
-  const radioniceSection = useRef();
-  const agendaSection = useRef();
-  const faqSection = useRef();
-  const iskustvaSection = useRef();
-  const timSection = useRef();
-  const partneriSection = useRef();
+    const oProjektuSection = useRef();
+    const radioniceSection = useRef();
+    const agendaSection = useRef();
+    const faqSection = useRef();
+    const iskustvaSection = useRef();
+    const timSection = useRef();
+    const partneriSection = useRef();
 
-  return (
-    <>
-      <Navbar
-        sections={[
-          oProjektuSection,
-          radioniceSection,
-          agendaSection,
-          faqSection,
-          iskustvaSection,
-          timSection,
-          partneriSection,
-        ]}
-        links={[
-          "O Projektu",
-          "Radionice",
-          "Agenda",
-          "FAQ",
-          "Iskustva",
-          "Tim",
-          "Partneri",
-        ]}
-        mainLink="prijava"
-        mainLinkName="Prijavi se"
-      />
-      <Hero />
-      <OProjektu section={oProjektuSection} />
-      <Radionice />
-      <Agenda section={agendaSection} />
-      <PodsetnikPrijave />
-      <Footer
-        sections={[
-          oProjektuSection,
-          radioniceSection,
-          agendaSection,
-          faqSection,
-          iskustvaSection,
-          timSection,
-          partneriSection,
-        ]}
-      />
-    </>
-  );
+    return (
+        <>
+            <Navbar
+                sections={[
+                    oProjektuSection,
+                    radioniceSection,
+                    agendaSection,
+                    faqSection,
+                    iskustvaSection,
+                    timSection,
+                    partneriSection,
+                ]}
+                links={[
+                    "O Projektu",
+                    "Radionice",
+                    "Agenda",
+                    "FAQ",
+                    "Iskustva",
+                    "Tim",
+                    "Partneri",
+                ]}
+                mainLink="prijava"
+                mainLinkName="Prijavi se"
+            />
+            <Hero />
+            <OProjektu section={oProjektuSection} />
+            <Radionice section={radioniceSection} />
+            <Agenda section={agendaSection} />
+            <PodsetnikPrijave />
+            <Footer
+                sections={[
+                    oProjektuSection,
+                    radioniceSection,
+                    agendaSection,
+                    faqSection,
+                    iskustvaSection,
+                    timSection,
+                    partneriSection,
+                ]}
+            />
+        </>
+    );
 };
 
 export default Home;
