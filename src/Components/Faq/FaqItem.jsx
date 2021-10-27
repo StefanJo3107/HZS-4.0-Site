@@ -16,8 +16,8 @@ const FaqItem = (props) => {
         <div className="icon-wrapper">
           <IoIosArrowDown
             size={40}
-            color="#8F00FF"
-            filter="drop-shadow(0px 0px 2px rgba(121, 82, 216, 0.6))"
+            color="#00ffa3"
+            filter="drop-shadow(0px 0px 2px rgba(0, 255, 162, 0.5))"
           />
         </div>
       </div>

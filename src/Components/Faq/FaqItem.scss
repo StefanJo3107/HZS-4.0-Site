@@ -4,7 +4,7 @@
   width: 100%;
   background: #10151d;
   border-radius: 2rem;
-  box-shadow: 0 0 20px rgba(121, 82, 216, 0.3);
+  box-shadow: 0 0 15px #00ffa282;
   margin-bottom: 2rem;
   .faq-question {
     @include box-center($justify: space-between);

@@ -45,7 +45,7 @@ const Home = () => {
             <OProjektu section={oProjektuSection} />
             <Radionice section={radioniceSection} />
             <Agenda section={agendaSection} />
-            <Faq />
+            <Faq section={faqSection} />
             <PodsetnikPrijave />
             <Footer
                 sections={[
