@@ -20,7 +20,7 @@ const CustomButton = (props) => {
             whileTap={{
                 scale: 0.9,
             }}
-            className={"button" + " " + props.className}
+            className={"button " + props.className}
             style={buttonStyle}
             onClick={props.onClick}
         >

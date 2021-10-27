@@ -6,6 +6,7 @@ import Agenda from "./../Components/Agenda/Agenda";
 import Footer from "../Components/Footer/Footer";
 import OProjektu from "../Components/OProjektu/OProjektu";
 import Radionice from "../Components/Radionice/Radionice";
+import Faq from "../Components/Faq/Faq";
 
 const Home = () => {
     const oProjektuSection = useRef();
@@ -44,6 +45,7 @@ const Home = () => {
             <OProjektu section={oProjektuSection} />
             <Radionice section={radioniceSection} />
             <Agenda section={agendaSection} />
+            <Faq />
             <PodsetnikPrijave />
             <Footer
                 sections={[

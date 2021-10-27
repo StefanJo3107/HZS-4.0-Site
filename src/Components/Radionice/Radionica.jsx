@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Radionica.scss";
 import SectionTitle from "./../Utilities/SectionTitle";
 import CustomButton from "../Utilities/CustomButton";
-import { motion } from "framer-motion";
 
 const Radionica = (props) => {
     const [showInfo, setShowInfo] = useState(true);
