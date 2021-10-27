@@ -1,30 +1,30 @@
 @import "../../global.scss";
 
 .faq-item {
-  width: 100%;
-  background: #10151d;
-  border-radius: 2rem;
-  box-shadow: 0 0 15px #00ffa282;
-  margin-bottom: 2rem;
-  .faq-question {
-    @include box-center($justify: space-between);
-    padding: 1rem 2rem;
-    cursor: pointer;
-    h3 {
-      font-size: 1.4rem;
-      color: $naslov_tamna;
+    width: 100%;
+    background: #10151d;
+    border-radius: 2rem;
+    box-shadow: 0 0 4px 4px #00ffa242;
+    margin-bottom: 2rem;
+    .faq-question {
+        @include box-center($justify: space-between);
+        padding: 1rem 2rem;
+        cursor: pointer;
+        h3 {
+            font-size: 1.4rem;
+            color: $naslov_tamna;
+        }
     }
-  }
-  .faq-answer {
-    @include box-center($justify: flex-start);
-    align-items: flex-start;
-    margin-left: 4%;
-    padding-top: 0;
-    overflow: hidden;
-    height: 5rem;
-    p {
-      color: $tekst_tamna;
-      width: 90%;
+    .faq-answer {
+        @include box-center($justify: flex-start);
+        align-items: flex-start;
+        margin-left: 4%;
+        padding-top: 0;
+        overflow: hidden;
+        height: 5rem;
+        p {
+            color: $tekst_tamna;
+            width: 90%;
+        }
     }
-  }
 }
