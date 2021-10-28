@@ -1,7 +1,6 @@
-import React, {Fragment, useState} from 'react';
-import {BsFillArrowLeftCircleFill} from 'react-icons/bs';
-import {BsFillArrowRightCircleFill} from 'react-icons/bs';
-import {AnimatePresence, motion} from 'framer-motion';
+import React from 'react';
+
+import SectionTitle from '../Utilities/SectionTitle';
 import Iskustvo from './Iskustvo';
 import './Iskustva.scss';
 
@@ -9,62 +8,28 @@ const Iskustva = () => {
   const iskustvaContent = [
     {
       iskustvoTekst:
-        'Hakaton je nesto najjace sto sam u zivotu video, nezaboravno iskustvo, sve preporuke od mene!',
-      autorSlika: <img src='../../../Assets/unknown.jpg' alt='autor-slika' />,
-      autorIme: 'Marko Markovic',
+        'Prvi put smo se susreli sa pravim izazovom i pravom konkurencijom. Naučili smo da radimo kao tim i udružimo snage do željenih rezultata. Drago mi je što sam bio deo ovog takmičenja i svakako me očekujte sledeće godine!',
+      autorIme: 'Stefan Milanović',
     },
     {
       iskustvoTekst:
-        'Hakaton je nesto najjace sto sam u zivotu video, nezaboravno iskustvo, sve preporuke od mene!',
-      autorSlika: <img src='../../../Assets/unknown.jpg' alt='autor-slika' />,
-      autorIme: 'Petar Petrovic',
-    },
-    {
-      iskustvoTekst:
-        'Hakaton je nesto najjace sto sam u zivotu video, nezaboravno iskustvo, sve preporuke od mene!',
-      autorSlika: <img src='../../../Assets/unknown.jpg' alt='autor-slika' />,
-      autorIme: 'Janko Jankovic',
-    },
-    {
-      iskustvoTekst:
-        'Hakaton je nesto najjace sto sam u zivotu video, nezaboravno iskustvo, sve preporuke od mene!',
-      autorSlika: <img src='../../../Assets/unknown.jpg' alt='autor-slika' />,
-      autorIme: 'Milos Milosevic',
+        'Takmičenje nije bilo onakvo kakvim sam ga očekivao, jer je zahtevalo posedovanje i drugih veština osim programiranja. Shvatio sam kako je zapravo biti programer i raditi u timu. Morao sam da se oslonim na nekog drugog i da verujem da će uraditi svoj deo posla kako treba.',
+      autorIme: 'Miljan Jokić',
     },
   ];
 
-  const [iskustvoIndex, setIskustvoIndex] = useState(0);
-
   return (
-    <Fragment>
-      <div className='iskustva-wrapper'>
-        <div className='iskustva-slider'>
-          <AnimatePresence>
-            <motion.div
-              initial={{opacity: 0, y: 50}}
-              animate={{opacity: 0, y: 0}}
-              exit={{opacity: 0, y: 50}}
-              transition={{duration: 1}}>
-              <Iskustvo
-                iskustvoTekst={iskustvaContent[iskustvoIndex].iskustvoTekst}
-                autorIme={iskustvaContent[iskustvoIndex].autorIme}
-                autorSlika={iskustvaContent[iskustvoIndex].autorSlika}
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-        <div className='iskustva-buttons'>
-          <div onCLick={() => setIskustvoIndex - 1}>
-            {iskustvoIndex > 0 && <BsFillArrowLeftCircleFill />}
-          </div>
-          <div onClick={() => setIskustvoIndex - 1}>
-            {iskustvoIndex < iskustvaContent.length - 1 && (
-              <BsFillArrowRightCircleFill />
-            )}
-          </div>
-        </div>
-      </div>
-    </Fragment>
+    <div className='iskustva'>
+      <SectionTitle text='black' underline='purple'>
+        iskustva bivših takmičara
+      </SectionTitle>
+      {iskustvaContent.map((iskustvo) => (
+        <Iskustvo
+          iskustvoTekst={iskustvo.iskustvoTekst}
+          autorIme={iskustvo.autorIme}
+        />
+      ))}
+    </div>
   );
 };
 
