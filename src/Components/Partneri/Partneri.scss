@@ -1,0 +1,22 @@
+@import "../../global.scss";
+
+.partneri {
+    padding: 4rem;
+    padding-top: 0rem;
+    margin-bottom: 10rem;
+
+    .pokrovitelj,
+    .generalni,
+    .naturalni,
+    .medijski {
+        @include box-center(column, center);
+    }
+
+    .generalniNaslov,
+    .naturalniNaslov,
+    .medijskiNaslov {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
