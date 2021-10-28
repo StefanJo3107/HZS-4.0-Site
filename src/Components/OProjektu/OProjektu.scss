@@ -14,7 +14,7 @@
         min-width: 20rem;
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
-        box-shadow: 0 2px 15px $dugme_tamna;
+        box-shadow: 0 0px 4px 5px #00ffa26b;
         padding: 4rem 10rem 4rem 4rem;
         margin: 3rem 0;
         @include box-center($direction: column, $justify: space-between);

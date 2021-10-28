@@ -23,12 +23,17 @@ const Iskustva = () => {
       <SectionTitle text='black' underline='purple'>
         iskustva bivših takmičara
       </SectionTitle>
-      {iskustvaContent.map((iskustvo) => (
-        <Iskustvo
-          iskustvoTekst={iskustvo.iskustvoTekst}
-          autorIme={iskustvo.autorIme}
-        />
-      ))}
+      <div className='iskustva-podnaslov'>
+        <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit</p>
+      </div>
+      <div className='iskustva-wrapper'>
+        {iskustvaContent.map((iskustvo) => (
+          <Iskustvo
+            iskustvoTekst={iskustvo.iskustvoTekst}
+            autorIme={iskustvo.autorIme}
+          />
+        ))}
+      </div>
     </div>
   );
 };

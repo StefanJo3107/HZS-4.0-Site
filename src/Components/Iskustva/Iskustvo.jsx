@@ -12,6 +12,8 @@ const Iskustvo = (props) => {
         </div>
         <div className='iskustvo-sadrzaj'>
           <p>{props.iskustvoTekst}</p>
+        </div>
+        <div className='iskustvo-autor'>
           <p>{props.autorIme}</p>
         </div>
       </div>

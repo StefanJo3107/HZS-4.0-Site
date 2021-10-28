@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Hero.scss";
 import VisibilitySensor from "react-visibility-sensor";
 import CustomButton from "./../Utilities/CustomButton";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 
 //top-image
 import onesAndZeroes from "../../Assets/Images/onesAndZeroes.png";
@@ -32,7 +32,12 @@ const Hero = () => {
                 />
             </div>
             <div className="hero-content">
-                <motion.div className="site-info" animate={{x: 0}} initial={{x: "-40rem"}} transition={{duration: 1}}>
+                <motion.div
+                    className="site-info"
+                    animate={{ x: 0 }}
+                    initial={{ x: "-40rem" }}
+                    transition={{ duration: 1 }}
+                >
                     <h1 className="title">Lorem ipsum dolor sit amet</h1>
                     <div className="description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
