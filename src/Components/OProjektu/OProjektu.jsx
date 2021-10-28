@@ -43,20 +43,24 @@ const OProjektu = (props) => {
                 >
                     <div className="o-projektu-description">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Adipisci sunt aspernatur deleniti, perferendis
-                            delectus laudantium error. Iusto placeat
-                            consequuntur repellat dignissimos, adipisci rem
-                            dolore doloribus recusandae nisi doloremque possimus
-                            dolores explicabo quidem, rerum ut blanditiis nihil
-                            suscipit deleniti id aliquid quaerat illo nam.
-                            Atque, iusto!
+                            Hakaton za srednjoškolce je programersko takmičenje
+                            koje organizuje Udruženje studenata informatike
+                            FONIS sa Fakulteta organizacionih nauka.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores, nam accusamus? Aliquam laborum aut,
-                            in laudantium eum ullam voluptatem molestiae
-                            deserunt quis esse accusamus a!
+                            Timovi od 3 ili 4 člana imaju na raspolaganju 24
+                            sata da kreiraju softversko rešenje na zadatu temu.
+                            Učesnicima će tokom hakatona podršku pružati
+                            mentori, koji će biti tu da razreše sve nejasnoće i
+                            usmere timove. Stručni žiri sačinjen od predstavnika
+                            partnerske kompanije i fakulteta odabraće 3
+                            najuspešnija tima koja očekuju i nagrade.
+                        </p>
+                        <p>
+                            Pre samog takmičenja, organizuju se i radionice koje
+                            obrađuju front-end, back-end, git i veštine
+                            prezentovanja. Njihov cilj je da prošire znanja
+                            srednjoškolaca i pripreme ih za samo takmičenje.
                         </p>
                     </div>
                 </VisibilitySensor>
