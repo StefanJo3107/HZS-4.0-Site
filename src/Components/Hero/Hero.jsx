@@ -16,8 +16,7 @@ import hzsLogo from "../../Assets/Images/hzs-logo.png";
 import LaptopIcon from "./LaptopIcon";
 
 //icons
-import { BsBook, BsTrophy, BsCashCoin } from "react-icons/bs";
-import { FiUsers } from "react-icons/fi";
+import { BsBook, BsTrophy, BsGift, BsPeople } from "react-icons/bs";
 
 const Hero = () => {
     const [laptopVisible, setLaptopVisible] = useState(false);
@@ -37,7 +36,7 @@ const Hero = () => {
                     initial={{ x: "-40rem" }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="title">Hakaton za srednjoškolce</h1>
+                    <h1 className="title">HAKATON ZA SREDNJOŠKOLCE</h1>
                     <h3 className="date">11. i 12. decembar</h3>
                     <div className="description">
                         Želiš da proširiš svoja IT znanja, oprobaš se u
@@ -115,7 +114,7 @@ const Hero = () => {
                                 shouldAnimate={laptopVisible && true}
                             />
                             <LaptopIcon
-                                icon={<BsCashCoin />}
+                                icon={<BsGift />}
                                 background="purple"
                                 iconName="Nagrade"
                                 x="7.5rem"
@@ -123,7 +122,7 @@ const Hero = () => {
                                 shouldAnimate={laptopVisible && true}
                             />
                             <LaptopIcon
-                                icon={<FiUsers />}
+                                icon={<BsPeople />}
                                 background="green"
                                 iconName="Timski rad"
                                 x="8rem"

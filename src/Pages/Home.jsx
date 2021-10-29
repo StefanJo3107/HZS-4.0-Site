@@ -9,6 +9,7 @@ import Radionice from "../Components/Radionice/Radionice";
 import Iskustva from "../Components/Iskustva/Iskustva";
 import Faq from "../Components/Faq/Faq";
 import Partneri from "../Components/Partneri/Partneri";
+import Tim from "../Components/Tim/Tim";
 
 const Home = () => {
     const oProjektuSection = useRef();
@@ -18,7 +19,6 @@ const Home = () => {
     const iskustvaSection = useRef();
     const timSection = useRef();
     const partneriSection = useRef();
-
 
     return (
         <>
@@ -50,6 +50,7 @@ const Home = () => {
             <Agenda section={agendaSection} />
             <Faq section={faqSection} />
             <Iskustva section={iskustvaSection} />
+            <Tim section={timSection} />
             <Partneri section={partneriSection} />
             <PodsetnikPrijave />
             <Footer
