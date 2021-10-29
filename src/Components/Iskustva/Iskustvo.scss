@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+.iskustvo {
+  background-color: $pozadina_bela;
+  transform: translateY(-80px);
+  border-radius: 2rem;
+  box-shadow: 0px 15px 15px 0px #caccd398;
+  width: 40%;
+  padding: 2rem;
+  min-height: 10rem;
+
+  .iskustvo-sadrzaj {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #10151d;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .iskustvo-autor {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    color: #c9d1d9;
+    padding: 1rem 0;
+  }
+}
