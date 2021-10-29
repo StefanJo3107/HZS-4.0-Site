@@ -44,20 +44,20 @@ const Iskustva = (props) => {
           <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit</p>
         </div>
         <div className='iskustva-wrapper'>
-          <VisibilitySensor
+          {/* <VisibilitySensor
             onChange={(isVisible) => {
               if (isVisible && !iskustvaVisible) {
                 setIskustvaVisible(true);
               }
               return;
-            }}>
-            {iskustvaContent.map((iskustvo) => (
-              <Iskustvo
-                iskustvoTekst={iskustvo.iskustvoTekst}
-                autorIme={iskustvo.autorIme}
-              />
-            ))}
-          </VisibilitySensor>
+            }}> */}
+          {iskustvaContent.map((iskustvo) => (
+            <Iskustvo
+              iskustvoTekst={iskustvo.iskustvoTekst}
+              autorIme={iskustvo.autorIme}
+            />
+          ))}
+          {/* </VisibilitySensor> */}
         </div>
       </div>
       <div className='rekli-su'>
