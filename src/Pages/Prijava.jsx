@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import PrijavaTop from "../Components/PrijavaTop/PrijavaTop";
 import TeamForm from "../Components/TeamForm/TeamForm";
+import UserFormRender from '../Components/UserFormRender/UserFormRender';
 
 
 const Prijava = () => {
@@ -10,6 +11,7 @@ const Prijava = () => {
         <>
             <Navbar links={[]} mainLink="" mainLinkName="Početna"/>
             <PrijavaTop/>
+            <UserFormRender/>
             <TeamForm/>
             <Footer/>
         </>

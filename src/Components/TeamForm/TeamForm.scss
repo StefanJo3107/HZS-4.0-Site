@@ -104,6 +104,11 @@ input[type=checkbox] {
       margin-top: 0;
     }
 
+    label {
+      font-size: 1rem;
+    }
+  }
+
     @media screen and (max-width: 500px) {
         #prosledi {
             padding: 1.25rem 6.25rem;
@@ -125,4 +130,3 @@ input[type=checkbox] {
             height: 50px;
         }
     }
-  }
