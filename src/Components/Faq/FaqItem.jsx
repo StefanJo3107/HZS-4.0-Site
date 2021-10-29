@@ -32,7 +32,7 @@ const FaqItem = (props) => {
                 initial={{ height: "0rem" }}
                 transition={{ duration: 0.5 }}
             >
-                <p style={{ marginBottom: "1rem" }}>{props.answer}</p>
+                {props.answer}
             </motion.div>
         </div>
     );

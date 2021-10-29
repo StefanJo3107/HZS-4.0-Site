@@ -16,6 +16,7 @@ const AgendaItem = () => {
         return;
       }}
       delayedCall
+      partialVisibility
     >
       <motion.div
         className="agenda-item"

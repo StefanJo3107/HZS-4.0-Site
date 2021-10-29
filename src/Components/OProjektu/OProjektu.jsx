@@ -1,24 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import SectionTitle from "../Utilities/SectionTitle";
-import VisibilitySensor from "react-visibility-sensor";
 import CustomButton from "../Utilities/CustomButton";
 import "./OProjektu.scss";
 
 import { motion } from "framer-motion";
 
 const OProjektu = (props) => {
-    const [oProjektuVisible, setOProjektuVisible] = useState(false);
-
-    const variants = {
-        initial: { opacity: 0 },
-        animate: {
-            x: [200, 0],
-            opacity: [0, 1],
-            transition: {
-                duration: 0.7,
-            },
-        },
-    };
     return (
         <motion.div
             className="o-projektu"
@@ -26,21 +13,10 @@ const OProjektu = (props) => {
             transition={{ repeat: Infinity, duration: 120, ease: "linear" }}
             ref={props.section}
         >
-            <motion.div
+            <div
                 className="o-projektu-wrapper"
-                variants={variants}
-                initial="initial"
-                animate={oProjektuVisible && "animate"}
             >
                 <SectionTitle>o projektu</SectionTitle>
-                <VisibilitySensor
-                    onChange={(isVisible) => {
-                        if (isVisible && !oProjektuVisible) {
-                            setOProjektuVisible(true);
-                        }
-                        return;
-                    }}
-                >
                     <div className="o-projektu-description">
                         <p>
                             Hakaton za srednjoškolce je programersko takmičenje
@@ -63,10 +39,8 @@ const OProjektu = (props) => {
                             srednjoškolaca i pripreme ih za samo takmičenje.
                         </p>
                     </div>
-                </VisibilitySensor>
-
                 <CustomButton variant="tamna2">Pravila takmičenja</CustomButton>
-            </motion.div>
+            </div>
         </motion.div>
     );
 };
