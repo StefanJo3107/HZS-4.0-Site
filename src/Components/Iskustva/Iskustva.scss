@@ -1,6 +1,8 @@
 @import '../../global.scss';
 
-.iskustva {
+@mixin container {
+  padding-left: 5rem;
+  padding-right: 5rem;
   background-color: $pozadina_bela;
   display: flex;
   align-items: flex-start;
@@ -8,21 +10,43 @@
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  padding-left: 5rem;
-  padding-top: 4rem;
-  padding-right: 5rem;
+}
 
+@mixin wrapper {
+  @include box-center(row, space-around);
+  flex: 1;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+
+@mixin podnaslov {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #795298;
+}
+
+.iskustva {
+  @include container();
+  padding-top: 4rem;
   .iskustva-podnaslov {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 1.25rem;
-    color: #795298;
+    @include podnaslov();
   }
 
   .iskustva-wrapper {
-    @include box-center(row, space-around);
-    flex: 1;
-    margin-top: 5rem;
-    padding: 2rem;
+    @include wrapper();
+  }
+}
+
+.rekli-su {
+  @include container();
+  padding-bottom: 3rem;
+
+  .rekli-su-podnaslov {
+    @include podnaslov();
+  }
+
+  .rekli-su-wrapper {
+    @include wrapper();
   }
 }
