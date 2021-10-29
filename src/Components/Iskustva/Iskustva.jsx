@@ -1,38 +1,38 @@
-import React, {useState} from 'react';
-import {motion} from 'framer-motion';
-import VisibilitySensor from 'react-visibility-sensor';
-import SectionTitle from '../Utilities/SectionTitle';
-import Iskustvo from './Iskustvo';
-import './Iskustva.scss';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import VisibilitySensor from "react-visibility-sensor";
+import SectionTitle from "../Utilities/SectionTitle";
+import Iskustvo from "./Iskustvo";
+import "./Iskustva.scss";
 
 const Iskustva = (props) => {
-  const iskustvaContent = [
-    {
-      iskustvoTekst:
-        'Prvi put smo se susreli sa pravim izazovom i pravom konkurencijom. Naučili smo da radimo kao tim i udružimo snage do željenih rezultata. Drago mi je što sam bio deo ovog takmičenja i svakako me očekujte sledeće godine!',
-      autorIme: 'Stefan Milanović',
-    },
-    {
-      iskustvoTekst:
-        'Takmičenje nije bilo onakvo kakvim sam ga očekivao, jer je zahtevalo posedovanje i drugih veština osim programiranja. Shvatio sam kako je zapravo biti programer i raditi u timu. Morao sam da se oslonim na nekog drugog i da verujem da će uraditi svoj deo posla kako treba.',
-      autorIme: 'Miljan Jokić',
-    },
-  ];
+    const iskustvaContent = [
+        {
+            iskustvoTekst:
+                "Prvi put smo se susreli sa pravim izazovom i pravom konkurencijom. Naučili smo da radimo kao tim i udružimo snage do željenih rezultata. Drago mi je što sam bio deo ovog takmičenja i svakako me očekujte sledeće godine!",
+            autorIme: "Stefan Milanović",
+        },
+        {
+            iskustvoTekst:
+                "Takmičenje nije bilo onakvo kakvim sam ga očekivao, jer je zahtevalo posedovanje i drugih veština osim programiranja. Shvatio sam kako je zapravo biti programer i raditi u timu. Morao sam da se oslonim na nekog drugog i da verujem da će uraditi svoj deo posla kako treba.",
+            autorIme: "Miljan Jokić",
+        },
+    ];
 
-  const rekliSuContent = [
-    {
-      iskustvoTekst:
-        'Prvi put smo se susreli sa pravim izazovom i pravom konkurencijom. Naučili smo da radimo kao tim i udružimo snage do željenih rezultata. Drago mi je što sam bio deo ovog takmičenja i svakako me očekujte sledeće godine!',
-      autorIme: 'Stefan Milanović',
-    },
-    {
-      iskustvoTekst:
-        'Takmičenje nije bilo onakvo kakvim sam ga očekivao, jer je zahtevalo posedovanje i drugih veština osim programiranja. Shvatio sam kako je zapravo biti programer i raditi u timu. Morao sam da se oslonim na nekog drugog i da verujem da će uraditi svoj deo posla kako treba.',
-      autorIme: 'Miljan Jokić',
-    },
-  ];
+    const rekliSuContent = [
+        {
+            iskustvoTekst:
+                "Prvi put smo se susreli sa pravim izazovom i pravom konkurencijom. Naučili smo da radimo kao tim i udružimo snage do željenih rezultata. Drago mi je što sam bio deo ovog takmičenja i svakako me očekujte sledeće godine!",
+            autorIme: "Stefan Milanović",
+        },
+        {
+            iskustvoTekst:
+                "Takmičenje nije bilo onakvo kakvim sam ga očekivao, jer je zahtevalo posedovanje i drugih veština osim programiranja. Shvatio sam kako je zapravo biti programer i raditi u timu. Morao sam da se oslonim na nekog drugog i da verujem da će uraditi svoj deo posla kako treba.",
+            autorIme: "Miljan Jokić",
+        },
+    ];
 
-  const [iskustvaVisible, setIskustvaVisible] = useState(false);
+    const [iskustvaVisible, setIskustvaVisible] = useState(false);
 
   return (
     <>

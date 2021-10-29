@@ -1,0 +1,128 @@
+@import "../../global.scss";
+
+input[type=textarea], input[type=text], select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+input[type=checkbox] {
+    margin: 0.5rem;
+    width: 25px;
+    height: 25px;
+}
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: $tekst_tamna;
+    font-size: 1.25rem;
+  }
+  
+  .tim-forma-container {
+    border-radius: 5px;
+    background-color: $pozadina_tamna;
+    padding: 20px;
+  }
+
+  .tim-forma-naslov {
+      color: $naslov_tamna;
+      font-size: 3.5rem;
+      margin: 0 2rem 4rem;
+  }
+
+  .tim-forma-naslov-border {
+      border-bottom: 10px solid $dugme_tamna;
+      padding-bottom: 10px;
+  }
+
+  form {
+      margin: 1rem 2rem;
+  }
+  
+  #iskustvo, #motivacija, #uspeh, #osoba {
+      height: 100px;
+  }
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row {
+      margin: 1rem 0;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .pravila-takmicenja-link {
+      text-decoration: underline;
+      color: $dugme_tamna;
+  }
+
+  .checkbox-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+  }
+
+  .submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#prosledi {
+    padding: 2rem 10rem;
+    font-weight: 600;
+    font-size: 2rem;
+    border-radius: 18px;
+    background-color: $dugme_tamna;
+    color: $tekst_bela;
+    border: none;
+    cursor: pointer;
+}
+  
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75 {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        #prosledi {
+            padding: 1.25rem 6.25rem;
+            font-size: 1.25rem;
+        }
+
+        .tim-forma-naslov {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 392px) {
+        .tim-forma-naslov {
+            font-size: 1.75rem;
+        }
+
+        input[type=checkbox] {
+            width: 50px;
+            height: 50px;
+        }
+    }
+  }

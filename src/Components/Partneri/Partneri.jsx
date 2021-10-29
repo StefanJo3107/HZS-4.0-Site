@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Partneri = () => {
+const Partneri = (props) => {
     const generalniSettings = {
         dots: false,
         infinite: true,
@@ -21,7 +21,7 @@ const Partneri = () => {
         centerPadding: "60px",
         responsive: [
             {
-                breakpoint: 1300,
+                breakpoint: 1350,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
@@ -95,7 +95,7 @@ const Partneri = () => {
     };
 
     return (
-        <div className="partneri">
+        <div className="partneri" ref={props.section}>
             <div className="pokrovitelj">
                 <SectionTitle>Pokrovitelj takmicenja</SectionTitle>
                 <Partner

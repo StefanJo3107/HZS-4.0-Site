@@ -16,9 +16,8 @@ import hzsLogo from "../../Assets/Images/hzs-logo.png";
 import LaptopIcon from "./LaptopIcon";
 
 //icons
-import { AiOutlineLaptop } from "react-icons/ai";
-import { FiUser, FiUsers } from "react-icons/fi";
-import { CgFileDocument } from "react-icons/cg";
+import { BsBook, BsTrophy, BsCashCoin } from "react-icons/bs";
+import { FiUsers } from "react-icons/fi";
 
 const Hero = () => {
     const [laptopVisible, setLaptopVisible] = useState(false);
@@ -38,11 +37,14 @@ const Hero = () => {
                     initial={{ x: "-40rem" }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="title">Lorem ipsum dolor sit amet</h1>
+                    <h1 className="title">Hakaton za srednjoškolce</h1>
+                    <h3 className="date">11. i 12. decembar</h3>
                     <div className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        Želiš da proširiš svoja IT znanja, oprobaš se u
+                        kreiranju softverskog rešenja i usput se zabaviš? Okupi
+                        svoj tim, prijavi se za naš hakaton i osvoji vredne
+                        nagrade! HZS 4.0 je pravi izbor, okupi svoj tim i
+                        prijavi se za naš hakaton!
                     </div>
                     <div className="buttons-wrapper">
                         <CustomButton variant="tamna">Prijavi se</CustomButton>
@@ -97,25 +99,25 @@ const Hero = () => {
                         </div>
                         <div className="laptop-icons">
                             <LaptopIcon
-                                icon={<AiOutlineLaptop />}
+                                icon={<BsBook />}
                                 background="purple"
-                                iconName="Programiranje"
+                                iconName="Radionice"
                                 x="-11rem"
                                 y="-3rem"
                                 shouldAnimate={laptopVisible && true}
                             />
                             <LaptopIcon
-                                icon={<FiUser />}
+                                icon={<BsTrophy />}
                                 background="green"
-                                iconName="Mentori"
+                                iconName="Takmičenje"
                                 x="-5rem"
                                 y="-11rem"
                                 shouldAnimate={laptopVisible && true}
                             />
                             <LaptopIcon
-                                icon={<CgFileDocument />}
+                                icon={<BsCashCoin />}
                                 background="purple"
-                                iconName="Radionice"
+                                iconName="Nagrade"
                                 x="7.5rem"
                                 y="-8rem"
                                 shouldAnimate={laptopVisible && true}
@@ -123,7 +125,7 @@ const Hero = () => {
                             <LaptopIcon
                                 icon={<FiUsers />}
                                 background="green"
-                                iconName="Networking"
+                                iconName="Timski rad"
                                 x="8rem"
                                 y="-1rem"
                                 shouldAnimate={laptopVisible && true}
