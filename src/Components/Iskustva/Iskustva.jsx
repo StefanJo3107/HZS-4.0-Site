@@ -1,10 +1,11 @@
-import React from 'react';
-
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import VisibilitySensor from 'react-visibility-sensor';
 import SectionTitle from '../Utilities/SectionTitle';
 import Iskustvo from './Iskustvo';
 import './Iskustva.scss';
 
-const Iskustva = () => {
+const Iskustva = (props) => {
   const iskustvaContent = [
     {
       iskustvoTekst:
@@ -31,9 +32,11 @@ const Iskustva = () => {
     },
   ];
 
+  const [iskustvaVisible, setIskustvaVisible] = useState(false);
+
   return (
     <>
-      <div className='iskustva'>
+      <div className='iskustva' ref={props.section}>
         <SectionTitle text='black' underline='purple'>
           iskustva bivših takmičara
         </SectionTitle>
@@ -41,12 +44,20 @@ const Iskustva = () => {
           <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit</p>
         </div>
         <div className='iskustva-wrapper'>
-          {iskustvaContent.map((iskustvo) => (
-            <Iskustvo
-              iskustvoTekst={iskustvo.iskustvoTekst}
-              autorIme={iskustvo.autorIme}
-            />
-          ))}
+          <VisibilitySensor
+            onChange={(isVisible) => {
+              if (isVisible && !iskustvaVisible) {
+                setIskustvaVisible(true);
+              }
+              return;
+            }}>
+            {iskustvaContent.map((iskustvo) => (
+              <Iskustvo
+                iskustvoTekst={iskustvo.iskustvoTekst}
+                autorIme={iskustvo.autorIme}
+              />
+            ))}
+          </VisibilitySensor>
         </div>
       </div>
       <div className='rekli-su'>
