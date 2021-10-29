@@ -19,6 +19,7 @@ const Home = () => {
     const timSection = useRef();
     const partneriSection = useRef();
 
+
     return (
         <>
             <Navbar

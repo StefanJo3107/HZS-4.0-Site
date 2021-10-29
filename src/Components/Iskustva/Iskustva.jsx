@@ -34,56 +34,50 @@ const Iskustva = (props) => {
 
     const [iskustvaVisible, setIskustvaVisible] = useState(false);
 
-    return (
-        <>
-            <div className="iskustva" ref={props.section}>
-                <SectionTitle text="black" underline="purple">
-                    iskustva bivših takmičara
-                </SectionTitle>
-                <div className="iskustva-podnaslov">
-                    <p>
-                        Lorem ipsum dolor sit amet, consecte tur adipiscing elit
-                    </p>
-                </div>
-                <VisibilitySensor
-                    onChange={(isVisible) => {
-                        if (isVisible && !iskustvaVisible) {
-                            setIskustvaVisible(true);
-                        }
-                        return;
-                    }}
-                >
-                    <div className="iskustva-wrapper">
-                        {iskustvaContent.map((iskustvo) => (
-                            <Iskustvo
-                                key={iskustvo.autorIme}
-                                iskustvoTekst={iskustvo.iskustvoTekst}
-                                autorIme={iskustvo.autorIme}
-                            />
-                        ))}
-                    </div>
-                </VisibilitySensor>
-            </div>
-            <div className="rekli-su">
-                <SectionTitle text="black" underline="purple">
-                    rekli su o nama
-                </SectionTitle>
-                <div className="rekli-su-podnaslov">
-                    <p>
-                        Lorem ipsum dolor sit amet, consecte tur adipiscing elit
-                    </p>
-                </div>
-                <div className="rekli-su-wrapper">
-                    {rekliSuContent.map((iskustvo) => (
-                        <Iskustvo
-                            iskustvoTekst={iskustvo.iskustvoTekst}
-                            autorIme={iskustvo.autorIme}
-                        />
-                    ))}
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className='iskustva' ref={props.section}>
+        <SectionTitle text='black' underline='purple'>
+          iskustva bivših takmičara
+        </SectionTitle>
+        <div className='iskustva-podnaslov'>
+          <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit</p>
+        </div>
+        <div className='iskustva-wrapper'>
+          {/* <VisibilitySensor
+            onChange={(isVisible) => {
+              if (isVisible && !iskustvaVisible) {
+                setIskustvaVisible(true);
+              }
+              return;
+            }}> */}
+          {iskustvaContent.map((iskustvo) => (
+            <Iskustvo
+              iskustvoTekst={iskustvo.iskustvoTekst}
+              autorIme={iskustvo.autorIme}
+            />
+          ))}
+          {/* </VisibilitySensor> */}
+        </div>
+      </div>
+      <div className='rekli-su'>
+        <SectionTitle text='black' underline='purple'>
+          rekli su o nama
+        </SectionTitle>
+        <div className='rekli-su-podnaslov'>
+          <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit</p>
+        </div>
+        <div className='rekli-su-wrapper'>
+          {rekliSuContent.map((iskustvo) => (
+            <Iskustvo
+              iskustvoTekst={iskustvo.iskustvoTekst}
+              autorIme={iskustvo.autorIme}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Iskustva;

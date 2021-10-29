@@ -1,0 +1,9 @@
+@import '../../global.scss';
+
+.clan-tima {
+  @include contain-image;
+
+  img {
+    @include fit-image;
+  }
+}
