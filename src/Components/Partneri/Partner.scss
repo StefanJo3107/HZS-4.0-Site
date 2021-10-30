@@ -1,12 +1,16 @@
 @import "../../global.scss";
 
 .partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 2px 2px 6px 2px #00ffa260;
     border-radius: 2rem;
     transform: scale(0.9);
+    margin: 0 !important;
     img {
         @include contain-image;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 95%;
+        max-height: 95%;
     }
 }

@@ -20,3 +20,7 @@
         text-align: center;
     }
 }
+
+.slick-slide > :first-child {
+    @include box-center(row, center);
+}
