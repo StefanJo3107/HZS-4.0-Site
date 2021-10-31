@@ -185,6 +185,12 @@
     }
     .buttons-wrapper {
       justify-content: flex-start !important;
+      a {
+        width: 90% !important;
+        button {
+          width: 100% !important;
+        }
+      }
       button {
         max-width: 16rem;
         min-width: 9rem;
