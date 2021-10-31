@@ -39,7 +39,7 @@ const TeamForm = () => {
           </div>
           <div className="row">
             <div className="col-25">
-              <label for="motivacija">Šta vas motiviše da se prijavite na ovogodišnji HZS?</label>
+              <label for="motivacija">Šta vas motiviše da se prijavite i šta bi za vas predstavljao uspeh na ovogodišnjem HZS-u?</label>
             </div>
             <div className="col-75">
               <input type="textarea" name="motivacija" id="motivacija"/>
@@ -47,15 +47,7 @@ const TeamForm = () => {
           </div>
           <div className="row">
             <div className="col-25">
-              <label for="uspeh">Šta bi za vas predstavljao uspeh na ovom takmičenju?</label>
-            </div>
-            <div className="col-75">
-              <input type="textarea" name="uspeh" id="uspeh"/>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-25">
-              <label for="osoba">Koja osoba vas inspiriše u IT svetu? Opišite zbog čega.</label>
+              <label for="osoba">Koja osoba iz IT sveta vas inspiriše?</label>
             </div>
             <div className="col-75">
               <input type="textarea" name="osoba" id="osoba"/>
