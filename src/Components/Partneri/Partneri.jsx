@@ -12,6 +12,7 @@ import Raiffeisen from "../../Assets/Images/Partneri/rafaisen.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PartneriSlider from "./PartneriSlider";
 
 const Partneri = (props) => {
     const generalniSettings = {
@@ -99,7 +100,38 @@ const Partneri = (props) => {
             },
         ],
     };
-
+    const generalniPartneri = [
+        {
+            partnerSlika: Catenamedia,
+            partnerIme: "Catenamedia",
+            pozadina: "#f53942",
+        },
+        {
+            partnerSlika: Endava,
+            partnerIme: "Endava",
+            pozadina: "#fff",
+        },
+        {
+            partnerSlika: Fon,
+            partnerIme: "Fon",
+            pozadina: "#fff",
+        },
+        {
+            partnerSlika: Guarana,
+            partnerIme: "Guarana",
+            pozadina: "#a5de2f",
+        },
+        {
+            partnerSlika: Prime,
+            partnerIme: "Prime",
+            pozadina: "#fff",
+        },
+        {
+            partnerSlika: Raiffeisen,
+            partnerIme: "Raiffeisen",
+            pozadina: "#ffed00",
+        },
+    ];
     return (
         <div className="partneri" ref={props.section}>
             <div className="pokrovitelj">
@@ -117,106 +149,20 @@ const Partneri = (props) => {
                     Godišnji partneri
                 </SectionTitle>
             </div>
-            <Slider {...generalniSettings}>
-                <Partner
-                    partnerSlika={Catenamedia}
-                    partnerIme="Catenamedia"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#f53942"
-                />
-                <Partner
-                    partnerSlika={Endava}
-                    partnerIme="Endava"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#fff"
-                />
-                <Partner
-                    partnerSlika={Fon}
-                    partnerIme="Fon"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#fff"
-                />
-                <Partner
-                    partnerSlika={Guarana}
-                    partnerIme="Guarana"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#a5de2f"
-                />
-                <Partner
-                    partnerSlika={Prime}
-                    partnerIme="Prime"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#fff"
-                />
-                <Partner
-                    partnerSlika={Raiffeisen}
-                    partnerIme="Raiffeisen"
-                    width="15rem"
-                    height="10rem"
-                    pozadina="#ffed00"
-                />
-            </Slider>
-            <div className="naturalni">
+            <PartneriSlider
+                partneri={generalniPartneri}
+                settings={generalniSettings}
+                width="15rem"
+                height="10rem"
+            />
+
+            {/* <div className="naturalni">
                 <SectionTitle className="naturalniNaslov">
                     Naturalni partneri
                 </SectionTitle>
             </div>
-            <Slider {...medijskiSettings}>
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-                <Partner
-                    partnerSlika={ZuhlkeLogo}
-                    partnerIme="Zuhlke"
-                    width="13rem"
-                    height="8rem"
-                    pozadina="#a2569f"
-                />
-            </Slider>
+            <PartneriSlider partneri={generalniPartneri} /> */
+            /*{" "}
             <div className="medijski">
                 <SectionTitle className="medijskiNaslov">
                     Medijski partneri
@@ -272,7 +218,7 @@ const Partneri = (props) => {
                     height="8rem"
                     pozadina="#a2569f"
                 />
-            </Slider>
+            </Slider> */}
         </div>
     );
 };

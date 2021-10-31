@@ -1,9 +1,42 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .clan-tima {
-  @include contain-image;
+    position: relative;
+    img {
+        @include fit-image;
+        width: 17rem;
+        height: 20rem;
+        border-radius: 1rem;
+    }
+    .clan-info {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
 
-  img {
-    @include fit-image;
-  }
+        background: rgba(158, 158, 158, 0.575);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(13.5px);
+        -webkit-backdrop-filter: blur(13.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        @include box-center(column, flex-end);
+        text-align: center;
+        padding-bottom: 1rem;
+
+        .clan-pozicija {
+            color: $dugme_tamna;
+        }
+        .clan-ime {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .clan-opis {
+            color: #fff;
+            padding-bottom: 1rem;
+        }
+    }
 }

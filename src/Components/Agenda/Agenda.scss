@@ -1,29 +1,29 @@
 @import "../../global.scss";
 
 .agenda {
-  min-height: 100vh;
-  position: relative;
-  padding-left: 5rem;
-  padding-top: 4rem;
-  padding-right: 5rem;
-  .front-img-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 5%;
-    width: 95%;
-    height: 10rem;
-    z-index: 50;
-  }
-  .hero-front-image {
-    @include contain-image;
-    opacity: 0.6;
-  }
+    min-height: 100vh;
+    position: relative;
+    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-right: 5rem;
+    .front-img-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 5%;
+        width: 95%;
+        height: 10rem;
+        z-index: 50;
+    }
+    .hero-front-image {
+        @include contain-image;
+        opacity: 0.6;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .agenda {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+    .agenda {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }

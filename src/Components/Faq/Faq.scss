@@ -1,8 +1,16 @@
-.faq {
-    min-height: 100vh;
-    padding: 4rem;
-    padding-top: 0rem;
-    margin-bottom: 5rem;
+.faq-wrapper {
+    .faq {
+        min-height: 100vh;
+        padding: 4rem;
+        padding-top: 0rem;
+        margin-bottom: 5rem;
+    }
+
+    .section-transition {
+        width: 100vw;
+        min-width: 60rem;
+        transform: translateY(10px) rotate(180deg) rotateX(5deg);
+    }
 }
 
 @media screen and (max-width: 850px) {
