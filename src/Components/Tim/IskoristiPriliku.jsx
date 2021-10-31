@@ -1,12 +1,13 @@
-import React from 'react';
-import SectionTitle from '../Utilities/SectionTitle';
-import CustomButton from '../Utilities/CustomButton';
+import React from "react";
+import SectionTitle from "../Utilities/SectionTitle";
+import CustomButton from "../Utilities/CustomButton";
+import { Link } from "react-router-dom";
 
 const IskoristiPriliku = () => {
   return (
-    <div className='iskoristi-priliku'>
-      <div className='iskoristi-priliku-tekst'>
-        <SectionTitle color='white' underline='green'>
+    <div className="iskoristi-priliku">
+      <div className="iskoristi-priliku-tekst">
+        <SectionTitle color="white" underline="green">
           iskoristi priliku
         </SectionTitle>
         <p>
@@ -16,8 +17,10 @@ const IskoristiPriliku = () => {
           architecto vel.
         </p>
       </div>
-      <div className='iskoristi-priliku-button'>
-        <CustomButton variant='tamna'>Prijavi se </CustomButton>
+      <div className="iskoristi-priliku-button">
+        <Link to="/prijava">
+          <CustomButton variant="tamna">Prijavi se</CustomButton>
+        </Link>
       </div>
     </div>
   );
