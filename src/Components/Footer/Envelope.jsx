@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CustomButton from "../Utilities/CustomButton";
 import VisibilitySensor from "react-visibility-sensor";
 import { Formik } from "formik";
+import axios from "axios";
 
 const Envelope = () => {
     const [visibleEnvelope, setVisibleEnvelope] = useState(false);
@@ -59,12 +60,12 @@ const Envelope = () => {
                 }
                 return errors;
             }}
-            onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
-            }}
+            // onSubmit={(values, { setSubmitting }) => {
+            //     setTimeout(() => {
+            //         alert(JSON.stringify(values, null, 2));
+            //         setSubmitting(false);
+            //     }, 400);
+            // }}
         >
             {({
                 values,
@@ -76,7 +77,11 @@ const Envelope = () => {
                 isSubmitting,
                 /* and other goodies */
             }) => (
-                <form>
+                <form
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                    }}
+                >
                     <VisibilitySensor
                         onChange={(isVisible) => {
                             if (isVisible && !visibleEnvelope) {
@@ -135,12 +140,15 @@ const Envelope = () => {
                                     onBlur={handleBlur}
                                     value={values.ime}
                                     style={
-                                        errors.ime && {
+                                        errors.ime &&
+                                        touched.ime && {
                                             border: "2px solid red",
                                         }
                                     }
                                 />
-                                <span className="error">{errors.ime}</span>
+                                {errors.ime && touched.ime && (
+                                    <span className="error">{errors.ime}</span>
+                                )}
                                 <motion.input
                                     whileFocus={{ scale: 1.05 }}
                                     type="email"
@@ -150,12 +158,17 @@ const Envelope = () => {
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     style={
-                                        errors.email && {
+                                        errors.email &&
+                                        touched.email && {
                                             border: "2px solid red",
                                         }
                                     }
                                 />
-                                <span className="error">{errors.email}</span>
+                                {errors.email && touched.email && (
+                                    <span className="error">
+                                        {errors.email}
+                                    </span>
+                                )}
                                 <motion.textarea
                                     whileFocus={{ scale: 1.05 }}
                                     id="poruka"
@@ -166,12 +179,17 @@ const Envelope = () => {
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     style={
-                                        errors.poruka && {
+                                        errors.poruka &&
+                                        touched.poruka && {
                                             border: "2px solid red",
                                         }
                                     }
                                 />
-                                <span className="error">{errors.poruka}</span>
+                                {errors.poruka && touched.poruka && (
+                                    <span className="error">
+                                        {errors.poruka}
+                                    </span>
+                                )}
                                 <div
                                     className={
                                         visibleEnvelope
@@ -179,9 +197,66 @@ const Envelope = () => {
                                             : "button-hide"
                                     }
                                 >
-                                    <CustomButton variant="bela">
+                                    <CustomButton
+                                        variant="bela"
+                                        onClick={async () => {
+                                            if (
+                                                !errors.email &&
+                                                !errors.ime &&
+                                                !errors.poruka &&
+                                                values.email &&
+                                                values.ime &&
+                                                values.poruka
+                                            ) {
+                                                try {
+                                                    axios.defaults.headers.post[
+                                                        "Content-Type"
+                                                    ] =
+                                                        "application/json;charset=utf-8";
+                                                    axios.defaults.headers.post[
+                                                        "Access-Control-Allow-Origin"
+                                                    ] = "*";
+                                                    await axios.post(
+                                                        "http://104.40.203.28:3001/pitanje",
+                                                        {
+                                                            email: values.email,
+                                                            ime: values.ime,
+                                                            pitanje:
+                                                                values.poruka,
+                                                        }
+                                                    );
+                                                    document.querySelector(
+                                                        ".success"
+                                                    ).innerHTML =
+                                                        "Uspesno poslata poruka!";
+                                                    document.querySelector(
+                                                        ".err-end"
+                                                    ).innerHTML = "";
+                                                } catch (err) {
+                                                    document.querySelector(
+                                                        ".err-end"
+                                                    ).innerHTML =
+                                                        "Neuspesno poslata poruka!";
+                                                    document.querySelector(
+                                                        ".success"
+                                                    ).innerHTML = "";
+                                                    console.log(err);
+                                                }
+                                            } else {
+                                                document.querySelector(
+                                                    ".err-end"
+                                                ).innerHTML =
+                                                    "Polja ne smeju da ostanu prazna!";
+                                                document.querySelector(
+                                                    ".success"
+                                                ).innerHTML = "";
+                                            }
+                                        }}
+                                    >
                                         POŠALJI
                                     </CustomButton>
+                                    <span className="success"></span>
+                                    <span className="err-end"></span>
                                 </div>
                             </motion.div>
                         </div>

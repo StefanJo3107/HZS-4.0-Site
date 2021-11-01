@@ -4,8 +4,8 @@
     position: relative;
     img {
         @include fit-image;
-        width: 17rem;
-        height: 20rem;
+        width: 16rem;
+        height: 19rem;
         border-radius: 1rem;
     }
     .clan-info {
@@ -57,7 +57,7 @@
             border: 1px solid rgba(255, 255, 255, 0.18);
 
             color: #fff;
-            padding-bottom: 1rem;
+            padding: 1rem;
 
             @include box-center(column, center);
         }

@@ -106,7 +106,9 @@ const Tim = (props) => {
                                 <br />
                                 <br />
                                 <strong>
-                                    „Ajmo Ana, našli smo ti pomoć!” 🥳
+                                    „Ajmo Ana, našli smo ti
+                                    <br />
+                                    pomoć!” 🥳
                                 </strong>
                             </p>
                         }

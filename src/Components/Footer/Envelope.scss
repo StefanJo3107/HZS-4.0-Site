@@ -32,7 +32,7 @@
         .envelope-underline {
             width: 8ch;
             border-bottom: 0.2rem solid;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             border-color: $dugme_bela;
             align-self: flex-start;
         }
@@ -68,9 +68,16 @@
             min-height: 1.8rem;
         }
 
-        .error {
+        .error,
+        .err-end {
             font-size: 0.7rem;
             color: red;
+            font-style: italic;
+        }
+
+        .success {
+            font-size: 0.7rem;
+            color: $dugme_bela;
             font-style: italic;
         }
         .button {

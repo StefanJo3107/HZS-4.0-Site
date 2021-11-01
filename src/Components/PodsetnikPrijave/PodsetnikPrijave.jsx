@@ -39,7 +39,7 @@ const PodsetnikPrijave = () => {
                 <div className="podsetnik-prijave">
                     <div className="podsetnik-info">
                         <SectionTitle underline="purple" text="black">
-                            poslednji poziv
+                            Čekamo tvoju prijavu!
                         </SectionTitle>
                         <p className="info-opis">
                             Hakaton za srednjoškolce je jedinstvena prilika da
