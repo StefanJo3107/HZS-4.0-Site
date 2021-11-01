@@ -8,14 +8,26 @@
 
 .timer {
   background-color: $pozadina_tamna;
-  min-height: 100vh;
-  @include box-center(row, space-between);
+  min-height: 70vh;
+  // @include box-center(column, space-around);
+  align-items: left;
 
   .timer-wrapper {
     .timer-naslov {
-      @include text-style(2rem, 700);
+      @include text-style(3rem, 700);
+      padding: 2rem 10rem 2rem 4rem;
     }
     .timer-podnaslov {
+      @include text-style(1rem, 400);
+      padding: 2rem 10rem 2rem 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .timer-wrapper {
+    @include box-center(column, center);
+    .timer-naslov {
       @include text-style(1rem, 400);
     }
   }

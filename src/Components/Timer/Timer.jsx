@@ -6,7 +6,6 @@ const Timer = () => {
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
-  const [timerSeconds, setTimerSeconds] = useState();
 
   let interval;
 
@@ -20,7 +19,6 @@ const Timer = () => {
         (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
       );
       const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
-      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
 
       if (distance < 0) {
         clearInterval(interval.curernt);
@@ -28,7 +26,6 @@ const Timer = () => {
         setTimerDays(days);
         setTimerHours(hours);
         setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
       }
     });
   };
@@ -45,16 +42,17 @@ const Timer = () => {
         </p>
         <p className='timer-podnaslov'>
           Sat brzo otkucava. Požuri i prijavi se na ovogodišnji Hakaton za
-          srednjoškolce. Lorem ipsum dolor sit amet consectetur, adipisicing
+          srednjoškolce! Lorem ipsum dolor sit amet consectetur, adipisicing
           elit. Culpa pariatur sint fuga tempora veniam harum ratione quisquam
           aspernatur. Vero, facilis! Tenetur, quidem quo? Nobis veritatis
           repudiandae ex, soluta ipsam expedita.
         </p>
+      </div>
+      <div className='timer-clock'>
         <Clock
           timerDays={timerDays}
           timerHours={timerHours}
           timerMinutes={timerMinutes}
-          timerSeconds={timerSeconds}
         />
       </div>
       <div className='animacija'></div>
