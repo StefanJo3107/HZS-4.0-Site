@@ -2,7 +2,6 @@ import React from "react";
 import SectionTitle from "../Utilities/SectionTitle";
 import ClanTima from "./ClanTima";
 import "./Tim.scss";
-import Unknown from "../../Assets/Images/Unknown.png";
 import Aleksa from "../../Assets/Images/Kor/AleksaDjuric(manja slika).jpg";
 import Ana from "../../Assets/Images/Kor/AnaKesic.jpg";
 import Iva from "../../Assets/Images/Kor/IvaDjokovic.jpg";
@@ -28,28 +27,28 @@ const Tim = (props) => {
         centerPadding: "60px",
         responsive: [
             {
-                breakpoint: 1650,
+                breakpoint: 1930,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 1300,
+                breakpoint: 1600,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 1000,
+                breakpoint: 1240,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 720,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
