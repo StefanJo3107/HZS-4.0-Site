@@ -148,8 +148,11 @@
 
     .podsetnik-info {
         @include box-center(column, flex-start);
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: 2.5rem;
+        .section-title {
+            align-self: flex-start;
+        }
     }
 
     .button {
