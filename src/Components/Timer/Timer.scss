@@ -1,0 +1,22 @@
+@import '../../global.scss';
+@mixin text-style($size: 2rem, $weight: 400) {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.timer {
+  background-color: $pozadina_tamna;
+  min-height: 100vh;
+  @include box-center(row, space-between);
+
+  .timer-wrapper {
+    .timer-naslov {
+      @include text-style(2rem, 700);
+    }
+    .timer-podnaslov {
+      @include text-style(1rem, 400);
+    }
+  }
+}
