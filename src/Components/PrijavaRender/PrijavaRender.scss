@@ -1,0 +1,30 @@
+@import "../../global.scss";
+
+form {
+    margin: 1rem 2rem;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#prosledi {
+    padding: 2rem 10rem;
+    font-weight: 600;
+    font-size: 2rem;
+    border-radius: 18px;
+    background-color: $dugme_tamna;
+    color: $tekst_bela;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    #prosledi {
+        padding: 1.25rem 6.25rem;
+        font-size: 1.25rem;
+    }
+}

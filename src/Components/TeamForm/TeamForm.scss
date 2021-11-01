@@ -38,10 +38,6 @@ input[type=checkbox] {
       border-bottom: 10px solid $dugme_tamna;
       padding-bottom: 10px;
   }
-
-  form {
-      margin: 1rem 2rem;
-  }
   
   #daLiSteUcestvovali, #staVasMotivise, #inspiracija {
       height: 100px;
@@ -79,24 +75,6 @@ input[type=checkbox] {
       align-items: center;
       padding: 2rem;
   }
-
-  .submit-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-#prosledi {
-    padding: 2rem 10rem;
-    font-weight: 600;
-    font-size: 2rem;
-    border-radius: 18px;
-    background-color: $dugme_tamna;
-    color: $tekst_bela;
-    border: none;
-    cursor: pointer;
-}
   
   @media screen and (max-width: 600px) {
     .col-25, .col-75 {
@@ -110,10 +88,6 @@ input[type=checkbox] {
   }
 
     @media screen and (max-width: 500px) {
-        #prosledi {
-            padding: 1.25rem 6.25rem;
-            font-size: 1.25rem;
-        }
 
         .tim-forma-naslov {
             font-size: 2.5rem;

@@ -1,73 +1,18 @@
 import React from 'react';
-import { Formik } from 'formik';
 import "./TeamForm.scss";
 
-const TeamForm = () => {
+const TeamForm = (props) => {
   
   const errorMessageStyle = {
     color: '#E50914',
     margin: '0.25rem'
   };
 
+
+
   return (
-
-      <Formik
-        initialValues={{
-          imeTima: '', //ovde idu podaci sa apija
-          kakoSteSaznali: '',
-          daLiSteUcestvovali: '',
-          staVasMotivise: '',
-          inspiracija: '',
-          timUTriReci: ''
-        }}
-        validate = { values => {
-          const errors = {};
-
-          if(!values.imeTima) {
-            errors.imeTima = 'Izvini, ovo polje je obavezno!';
-          }
-
-          if(!values.kakoSteSaznali) {
-            errors.kakoSteSaznali = 'Izvini, ovo polje je obavezno!';
-          }
-
-          if(!values.daLiSteUcestvovali) {
-            errors.daLiSteUcestvovali = 'Izvini, ovo polje je obavezno!';
-          }
-
-          if(!values.staVasMotivise) {
-            errors.staVasMotivise = 'Izvini, ovo polje je obavezno!';
-          }
-
-          if(!values.inspiracija) {
-            errors.inspiracija = 'Izvini, ovo polje je obavezno!';
-          }
-
-          if(!values.timUTriReci) {
-            errors.timUTriReci = 'Izvini, ovo polje je obavezno!';
-          }
-
-
-          return errors;
-        } }
-        onSubmit={(values)=>{
-
-          console.log(values);
-          console.log('form submitted!');
-         //ovde se salju podaci u bazu
-        }}
-      >
-        { ({
-          values,
-          errors,
-          touched,
-          handleChange,
-          handleBlur,
-          handleSubmit
-        }) => (
         <div className="tim-forma-container">
         <h1 className="tim-forma-naslov"><span className="tim-forma-naslov-border">PODACI O TIM</span>U</h1>
-        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-25">
               <label for="imeTima">Ime tima:</label>
@@ -77,12 +22,12 @@ const TeamForm = () => {
               type="text" 
               id="imeTima" 
               name="imeTima"
-              value={values.imeTima}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={props.values.imeTima}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
               />
-              {errors.imeTima  && touched.imeTima? 
-                <span style={errorMessageStyle}>{ errors.imeTima }</span>
+              {props.errors.imeTima  && props.touched.imeTima? 
+                <span style={errorMessageStyle}>{props.errors.imeTima }</span>
               :null}
             </div>
           </div>
@@ -92,15 +37,14 @@ const TeamForm = () => {
             </div>
             <div className="col-75">
               <select id="kakoSteSaznali" name="saznanje">
-                <option value="" disabled selected hidden>Izaberite jednu od ponuđenih opcija...</option>
-                <option value={values.kakoSteSaznali='drustvene-mreze'}>Preko društvenih mreža</option>
-                <option value={values.kakoSteSaznali='preko-prijatelja'}>Preko prijatelja</option>
-                <option value={values.kakoSteSaznali='preko-profesora'}>Preko profesora</option>
-                <option value={values.kakoSteSaznali='preko-televizije'}>Preko televizije</option>
-                <option value={values.kakoSteSaznali='preko-portala'}>Preko portala</option>
+                <option value={props.values.kakoSteSaznali='drustvene-mreze'}>Preko društvenih mreža</option>
+                <option value={props.values.kakoSteSaznali='preko-prijatelja'}>Preko prijatelja</option>
+                <option value={props.values.kakoSteSaznali='preko-profesora'}>Preko profesora</option>
+                <option value={props.values.kakoSteSaznali='preko-televizije'}>Preko televizije</option>
+                <option value={props.values.kakoSteSaznali='preko-portala'}>Preko portala</option>
               </select>
-              {errors.kakoSteSaznali && touched.kakoSteSaznali? 
-                <span style={errorMessageStyle}>{ errors.kakoSteSaznali }</span>
+              {props.errors.kakoSteSaznali && props.touched.kakoSteSaznali? 
+                <span style={errorMessageStyle}>{ props.errors.kakoSteSaznali }</span>
               :null}
             </div>
           </div>
@@ -113,12 +57,12 @@ const TeamForm = () => {
               type="textarea" 
               name="daLiSteUcestvovali" 
               id="daLiSteUcestvovali" 
-              value={values.daLiSteUcestvovali}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={props.values.daLiSteUcestvovali}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
               />
-              {errors.daLiSteUcestvovali && touched.daLiSteUcestvovali? 
-                <span style={errorMessageStyle}>{ errors.daLiSteUcestvovali }</span>
+              {props.errors.daLiSteUcestvovali && props.touched.daLiSteUcestvovali? 
+                <span style={errorMessageStyle}>{ props.errors.daLiSteUcestvovali }</span>
               :null}
             </div>
           </div>
@@ -131,12 +75,12 @@ const TeamForm = () => {
               type="textarea" 
               name="staVasMotivise" 
               id="staVasMotivise"
-              value={values.staVasMotivise}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={props.values.staVasMotivise}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
               />
-              {errors.staVasMotivise && touched.staVasMotivise? 
-                <span style={errorMessageStyle}>{ errors.staVasMotivise }</span>
+              {props.errors.staVasMotivise && props.touched.staVasMotivise? 
+                <span style={errorMessageStyle}>{ props.errors.staVasMotivise }</span>
               :null}
             </div>
           </div>
@@ -149,12 +93,12 @@ const TeamForm = () => {
               type="textarea" 
               name="inspiracija" 
               id="inspiracija"
-              value={values.inspiracija}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={props.values.inspiracija}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
               />
-              {errors.inspiracija && touched.inspiracija? 
-                <span style={errorMessageStyle}>{ errors.inspiracija }</span>
+              {props.errors.inspiracija && props.touched.inspiracija? 
+                <span style={errorMessageStyle}>{ props.errors.inspiracija }</span>
               :null}
             </div>
           </div>
@@ -167,12 +111,12 @@ const TeamForm = () => {
               type="textarea" 
               name="timUTriReci" 
               id="timUTriReci"
-              value={values.timUTriReci}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={props.values.timUTriReci}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
               />
-              {errors.timUTriReci && touched.timUTriReci? 
-                <span style={errorMessageStyle}>{ errors.timUTriReci }</span>
+              {props.errors.timUTriReci && props.touched.timUTriReci? 
+                <span style={errorMessageStyle}>{ props.errors.timUTriReci }</span>
               :null}
             </div>
           </div>
@@ -180,14 +124,7 @@ const TeamForm = () => {
               <input type="checkbox" name="pravila-takmicenja" id="pravila-takmicenja"/>
               <label for="pravila-takmicenja">Slažem se sa <a className="pravila-takmicenja-link" href="../../Assets/pravila.pdf" target="_blank">pravilima takmičenja.</a></label>
           </div>
-          <div className="submit-container">
-            <input type="submit" value="PROSLEDI" id="prosledi"/>
-          </div>
-        </form>
       </div>
-        )}
-      </Formik>
-
     )
 }
 
