@@ -6,6 +6,7 @@ const PartneriSlider = (props) => {
     const partneri = props.partneri.map((partner) => {
         return (
             <Partner
+                key={partner.partnerIme}
                 partnerSlika={partner.partnerSlika}
                 partnerIme={partner.partnerIme}
                 width={props.width}

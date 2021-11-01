@@ -64,10 +64,19 @@
             }
         }
 
+        textarea {
+            min-height: 1.8rem;
+        }
+
+        .error {
+            font-size: 0.7rem;
+            color: red;
+            font-style: italic;
+        }
         .button {
             font-size: 1rem;
             padding: 0.6rem;
-            margin-top: 0.6rem;
+            //margin-top: 0.6rem;
             opacity: 0;
         }
 

@@ -69,49 +69,129 @@ const Tim = (props) => {
                         slika={Marko}
                         ime="Marko Savićević"
                         pozicija="Koordinator projekta"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čuo u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „Ee Mare, ja imam jedan <br />
+                                    problemčić” 😅
+                                </strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Jelena}
                         ime="Jelena Subotić"
                         pozicija="Koordinator tima za ljudske resurse"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čula u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>„Kad će neki teambuilding?” 😍</strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Ana}
                         ime="Ana Kesić"
                         pozicija="Koordinator tima za odnose sa javnošću"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čula u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „Ajmo Ana, našli smo ti pomoć!” 🥳
+                                </strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Sofija}
                         ime="Sofija Ivanović"
                         pozicija="Koordinator tima za dizajn"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čula u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „E jel možeš još ovo da izmeniš?” 🤯
+                                </strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Iva}
                         ime="Iva Đoković"
                         pozicija="Koordinator tima za odnose sa kompanijama"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čula u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>„A jel će biti para za ovo?” 😬</strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Nemanja}
                         ime="Nemanja Vukelić"
                         pozicija="Koordinator tima za akademske odnose"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čuo u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „Dodaj Vukašina u bazu mentora, žene ga
+                                    vole.” 🥰
+                                </strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Stefan}
                         ime="Stefan Jovanović"
                         pozicija="Koordinator tima za informacione tehnologije"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čuo u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „Ma zna to Stefan da napravi,
+                                    <br />
+                                    lagano.” 💁‍♂️
+                                </strong>
+                            </p>
+                        }
                     />
                     <ClanTima
                         slika={Aleksa}
                         ime="Aleksa Đurić"
                         pozicija="Koordinator tima za logistiku"
-                        opis="Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet Lorem ipsum dolor siit amet"
+                        opis={
+                            <p>
+                                Rečenica koju je najviše puta čuo u toku
+                                projekta:
+                                <br />
+                                <br />
+                                <strong>
+                                    „Šta logistika uopšte radi?” O.o
+                                </strong>
+                            </p>
+                        }
                     />
                 </Slider>
             </div>
