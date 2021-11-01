@@ -1,62 +1,62 @@
-import React, {useState} from 'react';
-import SectionTitle from '../Utilities/SectionTitle';
-import VisibilitySensor from 'react-visibility-sensor';
+import React, {useEffect, useState} from 'react';
 import './Timer.scss';
+import Clock from './Clock';
 
-import {motion} from 'framer-motion';
+const Timer = () => {
+  const [timerDays, setTimerDays] = useState();
+  const [timerHours, setTimerHours] = useState();
+  const [timerMinutes, setTimerMinutes] = useState();
 
-const Timer = (props) => {
-  const [oProjektuVisible, setOProjektuVisible] = useState(false);
+  let interval;
 
-  const variants = {
-    initial: {opacity: 0},
-    animate: {
-      x: [200, 0],
-      opacity: [0, 1],
-      transition: {
-        duration: 0.7,
-      },
-    },
+  const startTimer = () => {
+    const countDownDate = new Date('Nov 10, 2021').getTime();
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      const hours = Math.floor(
+        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
+
+      if (distance < 0) {
+        clearInterval(interval.curernt);
+      } else {
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+      }
+    });
   };
-  return (
-    <motion.div
-      className='o-projektu'
-      animate={{backgroundPositionX: ['0vh', '254vh']}}
-      transition={{repeat: Infinity, duration: 120, ease: 'linear'}}
-      ref={props.section}>
-      <motion.div
-        className='o-projektu-wrapper'
-        variants={variants}
-        initial='initial'
-        animate={oProjektuVisible && 'animate'}>
-        <SectionTitle>o projektu</SectionTitle>
-        <VisibilitySensor
-          onChange={(isVisible) => {
-            if (isVisible && !oProjektuVisible) {
-              setOProjektuVisible(true);
-            }
-            return;
-          }}>
-          <div className='o-projektu-description'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              sunt aspernatur deleniti, perferendis delectus laudantium error.
-              Iusto placeat consequuntur repellat dignissimos, adipisci rem
-              dolore doloribus recusandae nisi doloremque possimus dolores
-              explicabo quidem, rerum ut blanditiis nihil suscipit deleniti id
-              aliquid quaerat illo nam. Atque, iusto!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              nam accusamus? Aliquam laborum aut, in laudantium eum ullam
-              voluptatem molestiae deserunt quis esse accusamus a!
-            </p>
-          </div>
-        </VisibilitySensor>
 
-        <CustomButton variant='tamna2'>Pravila takmičenja</CustomButton>
-      </motion.div>
-    </motion.div>
+  useEffect(() => {
+    startTimer();
+  });
+
+  return (
+    <div className='timer'>
+      <div className='timer-wrapper'>
+        <p className='timer-naslov'>
+          Do zatvaranja prijava je ostalo još malo!
+        </p>
+        <p className='timer-podnaslov'>
+          Sat brzo otkucava. Požuri i prijavi se na ovogodišnji Hakaton za
+          srednjoškolce! Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Culpa pariatur sint fuga tempora veniam harum ratione quisquam
+          aspernatur. Vero, facilis! Tenetur, quidem quo? Nobis veritatis
+          repudiandae ex, soluta ipsam expedita.
+        </p>
+      </div>
+      <div className='timer-clock'>
+        <Clock
+          timerDays={timerDays}
+          timerHours={timerHours}
+          timerMinutes={timerMinutes}
+        />
+      </div>
+      <div className='animacija'></div>
+    </div>
   );
 };
 
