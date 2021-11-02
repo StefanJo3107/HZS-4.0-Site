@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/HZS-4.0-Site/static/css/main.132988ab.chunk.css",
-    "main.js": "/HZS-4.0-Site/static/js/main.9ad5c965.chunk.js",
-    "main.js.map": "/HZS-4.0-Site/static/js/main.9ad5c965.chunk.js.map",
+    "main.css": "/HZS-4.0-Site/static/css/main.72b41aa6.chunk.css",
+    "main.js": "/HZS-4.0-Site/static/js/main.11235157.chunk.js",
+    "main.js.map": "/HZS-4.0-Site/static/js/main.11235157.chunk.js.map",
     "runtime-main.js": "/HZS-4.0-Site/static/js/runtime-main.2a7c7022.js",
     "runtime-main.js.map": "/HZS-4.0-Site/static/js/runtime-main.2a7c7022.js.map",
     "static/css/2.012a35c3.chunk.css": "/HZS-4.0-Site/static/css/2.012a35c3.chunk.css",
-    "static/js/2.19408b2c.chunk.js": "/HZS-4.0-Site/static/js/2.19408b2c.chunk.js",
-    "static/js/2.19408b2c.chunk.js.map": "/HZS-4.0-Site/static/js/2.19408b2c.chunk.js.map",
+    "static/js/2.e5f0fdea.chunk.js": "/HZS-4.0-Site/static/js/2.e5f0fdea.chunk.js",
+    "static/js/2.e5f0fdea.chunk.js.map": "/HZS-4.0-Site/static/js/2.e5f0fdea.chunk.js.map",
     "index.html": "/HZS-4.0-Site/index.html",
     "static/css/2.012a35c3.chunk.css.map": "/HZS-4.0-Site/static/css/2.012a35c3.chunk.css.map",
-    "static/css/main.132988ab.chunk.css.map": "/HZS-4.0-Site/static/css/main.132988ab.chunk.css.map",
-    "static/js/2.19408b2c.chunk.js.LICENSE.txt": "/HZS-4.0-Site/static/js/2.19408b2c.chunk.js.LICENSE.txt",
+    "static/css/main.72b41aa6.chunk.css.map": "/HZS-4.0-Site/static/css/main.72b41aa6.chunk.css.map",
+    "static/js/2.e5f0fdea.chunk.js.LICENSE.txt": "/HZS-4.0-Site/static/js/2.e5f0fdea.chunk.js.LICENSE.txt",
     "static/media/AleksaDjuric(manja slika).991e5dbd.jpg": "/HZS-4.0-Site/static/media/AleksaDjuric(manja slika).991e5dbd.jpg",
     "static/media/AnaKesic.264c7da5.jpg": "/HZS-4.0-Site/static/media/AnaKesic.264c7da5.jpg",
     "static/media/IvaDjokovic.1d9b34ff.jpg": "/HZS-4.0-Site/static/media/IvaDjokovic.1d9b34ff.jpg",
-    "static/media/JelenaSubotic.70a80121.jpg": "/HZS-4.0-Site/static/media/JelenaSubotic.70a80121.jpg",
+    "static/media/JelenaSubotic.21029b5a.jpg": "/HZS-4.0-Site/static/media/JelenaSubotic.21029b5a.jpg",
     "static/media/MarkoSavicevic.919f8507.jpg": "/HZS-4.0-Site/static/media/MarkoSavicevic.919f8507.jpg",
     "static/media/Miljan.d2d738d3.jpg": "/HZS-4.0-Site/static/media/Miljan.d2d738d3.jpg",
     "static/media/NemanjaVukelic.cf8c121d.jpg": "/HZS-4.0-Site/static/media/NemanjaVukelic.cf8c121d.jpg",
@@ -31,15 +31,15 @@
     "static/media/layered-waves3.8727d1d9.svg": "/HZS-4.0-Site/static/media/layered-waves3.8727d1d9.svg",
     "static/media/onesAndZeroes.e6dffcd8.png": "/HZS-4.0-Site/static/media/onesAndZeroes.e6dffcd8.png",
     "static/media/OProjektu.scss": "/HZS-4.0-Site/static/media/pattern-brojevi.3b460124.png",
-    "static/media/pravila.9e4b468d.pdf": "/HZS-4.0-Site/static/media/pravila.9e4b468d.pdf",
+    "static/media/pravila.b49fd96c.pdf": "/HZS-4.0-Site/static/media/pravila.b49fd96c.pdf",
     "static/media/slick-theme.css": "/HZS-4.0-Site/static/media/slick.c94f7671.ttf",
     "static/media/zuhlke.e49ac4d2.jpg": "/HZS-4.0-Site/static/media/zuhlke.e49ac4d2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2a7c7022.js",
     "static/css/2.012a35c3.chunk.css",
-    "static/js/2.19408b2c.chunk.js",
-    "static/css/main.132988ab.chunk.css",
-    "static/js/main.9ad5c965.chunk.js"
+    "static/js/2.e5f0fdea.chunk.js",
+    "static/css/main.72b41aa6.chunk.css",
+    "static/js/main.11235157.chunk.js"
   ]
 }
