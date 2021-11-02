@@ -4,6 +4,7 @@ import "./PrijavaTop.scss";
 
 //background image
 import onesAndZeroes from "../../Assets/Images/onesAndZeroes.png";
+import Timer from "./../Timer/Timer";
 
 const PrijavaTop = () => {
   return (
@@ -30,8 +31,8 @@ const PrijavaTop = () => {
             aliqua.
           </div>
         </motion.div>
-        <div className="timer">{/* Ovde ide tajmer */}</div>
       </div>
+      <Timer />
     </section>
   );
 };

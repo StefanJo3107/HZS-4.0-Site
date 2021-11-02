@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import './Timer.scss';
-import Clock from './Clock';
+import React, { useEffect, useState } from "react";
+import "./Timer.scss";
+import Clock from "./Clock";
+import Watch from "./Watch";
 
 const Timer = () => {
   const [timerDays, setTimerDays] = useState();
@@ -10,7 +11,7 @@ const Timer = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date('Nov 10, 2021').getTime();
+    const countDownDate = new Date("Nov 10, 2021").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
@@ -35,12 +36,13 @@ const Timer = () => {
   });
 
   return (
-    <div className='timer'>
-      <div className='timer-wrapper'>
-        <p className='timer-naslov'>
+    <div className="timer">
+      <Watch />
+      <div className="timer-wrapper">
+        <p className="timer-naslov">
           Do zatvaranja prijava je ostalo još malo!
         </p>
-        <p className='timer-podnaslov'>
+        <p className="timer-podnaslov">
           Sat brzo otkucava. Požuri i prijavi se na ovogodišnji Hakaton za
           srednjoškolce! Lorem ipsum dolor sit amet consectetur, adipisicing
           elit. Culpa pariatur sint fuga tempora veniam harum ratione quisquam
@@ -48,14 +50,14 @@ const Timer = () => {
           repudiandae ex, soluta ipsam expedita.
         </p>
       </div>
-      <div className='timer-clock'>
+      <div className="timer-clock">
         <Clock
           timerDays={timerDays}
           timerHours={timerHours}
           timerMinutes={timerMinutes}
         />
       </div>
-      <div className='animacija'></div>
+      <div className="animacija"></div>
     </div>
   );
 };

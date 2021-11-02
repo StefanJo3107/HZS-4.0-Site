@@ -1,0 +1,92 @@
+@import "../../global.scss";
+
+.watch {
+  position: absolute;
+  top: -2rem;
+  right: -15rem;
+}
+
+@media screen and (max-width: 960px) {
+  .watch {
+    display: none;
+  }
+}
+
+.outer-watch-face {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100%;
+  background: transparent;
+  animation: rotate 36s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.outer-watch-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.outer-watch-face::before,
+.outer-watch-face::after,
+.outer-watch-face .marking {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 100%;
+  background: #00ffa3;
+  z-index: 0;
+  left: 49%;
+}
+
+.outer-watch-face .marking {
+  background: #00ffa284;
+  width: 0.3rem;
+}
+
+.outer-watch-face .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.outer-watch-face .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.outer-watch-face .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.outer-watch-face .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.inner-watch-face {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: $pozadina_tamna;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
