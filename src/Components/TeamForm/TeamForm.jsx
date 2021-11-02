@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { BsLock } from "react-icons/bs";
 import "./TeamForm.scss";
 
 const TeamForm = (props) => {
@@ -17,13 +19,21 @@ const TeamForm = (props) => {
                     <label for="imeTima">Ime tima:</label>
                 </div>
                 <div className="col-75">
-                    <input
+                    <motion.input
+                        whileFocus={{ scale: 1.02 }}
                         type="text"
                         id="imeTima"
                         name="imeTima"
                         value={props.values.imeTima}
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
+                        style={
+                            props.errors.imeTima && props.touched.imeTima
+                                ? {
+                                      border: "2px solid red",
+                                  }
+                                : {}
+                        }
                     />
                     {props.errors.imeTima && props.touched.imeTima ? (
                         <span style={errorMessageStyle}>
@@ -76,13 +86,21 @@ const TeamForm = (props) => {
                     </label>
                 </div>
                 <div className="col-75">
-                    <input
-                        type="textarea"
+                    <motion.textarea
+                        whileFocus={{ scale: 1.02 }}
                         name="daLiSteUcestvovali"
                         id="daLiSteUcestvovali"
                         value={props.values.daLiSteUcestvovali}
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
+                        style={
+                            props.errors.daLiSteUcestvovali &&
+                            props.touched.daLiSteUcestvovali
+                                ? {
+                                      border: "2px solid red",
+                                  }
+                                : {}
+                        }
                     />
                     {props.errors.daLiSteUcestvovali &&
                     props.touched.daLiSteUcestvovali ? (
@@ -100,13 +118,21 @@ const TeamForm = (props) => {
                     </label>
                 </div>
                 <div className="col-75">
-                    <input
-                        type="textarea"
+                    <motion.textarea
+                        whileFocus={{ scale: 1.02 }}
                         name="staVasMotivise"
                         id="staVasMotivise"
                         value={props.values.staVasMotivise}
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
+                        style={
+                            props.errors.staVasMotivise &&
+                            props.touched.staVasMotivise
+                                ? {
+                                      border: "2px solid red",
+                                  }
+                                : {}
+                        }
                     />
                     {props.errors.staVasMotivise &&
                     props.touched.staVasMotivise ? (
@@ -123,13 +149,21 @@ const TeamForm = (props) => {
                     </label>
                 </div>
                 <div className="col-75">
-                    <input
-                        type="textarea"
+                    <motion.textarea
+                        whileFocus={{ scale: 1.02 }}
                         name="inspiracija"
                         id="inspiracija"
                         value={props.values.inspiracija}
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
+                        style={
+                            props.errors.inspiracija &&
+                            props.touched.inspiracija
+                                ? {
+                                      border: "2px solid red",
+                                  }
+                                : {}
+                        }
                     />
                     {props.errors.inspiracija && props.touched.inspiracija ? (
                         <span style={errorMessageStyle}>
@@ -145,13 +179,22 @@ const TeamForm = (props) => {
                     </label>
                 </div>
                 <div className="col-75">
-                    <input
-                        type="textarea"
+                    <motion.input
+                        whileFocus={{ scale: 1.02 }}
+                        type="text"
                         name="timUTriReci"
                         id="timUTriReci"
                         value={props.values.timUTriReci}
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
+                        style={
+                            props.errors.timUTriReci &&
+                            props.touched.timUTriReci
+                                ? {
+                                      border: "2px solid red",
+                                  }
+                                : {}
+                        }
                     />
                     {props.errors.timUTriReci && props.touched.timUTriReci ? (
                         <span style={errorMessageStyle}>
@@ -163,9 +206,13 @@ const TeamForm = (props) => {
             <div className="checkbox-container">
                 <input
                     type="checkbox"
-                    name="pravila-takmicenja"
+                    name="pravilaTakmicenja"
                     id="pravila-takmicenja"
+                    value={props.values.pravilaTakmicenja}
+                    onChange={props.handleChange}
+                    onBlur={props.handleBlur}
                 />
+
                 <label for="pravila-takmicenja">
                     Slažem se sa{" "}
                     <a
@@ -177,6 +224,12 @@ const TeamForm = (props) => {
                     </a>
                 </label>
             </div>
+            {props.errors.pravilaTakmicenja &&
+            props.touched.pravilaTakmicenja ? (
+                <p style={{ ...errorMessageStyle, textAlign: "center" }}>
+                    {props.errors.pravilaTakmicenja}
+                </p>
+            ) : null}
         </div>
     );
 };

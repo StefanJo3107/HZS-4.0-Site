@@ -55,6 +55,7 @@ const PrijavaRender = () => {
                 staVasMotivise: "",
                 inspiracija: "",
                 timUTriReci: "",
+                pravilaTakmicenja: "",
             }}
             initialTouched={{
                 clanovi: [
@@ -97,6 +98,7 @@ const PrijavaRender = () => {
                 staVasMotivise: "",
                 inspiracija: "",
                 timUTriReci: "",
+                pravilaTakmicenja: "",
             }}
             initialValues={{
                 clanovi: [
@@ -134,11 +136,12 @@ const PrijavaRender = () => {
                     },
                 ],
                 imeTima: "",
-                kakoSteSaznali: "",
+                kakoSteSaznali: "drustvene-mreze",
                 daLiSteUcestvovali: "",
                 staVasMotivise: "",
                 inspiracija: "",
                 timUTriReci: "",
+                pravilaTakmicenja: false,
             }}
             onSubmit={(values) => {
                 console.log("form submitted");
@@ -243,7 +246,9 @@ const PrijavaRender = () => {
                 if (!values.timUTriReci) {
                     errors.timUTriReci = "Izvini, ovo polje je obavezno!";
                 }
-
+                if (!values.pravilaTakmicenja)
+                    errors.pravilaTakmicenja =
+                        "Moraš se složiti sa pravilima takmičenja!";
                 return errors;
             }}
         >
