@@ -1,6 +1,6 @@
-@import '../../global.scss';
+@import "../../global.scss";
 @mixin text-style($size: 2rem, $weight: 400) {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: #ffffff;
   font-size: $size;
   font-weight: $weight;
@@ -8,19 +8,31 @@
 
 .timer {
   background-color: $pozadina_tamna;
-  min-height: 70vh;
-  // @include box-center(column, space-around);
+  min-height: 100vh;
   align-items: left;
-
   .timer-wrapper {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: 12vw;
+    @include box-center(column, center);
+    align-items: flex-start;
     .timer-naslov {
       @include text-style(3rem, 700);
-      padding: 2rem 10rem 2rem 4rem;
+      width: 85%;
+      margin-top: 1.8rem;
+      font-size: 2.4rem;
     }
     .timer-podnaslov {
+      margin-top: 2rem;
       @include text-style(1rem, 400);
-      padding: 2rem 10rem 2rem 4rem;
+      width: 85%;
     }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .timer-wrapper {
+    align-items: center !important;
   }
 }
 
@@ -29,6 +41,10 @@
     @include box-center(column, center);
     .timer-naslov {
       @include text-style(1rem, 400);
+      padding: 2rem !important;
+    }
+    .timer-podnaslov {
+      padding: 2rem !important;
     }
   }
 }

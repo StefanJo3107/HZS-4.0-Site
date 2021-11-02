@@ -1,19 +1,23 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .clock-wrapper {
   background-color: #00ffa3;
   color: #0d1117;
   @include box-center(row, space-around);
-  min-height: 12rem;
+  min-height: 9rem;
   border-radius: 0 2rem 2rem 0;
   width: 70%;
   margin-top: 3rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 3rem;
-
+  margin-top: 4.5rem;
   .clock-element {
     @include box-center(column, center);
+    p:last-child {
+      margin-top: 0.7rem;
+      font-size: 1.6rem;
+    }
   }
 }
 
