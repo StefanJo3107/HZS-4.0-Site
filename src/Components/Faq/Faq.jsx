@@ -84,7 +84,7 @@ const Faq = (props) => {
                             ideje i finalnog rešenja stručnom žiriju, nakon čega
                             žiri ima 5 minuta za dodatna pitanja koja postavlja
                             timu. Posle završenih prezentacija svih timova, žiri
-                            na privatnom sastanku odlučuje pobednika takmičenja.
+                            bira pobednike takmičenja.
                         </p>
                     }
                 />

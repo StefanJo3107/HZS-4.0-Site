@@ -1,41 +1,41 @@
 @import "../../global.scss";
 
 form {
-  margin: 1rem 2rem;
+    margin: 1rem 2rem;
 }
 
 .submit-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 #prosledi {
-  padding: 2rem 10rem;
-  font-weight: 600;
-  font-size: 2rem;
-  border-radius: 18px;
-  background-color: $dugme_tamna;
-  color: $tekst_bela;
-  border: none;
-  cursor: pointer;
+    padding: 2rem 10rem;
+    font-weight: 600;
+    font-size: 2rem;
+    border-radius: 18px;
+    background-color: $dugme_tamna;
+    color: $tekst_bela;
+    border: none;
+    cursor: pointer;
 }
 
 .button-wrapper-prijava {
-  width: 100%;
-  @include box-center;
-  button {
-    width: 20rem;
-    height: 5rem;
-    margin: 2rem 0;
-    font-size: 2.2rem;
-  }
+    width: 100%;
+    @include box-center;
+    button {
+        width: 20rem;
+        height: 5rem;
+        margin: 2rem 0;
+        font-size: 2.2rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
-  #prosledi {
-    padding: 1.25rem 6.25rem;
-    font-size: 1.25rem;
-  }
+    #prosledi {
+        padding: 1.25rem 6.25rem;
+        font-size: 1.25rem;
+    }
 }

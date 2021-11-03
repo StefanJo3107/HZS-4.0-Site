@@ -12,6 +12,7 @@ const PartneriSlider = (props) => {
                 width={props.width}
                 height={props.height}
                 pozadina={partner.pozadina}
+                link={partner.link}
             />
         );
     });

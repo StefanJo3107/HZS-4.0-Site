@@ -209,20 +209,19 @@ const Envelope = () => {
                                                 values.poruka
                                             ) {
                                                 try {
-                                                    axios.defaults.headers.post[
-                                                        "Content-Type"
-                                                    ] =
-                                                        "application/json;charset=utf-8";
-                                                    axios.defaults.headers.post[
-                                                        "Access-Control-Allow-Origin"
-                                                    ] = "*";
                                                     await axios.post(
-                                                        "http://104.40.203.28:3001/pitanje",
+                                                        "https://hzs-backend.herokuapp.com/pitanje",
                                                         {
                                                             email: values.email,
                                                             ime: values.ime,
                                                             pitanje:
                                                                 values.poruka,
+                                                        },
+                                                        {
+                                                            headers: {
+                                                                "Access-Control-Allow-Origin":
+                                                                    "*",
+                                                            },
                                                         }
                                                     );
                                                     document.querySelector(
