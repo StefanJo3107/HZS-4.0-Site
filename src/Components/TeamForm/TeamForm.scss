@@ -3,111 +3,111 @@
 textarea,
 input[type="text"],
 select {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  box-sizing: border-box;
-  resize: vertical;
-  background-color: #c8ffeb;
-  outline: none;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #c8ffeb;
+    outline: none;
 }
 
 input[type="checkbox"] {
-  margin: 0.5rem;
-  width: 25px;
-  height: 25px;
+    margin: 0.5rem;
+    width: 25px;
+    height: 25px;
 }
 
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  color: $tekst_tamna;
-  font-size: 1.25rem;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: $tekst_tamna;
+    font-size: 1.25rem;
 }
 
 .tim-forma-container {
-  margin-top: 5rem;
-  border-radius: 5px;
-  background-color: $pozadina_tamna;
+    margin-top: 5rem;
+    border-radius: 5px;
+    background-color: $pozadina_tamna;
 }
 
 .tim-forma-naslov {
-  color: $naslov_tamna;
-  font-size: 3.5rem;
-  margin: 0 2rem 4rem;
+    color: $naslov_tamna;
+    font-size: 3.5rem;
+    margin: 0 2rem 4rem;
 }
 
 .tim-forma-naslov-border {
-  border-bottom: 10px solid $dugme_tamna;
-  padding-bottom: 10px;
+    border-bottom: 10px solid $dugme_tamna;
+    padding-bottom: 10px;
 }
 
 #daLiSteUcestvovali,
 #staVasMotivise,
 #inspiracija {
-  height: 100px;
+    height: 100px;
 }
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
 }
 
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }
 
 .row {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .pravila-takmicenja-link {
-  text-decoration: underline;
-  color: $dugme_tamna;
+    text-decoration: underline;
+    color: $dugme_tamna;
 }
 
 .checkbox-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 0rem;
 }
 
 @media screen and (max-width: 600px) {
-  .col-25,
-  .col-75 {
-    width: 100%;
-    margin-top: 0;
-  }
+    .col-25,
+    .col-75 {
+        width: 100%;
+        margin-top: 0;
+    }
 
-  label {
-    font-size: 1rem;
-  }
+    label {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
-  .tim-forma-naslov {
-    font-size: 2.5rem;
-  }
+    .tim-forma-naslov {
+        font-size: 2.5rem;
+    }
 }
 
 @media screen and (max-width: 392px) {
-  .tim-forma-naslov {
-    font-size: 1.75rem;
-  }
+    .tim-forma-naslov {
+        font-size: 1.75rem;
+    }
 
-  input[type="checkbox"] {
-    width: 50px;
-    height: 50px;
-  }
+    input[type="checkbox"] {
+        width: 50px;
+        height: 50px;
+    }
 }

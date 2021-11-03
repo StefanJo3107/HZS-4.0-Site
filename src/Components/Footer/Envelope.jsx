@@ -217,7 +217,7 @@ const Envelope = () => {
                                                         "Access-Control-Allow-Origin"
                                                     ] = "*";
                                                     await axios.post(
-                                                        "http://104.40.203.28:3001/pitanje",
+                                                        "https://hzs-backend.herokuapp.com/pitanje",
                                                         {
                                                             email: values.email,
                                                             ime: values.ime,

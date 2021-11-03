@@ -7,7 +7,7 @@ const UserForm = (props) => {
         margin: "0.25rem",
     };
     return (
-        <div className="user-form-container">
+        <div className="user-form-container" style={{ marginBottom: "4rem" }}>
             <div className="row">
                 <div className="col-25">
                     <label for="ime">Ime i prezime:</label>
@@ -22,6 +22,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].ime &&
                             props.touched.clanovi[props.indeks].ime
                                 ? {
@@ -54,6 +55,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].grad &&
                             props.touched.clanovi[props.indeks].grad
                                 ? {
@@ -85,6 +87,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].srednja &&
                             props.touched.clanovi[props.indeks].srednja
                                 ? {
@@ -116,6 +119,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].razred &&
                             props.touched.clanovi[props.indeks].razred
                                 ? {
@@ -147,6 +151,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].brojTelefona &&
                             props.touched.clanovi[props.indeks].brojTelefona
                                 ? {
@@ -178,6 +183,7 @@ const UserForm = (props) => {
                         onChange={props.handleChange}
                         onBlur={props.handleBlur}
                         style={
+                            props.errors.clanovi &&
                             props.errors.clanovi[props.indeks].email &&
                             props.touched.clanovi[props.indeks].email
                                 ? {
