@@ -191,16 +191,17 @@ const PrijavaRender = () => {
                 pravilaTakmicenja: false,
             }}
             onSubmit={async (values) => {
-                axios.defaults.headers.post["Content-Type"] =
-                    "application/json;charset=utf-8";
-                axios.defaults.headers.post["Access-Control-Allow-Origin"] =
-                    "*";
                 const { pravilaTakmicenja, ...postValues } = values;
                 postValues.clanovi = postValues.clanovi.slice(0, numberOfUsers);
                 console.log(JSON.stringify(postValues));
                 await axios.post(
                     "https://hzs-backend.herokuapp.com/prijava",
-                    postValues
+                    postValues,
+                    {
+                        headers: {
+                            "Access-Control-Allow-Origin": "*",
+                        },
+                    }
                 );
                 openModal();
             }}
