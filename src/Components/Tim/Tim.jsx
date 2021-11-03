@@ -139,7 +139,9 @@ const Tim = (props) => {
                                 projekta:
                                 <br />
                                 <br />
-                                <strong>„A jel će biti para za ovo?” 😬</strong>
+                                <strong>
+                                    „A je l' će biti para za ovo?” 😬
+                                </strong>
                             </p>
                         }
                     />

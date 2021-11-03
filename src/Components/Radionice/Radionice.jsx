@@ -16,6 +16,8 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiPostman } from "react-icons/si";
 import VisibilitySensor from "react-visibility-sensor";
+import Pavle from "../../Assets/Images/Pavle.jpg";
+import VladimirT from "../../Assets/Images/VladimirT.jpg";
 
 const Radionice = (props) => {
     const radioniceContent = [
@@ -23,11 +25,10 @@ const Radionice = (props) => {
             nazivRadionice: "Back-end",
             opisRadionice:
                 "Ova radionica ce Vam pomoci da shvatite kako funkcionise rad sa bazom",
-            imePredavaca: "Zuhlke radnik 1",
+            imePredavaca: "Pavle Prica",
             oPredavacu:
-                "Zuhlke radnik 1 je nas najbolji predavac van fonisa. Zuhlke radnik 1 je nas najbolji predavac van fonisa. ",
-            slikaPredavaca:
-                "https://avatars.githubusercontent.com/u/53167193?v=4",
+                "Pavle je Cloud inženjer i deo Zühlke Global Delivery Centre-a. Bavi se aplikacijama baziranim na Cloud-u i fokus je na tehnologijama kao što su Java, Kotlin, Spring, Amazon Web Services. Pored toga, veliki je geek i voli da trenira.",
+            slikaPredavaca: Pavle,
             icons: [
                 <FaNodeJs size={50} color="#7fae7b" />,
                 <SiMongodb size={50} color="#51a74b" />,
@@ -38,11 +39,10 @@ const Radionice = (props) => {
             nazivRadionice: "Front-end",
             opisRadionice:
                 "Ova radionica ce Vam pomoci da shvatite kako mozete dizajnirati web stranice i postici veliku interaktivnost sa krajnjim korisnicima",
-            imePredavaca: "Vladimir Lazarevic",
+            imePredavaca: "Vladimir Tomić",
             oPredavacu:
                 "Vladimir Lazarevic je nas najbolji predavac u fonisu. Vladimir Lazarevic je nas najbolji predavac u fonisu. ",
-            slikaPredavaca:
-                "https://avatars.githubusercontent.com/u/53167193?v=4",
+            slikaPredavaca: VladimirT,
             icons: [
                 <FaHtml5 size={50} color="#dd4b25" />,
                 <FaCss3Alt size={50} color="#1a6fb4" />,

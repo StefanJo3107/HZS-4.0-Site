@@ -193,7 +193,6 @@ const PrijavaRender = () => {
             onSubmit={async (values) => {
                 const { pravilaTakmicenja, ...postValues } = values;
                 postValues.clanovi = postValues.clanovi.slice(0, numberOfUsers);
-                console.log(JSON.stringify(postValues));
                 await axios.post(
                     "https://hzs-backend.herokuapp.com/prijava",
                     postValues,

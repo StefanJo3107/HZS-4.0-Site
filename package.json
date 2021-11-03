@@ -1,6 +1,6 @@
 {
     "name": "hzs-site",
-    "homepage": "https://stefanjo3107.github.io/HZS-4.0-Site",
+    "homepage": "https://hzs.fonis.rs/4.0",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

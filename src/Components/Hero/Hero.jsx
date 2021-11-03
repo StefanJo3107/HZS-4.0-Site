@@ -46,9 +46,9 @@ const Hero = (props) => {
                         11. i 12. decembar
                     </h3>
                     <div className="description">
-                        Želiš da stekneš nova programerska znanja i praktično ih
-                        primeniš? HZS ti nudi priliku da kroz takmičenje osetiš
-                        kako je to raditi u timu programera i kreirati pravo
+                        Želiš da pokažeš svoja programerska znanja i praktično
+                        ih primeniš? HZS ti nudi priliku da kroz takmičenje
+                        osetiš kako je to raditi u timu i kreirati pravo
                         softversko rešenje.
                         <br />
                         Prijave za Hakaton su otvorene od{" "}

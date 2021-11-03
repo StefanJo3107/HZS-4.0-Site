@@ -49,12 +49,10 @@ const Timer = (props) => {
                         Do zatvaranja prijava je ostalo još malo!
                     </p>
                     <p className="timer-podnaslov">
-                        Sat brzo otkucava. Požuri i prijavi se na ovogodišnji
-                        Hakaton za srednjoškolce! Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Culpa pariatur sint fuga
-                        tempora veniam harum ratione quisquam aspernatur. Vero,
-                        facilis! Tenetur, quidem quo? Nobis veritatis
-                        repudiandae ex, soluta ipsam expedita.
+                        Sat brzo otkucava. Ne propusti priliku da sa svojim
+                        prijateljima osetiš atmosferu HZS-a 4.0. Požuri i
+                        prijavi se na ovogodišnji Hakaton za srednjoškolce do
+                        18. novembra!
                     </p>
                 </div>
             )}

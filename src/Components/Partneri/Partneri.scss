@@ -12,10 +12,14 @@
         @include box-center(column, center);
     }
 
-    .generalniNaslov,
+    .generalniNaslov {
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
     .naturalniNaslov,
     .medijskiNaslov {
-        margin-top: 2rem;
+        margin-top: 2.2rem;
         font-size: 1.8rem;
         text-align: center;
     }

@@ -25,10 +25,12 @@ const PrijavaTop = () => {
                 >
                     <h1 className="prijava-title">Prijava</h1>
                     <div className="prijava-opis">
-                        Sat brzo otkucava, požuri i prijavi se na ovogodišnji
-                        Hakaton za srednjoškolce. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
+                        Prijave su otvorene do <strong>18.11</strong>, zato
+                        požuri i prijavi se!
+                        <br />
+                        Nakon zatvaranja prijava ćemo te kontaktirati putem
+                        mejla gde ćemo ti dostaviti sve neophodne informacije o
+                        daljem toku selekcije.
                     </div>
                 </motion.div>
             </div>
