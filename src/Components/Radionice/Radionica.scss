@@ -34,7 +34,7 @@
         margin-top: 2rem;
         height: 80%;
         @include box-center($direction: column);
-        width: 30%;
+        width: 40%;
         background: #202124;
         border-radius: 1rem;
         box-shadow: 0 2px 15px #000;
@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 890px) {
     .predavac {
-        width: 80% !important;
+        width: 90% !important;
         opacity: 1 !important;
         &.hide {
             display: none !important;
