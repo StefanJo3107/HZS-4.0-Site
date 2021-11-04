@@ -15,7 +15,8 @@ import Bilijar from "../../Assets/Images/Partneri/bilijar.png";
 import Dnevnik from "../../Assets/Images/Partneri/dnevnik.jpg";
 import Kampster from "../../Assets/Images/Partneri/kampster.png";
 import Muzej from "../../Assets/Images/Partneri/muzej.jpg";
-import Apartmani from "../../Assets/Images/Partneri/apartmani.jfif";
+import Apartmani from "../../Assets/Images/Partneri/apartmani.jpg";
+import Escape from "../../Assets/Images/Partneri/escape.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PartneriSlider from "./PartneriSlider";
@@ -184,8 +185,14 @@ const Partneri = (props) => {
         {
             partnerSlika: Apartmani,
             partnerIme: "Apartman BB Zlatibor",
-            pozadina: "#fff",
+            pozadina: "#222327",
             link: "https://www.instagram.com/apartman_bb_zlatibor/",
+        },
+        {
+            partnerSlika: Escape,
+            partnerIme: "Escape Game",
+            pozadina: "#202020",
+            link: "https://escapegame.rs/",
         },
     ];
     return (

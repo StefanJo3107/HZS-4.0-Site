@@ -57,7 +57,7 @@ const Radionice = (props) => {
                 "Koliko je važno dobro kreirati softversko rešenje, toliko je bitno i znati prezentovati ga. Kroz iskustva drugih koji su kroz ovakva takmičenja prošli više puta, učesnici će saznati kako i o čemu sve treba da razmišljaju da bi predstavili svoje rešenje na pravi način.",
             imePredavaca: "Mateja Ivanović",
             oPredavacu:
-                "Mateja je alumni član FONIS-a, apsolvent na Fakultetu organizacionih nauka i najviše se pronalazi u programiranju full stack aplikacija koristeći NodeJS i React. Voli da učestvuje na hakatonima i iza sebe ima osvojeno i prvo i drugo mesto na Fon Hakatonu. ",
+                "Mateja je alumni član FONIS-a, apsolvent na Fakultetu organizacionih nauka i najviše se pronalazi u programiranju full stack aplikacija koristeći NodeJS i React. Voli da učestvuje na hakatonima i iza sebe ima osvojeno i prvo i drugo mesto na FON Hakatonu. ",
             slikaPredavaca: Mateja,
         },
         {
