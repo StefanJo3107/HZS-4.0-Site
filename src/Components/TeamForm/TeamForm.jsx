@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import "./TeamForm.scss";
 import SectionTitle from "./../Utilities/SectionTitle";
+import Pdf from "../../Assets/pravila.pdf";
 
 const TeamForm = (props) => {
     const errorMessageStyle = {
@@ -215,8 +216,9 @@ const TeamForm = (props) => {
                     Slažem se sa{" "}
                     <a
                         className="pravila-takmicenja-link"
-                        href="../../Assets/pravila.pdf"
+                        href={Pdf}
                         target="_blank"
+                        rel="noreferrer"
                     >
                         pravilima takmičenja.
                     </a>

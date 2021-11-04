@@ -7,41 +7,43 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import SingleTab from "./SingleTab";
 import Radionica from "./Radionica";
 import {
-    FaNodeJs,
+    FaJava,
     FaHtml5,
     FaCss3Alt,
     FaJs,
     FaGitAlt,
     FaGithub,
 } from "react-icons/fa";
-import { SiMongodb, SiPostman } from "react-icons/si";
+import { SiPostman, SiSpring } from "react-icons/si";
 import VisibilitySensor from "react-visibility-sensor";
 import Pavle from "../../Assets/Images/Pavle.jpg";
 import VladimirT from "../../Assets/Images/VladimirT.jpg";
+import Dzeca from "../../Assets/Images/Dzeca.jpg";
+import Mateja from "../../Assets/Images/Mateja.jpeg";
 
 const Radionice = (props) => {
     const radioniceContent = [
         {
             nazivRadionice: "Back-end",
             opisRadionice:
-                "Ova radionica ce Vam pomoci da shvatite kako funkcionise rad sa bazom",
+                "Rad u programskom jeziku Java i njegovom framework-u Spring biće glavna tema ove radionice. Učesnicima će biti objašnjen rad sa bazom podataka i kreiranje API-ja.",
             imePredavaca: "Pavle Prica",
             oPredavacu:
                 "Pavle je Cloud inženjer i deo Zühlke Global Delivery Centre-a. Bavi se aplikacijama baziranim na Cloud-u i fokus je na tehnologijama kao što su Java, Kotlin, Spring, Amazon Web Services. Pored toga, veliki je geek i voli da trenira.",
             slikaPredavaca: Pavle,
             icons: [
-                <FaNodeJs size={50} color="#7fae7b" />,
-                <SiMongodb size={50} color="#51a74b" />,
+                <FaJava size={50} color="#f09218" />,
+                <SiSpring size={50} color="#5cb230" />,
                 <SiPostman size={50} color="#f76935" />,
             ],
         },
         {
             nazivRadionice: "Front-end",
             opisRadionice:
-                "Ova radionica ce Vam pomoci da shvatite kako mozete dizajnirati web stranice i postici veliku interaktivnost sa krajnjim korisnicima",
+                "Radionica je osmišljena tako da učesnike uputi kako da dizajniraju i izrade svoje web stranice. Učesnici će imati priliku da se upoznaju sa HTML-om, CSS-om i JavaScript-om.",
             imePredavaca: "Vladimir Tomić",
             oPredavacu:
-                "Vladimir Lazarevic je nas najbolji predavac u fonisu. Vladimir Lazarevic je nas najbolji predavac u fonisu. ",
+                "Vladimir je u kompaniji Zühlke Engineering od novembra 2016. godine, a trenutno radi na poziciji Advanced Software Engineer. Oblasti interesovanja su mu Spring ekosistem, React, Flutter, Solution Design, dok se u slobodno vreme bavi fotografijom. ",
             slikaPredavaca: VladimirT,
             icons: [
                 <FaHtml5 size={50} color="#dd4b25" />,
@@ -52,22 +54,20 @@ const Radionice = (props) => {
         {
             nazivRadionice: "Soft skills",
             opisRadionice:
-                "Ova radionica ce Vam pomoci da shvatite kako funkcionise rad sa bazom",
-            imePredavaca: "Boris Vajagic",
+                "Koliko je važno dobro kreirati softversko rešenje, toliko je bitno i znati prezentovati ga. Kroz iskustva drugih koji su kroz ovakva takmičenja prošli više puta, učesnici će saznati kako i o čemu sve treba da razmišljaju da bi predstavili svoje rešenje na pravi način.",
+            imePredavaca: "Mateja Ivanović",
             oPredavacu:
-                "Boris Vajagic je nas najbolji predavac u fonisu. Boris Vajagic je nas najbolji predavac u fonisu.",
-            slikaPredavaca:
-                "https://media-exp1.licdn.com/dms/image/C4E03AQEESt2TxgcwDQ/profile-displayphoto-shrink_400_400/0/1618985618779?e=1640822400&v=beta&t=HKCgmxGh9u-kN0MY08vGHXp2uLEXrFOxYMWiTJkbuww",
+                "Mateja je alumni član FONIS-a, apsolvent na Fakultetu organizacionih nauka i najviše se pronalazi u programiranju full stack aplikacija koristeći NodeJS i React. Voli da učestvuje na hakatonima i iza sebe ima osvojeno i prvo i drugo mesto na Fon Hakatonu. ",
+            slikaPredavaca: Mateja,
         },
         {
             nazivRadionice: "Git",
             opisRadionice:
-                "Ova radionica ce Vam pomoci da shvatite kako funkcionise rad sa bazom",
+                "Cilj radionice je da upozna učesnike sa Git-om, najkorišćenijim distribuiranim sistemom za kontrolu verzije. Git uveliko olakšava timski rad na projektu, a popularnost je stekao i zato što je brz, besplatan i što podržava praćenje promena, lokalno i u zajedničkom okruženju.",
             imePredavaca: "Jelena Milev",
             oPredavacu:
-                "Jelena Milev je nas najbolji predavac u fonisu. Jelena Milev je nas najbolji predavac u fonisu.",
-            slikaPredavaca:
-                "https://avatars.githubusercontent.com/u/36775292?v=4",
+                "Jelena je alumni član FONIS-a i već nešto više od godinu dana Junior Software Developer u kompaniji Levi9. Bavi se razvojem veb aplikacija korišćenjem Spring i Angular framework-a. U slobodno vreme prati ostvarenja sedme umetnosti i stand up nastupe naših komičara.",
+            slikaPredavaca: Dzeca,
             icons: [
                 <FaGitAlt size={50} color="#e84e31" />,
                 <FaGithub size={50} color="#1a1e22" />,

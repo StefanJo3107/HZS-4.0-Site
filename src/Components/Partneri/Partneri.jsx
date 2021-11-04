@@ -15,6 +15,7 @@ import Bilijar from "../../Assets/Images/Partneri/bilijar.png";
 import Dnevnik from "../../Assets/Images/Partneri/dnevnik.jpg";
 import Kampster from "../../Assets/Images/Partneri/kampster.png";
 import Muzej from "../../Assets/Images/Partneri/muzej.jpg";
+import Apartmani from "../../Assets/Images/Partneri/apartmani.jfif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PartneriSlider from "./PartneriSlider";
@@ -179,6 +180,12 @@ const Partneri = (props) => {
             partnerIme: "Muzej afričke umetnosti",
             pozadina: "#fff",
             link: "http://www.mau.rs/en/",
+        },
+        {
+            partnerSlika: Apartmani,
+            partnerIme: "Apartman BB Zlatibor",
+            pozadina: "#fff",
+            link: "https://www.instagram.com/apartman_bb_zlatibor/",
         },
     ];
     return (

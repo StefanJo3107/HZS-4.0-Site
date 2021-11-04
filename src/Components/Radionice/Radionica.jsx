@@ -58,7 +58,7 @@ const Radionica = (props) => {
                                 setShowInfo(false);
                             }}
                         >
-                            O predavacu
+                            O predavaču
                         </CustomButton>
                     </motion.div>
                     <motion.div

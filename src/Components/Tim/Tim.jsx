@@ -23,7 +23,7 @@ const Tim = (props) => {
         slidesToScroll: 1,
         autoplay: true,
         swipeToSlide: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 2000,
         centerPadding: "60px",
         responsive: [
             {
