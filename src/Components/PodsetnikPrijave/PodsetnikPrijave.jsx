@@ -50,11 +50,11 @@ const PodsetnikPrijave = () => {
                             Zato ne čekaj, već popuni formu na sajtu i postani
                             deo Hakatona za srednjoškolce 4.0!
                         </p>
-                        <Link to="/prijava">
+                        {/* <Link to="/prijava">
                             <CustomButton variant="bela">
                                 Prijavi se
                             </CustomButton>
-                        </Link>
+                        </Link> */}
                     </div>
                     <VisibilitySensor
                         onChange={(isVisible) => {

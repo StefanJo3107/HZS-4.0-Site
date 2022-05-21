@@ -51,19 +51,19 @@ const Hero = (props) => {
                         osetiš kako je to raditi u timu i kreirati pravo
                         softversko rešenje.
                         <br />
-                        Prijave za Hakaton su otvorene od{" "}
-                        <strong>4. novembra</strong>, zato okupi svoj tim i
+                        Prijave za Hakaton su otvorene do{" "}
+                        <strong>18. novembra</strong>, zato okupi svoj tim i
                         pošalji prijavu!
                     </div>
                     <div className="buttons-wrapper">
-                        <Link to="/prijava" style={{ flex: 3 }}>
+                        {/* <Link to="/prijava" style={{ flex: 3 }}>
                             <CustomButton
                                 variant="tamna"
                                 styleButton={{ width: "95%" }}
                             >
                                 Prijavi se
                             </CustomButton>
-                        </Link>
+                        </Link> */}
                         <CustomButton
                             variant="tamna2"
                             onClick={() => scrollFunc(props.toSection)}

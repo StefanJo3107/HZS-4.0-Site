@@ -46,7 +46,7 @@ const Home = () => {
                 mainLinkName="Prijavi se"
             />
             <Hero toSection={oProjektuSection} />
-            <Timer timerInfo={true} />
+            {/* <Timer timerInfo={true} /> */}
             <OProjektu section={oProjektuSection} />
             <Radionice section={radioniceSection} />
             <Agenda section={agendaSection} />

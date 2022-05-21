@@ -26,10 +26,10 @@ const Radionice = (props) => {
         {
             nazivRadionice: "Back-end",
             opisRadionice:
-                "Rad u programskom jeziku Java i njegovom framework-u Spring biće glavna tema ove radionice. Učesnicima će biti objašnjen rad sa bazom podataka i kreiranje API-ja.",
+                "Na back-end radionici učesnici će saznati šta mogu ostvariti kroz Spring, njegov ekosistem i za šta on nudi rešenje. Programski jezik koji će biti korišćen je Java, a kreiraće se back-end aplikacija koja će se koristiti i na front-end radionici.",
             imePredavaca: "Pavle Prica",
             oPredavacu:
-                "Pavle je Cloud inženjer i deo Zühlke Global Delivery Centre-a. Bavi se aplikacijama baziranim na Cloud-u i fokus je na tehnologijama kao što su Java, Kotlin, Spring, Amazon Web Services. Pored toga, veliki je geek i voli da trenira.",
+                "Pavle je Cloud inženjer i deo Zühlke tima. Bavi se aplikacijama baziranim na Cloud-u i fokus je na tehnologijama kao što su Java, Kotlin, Spring, Amazon Web Services. Pored toga, veliki je geek i voli da trenira.",
             slikaPredavaca: Pavle,
             icons: [
                 <FaJava size={50} color="#f09218" />,
@@ -40,10 +40,10 @@ const Radionice = (props) => {
         {
             nazivRadionice: "Front-end",
             opisRadionice:
-                "Radionica je osmišljena tako da učesnike uputi kako da dizajniraju i izrade svoje web stranice. Učesnici će imati priliku da se upoznaju sa HTML-om, CSS-om i JavaScript-om.",
+                "Najveći deo ove radionice biće posvećen React tehnologiji. Uz pomoć nje će biti napravljen front-end jednostavne TO-DO aplikacije, koja će u pozadini koristiti Spring aplikaciju razvijenu na back-end radionici.",
             imePredavaca: "Vladimir Tomić",
             oPredavacu:
-                "Vladimir je u kompaniji Zühlke Engineering od novembra 2016. godine, a trenutno radi na poziciji Advanced Software Engineer. Oblasti interesovanja su mu Spring ekosistem, React, Flutter, Solution Design, dok se u slobodno vreme bavi fotografijom. ",
+                "Vladimir je u kompaniji Zühlke od novembra 2016. godine, a trenutno radi na poziciji Advanced Software Engineer. Oblasti interesovanja su mu Spring ekosistem, React, Flutter, Solution Design, dok se u slobodno vreme bavi fotografijom. ",
             slikaPredavaca: VladimirT,
             icons: [
                 <FaHtml5 size={50} color="#dd4b25" />,
@@ -57,7 +57,7 @@ const Radionice = (props) => {
                 "Koliko je važno dobro kreirati softversko rešenje, toliko je bitno i znati prezentovati ga. Kroz iskustva drugih koji su kroz ovakva takmičenja prošli više puta, učesnici će saznati kako i o čemu sve treba da razmišljaju da bi predstavili svoje rešenje na pravi način.",
             imePredavaca: "Mateja Ivanović",
             oPredavacu:
-                "Mateja je alumni član FONIS-a, apsolvent na Fakultetu organizacionih nauka i najviše se pronalazi u programiranju full stack aplikacija koristeći NodeJS i React. Voli da učestvuje na hakatonima i iza sebe ima osvojeno i prvo i drugo mesto na FON Hakatonu. ",
+                "Mateja je alumni član FONIS-a, apsolvent na Fakultetu organizacionih nauka i najviše se pronalazi u programiranju full stack aplikacija koristeći NodeJS i React. Voli da učestvuje na hakatonima i iza sebe ima osvojeno prvo i drugo mesto na FON Hakatonu. ",
             slikaPredavaca: Mateja,
         },
         {

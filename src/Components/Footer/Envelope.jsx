@@ -216,12 +216,6 @@ const Envelope = () => {
                                                             ime: values.ime,
                                                             pitanje:
                                                                 values.poruka,
-                                                        },
-                                                        {
-                                                            headers: {
-                                                                "Access-Control-Allow-Origin":
-                                                                    "*",
-                                                            },
                                                         }
                                                     );
                                                     document.querySelector(

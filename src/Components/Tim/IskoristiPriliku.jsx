@@ -18,11 +18,11 @@ const IskoristiPriliku = () => {
                     </p>
                 </div>
             </div>
-            <div className="right">
+            {/* <div className="right">
                 <Link to="/prijava">
                     <CustomButton variant="tamna">Prijavi se</CustomButton>
                 </Link>
-            </div>
+            </div> */}
         </div>
     );
 };

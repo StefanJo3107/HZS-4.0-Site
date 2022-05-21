@@ -6,16 +6,16 @@ import Error from "./Pages/Error";
 import ScrollToTop from "./Components/Utilities/ScrollToTop";
 
 const App = () => {
-  return (
-    <>
-      <ScrollToTop />
-      <Switch>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="/prijava" exact component={Prijava}></Route>
-        <Route path="*" component={Error}></Route>
-      </Switch>
-    </>
-  );
+    return (
+        <>
+            <ScrollToTop />
+            <Switch>
+                <Route path="/" exact component={Home}></Route>
+                {/* <Route path="/prijava" exact component={Prijava}></Route> */}
+                <Route path="*" component={Error}></Route>
+            </Switch>
+        </>
+    );
 };
 
 export default App;

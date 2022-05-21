@@ -31,7 +31,7 @@ const Navbar = (props) => {
                 </li>
             ))}
             <li>
-                <Link to={`/${props.mainLink}`}>{props.mainLinkName}</Link>
+                {/*     <Link to={`/${props.mainLink}`}>{props.mainLinkName}</Link> */}
             </li>
         </ul>
     );

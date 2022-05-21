@@ -17,6 +17,15 @@ import Kampster from "../../Assets/Images/Partneri/kampster.png";
 import Muzej from "../../Assets/Images/Partneri/muzej.jpg";
 import Apartmani from "../../Assets/Images/Partneri/apartmani.jpg";
 import Escape from "../../Assets/Images/Partneri/escape.png";
+import Gorana from "../../Assets/Images/Partneri/gorana.png";
+import Werelock from "../../Assets/Images/Partneri/werelock.jpg";
+import Digitec from "../../Assets/Images/Partneri/digitec.jpg";
+import Lilly from "../../Assets/Images/Partneri/lilly.png";
+import Medved from "../../Assets/Images/Partneri/medved.png";
+import Atlantic from "../../Assets/Images/Partneri/atlantic.png";
+import Stark from "../../Assets/Images/Partneri/stark.png";
+import Kolacic from "../../Assets/Images/Partneri/kolacic.png";
+import Moritz from "../../Assets/Images/Partneri/moritz.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PartneriSlider from "./PartneriSlider";
@@ -144,6 +153,12 @@ const Partneri = (props) => {
             pozadina: "#ffed00",
             link: "https://www.raiffeisenbank.rs/",
         },
+        {
+            partnerSlika: Digitec,
+            partnerIme: "Digitec",
+            pozadina: "#fff",
+            link: "https://www.digitec.rs/reklamni_materijali",
+        },
     ];
     const naturalni = [
         {
@@ -193,6 +208,54 @@ const Partneri = (props) => {
             partnerIme: "Escape Game",
             pozadina: "#202020",
             link: "https://escapegame.rs/",
+        },
+        {
+            partnerSlika: Gorana,
+            partnerIme: "Gorana | Nauči da učiš",
+            pozadina: "#fff",
+            link: "https://www.instagram.com/gorana.belic.ispanovic/",
+        },
+        {
+            partnerSlika: Werelock,
+            partnerIme: "Werelock Shop",
+            pozadina: "#0f0f0f",
+            link: "https://www.instagram.com/werelock.shop/",
+        },
+        {
+            partnerSlika: Lilly,
+            partnerIme: "Lilly",
+            pozadina: "#fff",
+            link: "https://www.lilly.rs/",
+        },
+        {
+            partnerSlika: Medved,
+            partnerIme: "Debeli medved",
+            pozadina: "#262262",
+            link: "https://www.corndog.rs/",
+        },
+        {
+            partnerSlika: Atlantic,
+            partnerIme: "Atlantic grupa",
+            pozadina: "#fff",
+            link: "https://www.atlanticgrupa.com/hr/",
+        },
+        {
+            partnerSlika: Stark,
+            partnerIme: "Štark",
+            pozadina: "#fff",
+            link: "https://javolimstark.rs/prodavnice/",
+        },
+        {
+            partnerSlika: Kolacic,
+            partnerIme: "Kolačić Sreće",
+            pozadina: "#fff",
+            link: "http://www.kolacicsrece.com/",
+        },
+        {
+            partnerSlika: Moritz,
+            partnerIme: "Moritz Eis",
+            pozadina: "#fff",
+            link: "https://www.moritzeis.rs/",
         },
     ];
     return (
