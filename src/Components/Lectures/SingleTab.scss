@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.browser-tab {
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  @include box-center($justify: space-between);
+  padding: 0 0.4rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  color: $text_white;
+  margin: 0 0.5rem;
+  background-color: transparent;
+  &.active {
+    background-color: #35363a;
+  }
+  .title-wrapper {
+    @include box-center;
+  }
+  .tab-title {
+    margin-left: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .browser-tab {
+    width: 7rem !important;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .browser-tab {
+    width: 10rem !important;
+    display: none;
+  }
+
+  .browser-tab.active {
+    display: flex;
+  }
+}

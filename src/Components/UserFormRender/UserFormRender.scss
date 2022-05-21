@@ -1,85 +1,85 @@
 @import "../../global.scss";
 
-select{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    color: $tekst_tamna;
-    font-size: 1.25rem;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: $text_white;
+  font-size: 1.25rem;
 }
 
 .user-form-render {
-    border-radius: 5px;
-    background-color: $pozadina_tamna;
-    padding: 20px;
-    margin-top: 3rem;
+  border-radius: 5px;
+  background-color: $bg_dark;
+  padding: 20px;
+  margin-top: 3rem;
 }
 
-.user-form-naslov {
-    color: $naslov_tamna;
-    font-size: 3.5rem;
-    margin: 0 2rem 4rem;
+.user-form-heading {
+  color: $heading_white;
+  font-size: 3.5rem;
+  margin: 0 2rem 4rem;
 }
 
-.user-form-naslov-border {
-    border-bottom: 10px solid $dugme_tamna;
-    padding-bottom: 10px;
+.user-form-heading-border {
+  border-bottom: 10px solid $btn_green;
+  padding-bottom: 10px;
 }
 
 form {
-    margin: 1rem 2rem 5rem;
+  margin: 1rem 2rem 5rem;
 }
 
 .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-  
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
 }
-  
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
 .row {
-      margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media screen and (max-width: 600px) {
-    .col-25, .col-75 {
-      width: 100%;
-      margin-top: 0;
-    }
+  .col-25,
+  .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
 
-    label {
-        font-size: 1rem;
-    }
+  label {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-        .user-form-naslov {
-            font-size: 2.5rem;
-        }
-    }
+  .user-form-heading {
+    font-size: 2.5rem;
+  }
+}
 
 @media screen and (max-width: 392px) {
-        .user-form-naslov {
-            font-size: 1.3rem;
-        }
-
-    }
+  .user-form-heading {
+    font-size: 1.3rem;
+  }
+}

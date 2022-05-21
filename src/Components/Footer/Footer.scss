@@ -22,16 +22,16 @@
   align-items: flex-start;
   padding-bottom: 2rem;
 
-  .hzs-logoi {
+  .hzs-logos {
     @include box-center(column, center);
 
-    .hzs-strelica {
+    .hzs-arrow {
       width: 5rem;
       filter: drop-shadow(0px 0px 0 #00ffa3) drop-shadow(0px 0px 0 #00ffa3)
         drop-shadow(0px 0px 0 #00ffa3) drop-shadow(0px 0px 0 #00ffa3);
     }
 
-    .hzs-sporedni-logo {
+    .hzs-secondary-logo {
       width: 5rem;
       filter: drop-shadow(0px 0px 0 #00ffa3);
     }
@@ -60,7 +60,7 @@
       color: #00ffa3;
     }
 
-    .footer-naslov {
+    .footer-heading {
       font-size: 1.5rem;
       color: white;
     }
@@ -72,14 +72,14 @@
       border-color: #00ffa3;
     }
 
-    .footer-tekst {
+    .footer-text {
       font-size: 1.2rem;
       color: #b7b9bb;
       margin-top: 0;
       line-height: 1.5rem;
     }
 
-    .footer-tekst > a {
+    .footer-text > a {
       color: #b7b9bb;
     }
 
@@ -90,7 +90,7 @@
     }
     .footer-nav ul > li {
       white-space: nowrap;
-      color: $tekst_tamna;
+      color: $text_white;
       cursor: pointer;
       position: relative;
       margin-bottom: 0.2rem;
@@ -98,11 +98,11 @@
       &::before {
         content: attr(datacontent);
         position: absolute;
-        border-bottom: 3px solid $dugme_tamna;
+        border-bottom: 3px solid $btn_green;
         top: 50%;
         transform: translateY(-50%) translateY(1.5px);
         left: 0;
-        color: $dugme_tamna;
+        color: $btn_green;
         width: 0;
         overflow: hidden;
         white-space: nowrap;
@@ -161,7 +161,7 @@
     margin: 2rem;
   }
 
-  .footer-navigacija {
+  .footer-navigation {
     display: none;
   }
 }

@@ -12,7 +12,7 @@ const SectionTitle = (props) => {
   return (
     <div className="section-title" style={props.center && centerStyle}>
       <h2
-        className={"naslov " + props.className}
+        className={"heading " + props.className}
         style={{ color: props.text === "black" ? "#000" : "#fff" }}
       >
         {props.children}

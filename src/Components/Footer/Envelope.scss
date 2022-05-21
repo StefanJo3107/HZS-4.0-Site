@@ -1,164 +1,164 @@
 @import "../../global.scss";
 
 .envelope-wrapper {
-    width: 14rem;
-    min-height: 10rem;
-    background-color: #00a769;
-    border-radius: 0 0 0.5rem 0.5rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    margin-top: 5rem;
+  width: 14rem;
+  min-height: 10rem;
+  background-color: #00a769;
+  border-radius: 0 0 0.5rem 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin-top: 5rem;
 
-    .letter {
-        @include box-center(column, flex-start);
-        position: absolute;
-        top: 0;
-        width: 92%;
-        height: 80%;
-        background-color: white;
-        border-radius: 1rem;
-        z-index: 2;
-        box-shadow: 2px 2px 5px 0px #000000a7;
-        padding: 0.6rem 0.4rem;
+  .letter {
+    @include box-center(column, flex-start);
+    position: absolute;
+    top: 0;
+    width: 92%;
+    height: 80%;
+    background-color: white;
+    border-radius: 1rem;
+    z-index: 2;
+    box-shadow: 2px 2px 5px 0px #000000a7;
+    padding: 0.6rem 0.4rem;
 
-        .envelope-naslov {
-            font-size: 1.3rem;
-            color: black;
-        }
-
-        .envelope-underline {
-            width: 8ch;
-            border-bottom: 0.2rem solid;
-            margin-bottom: 0.5rem;
-            border-color: $dugme_bela;
-            align-self: flex-start;
-        }
-
-        * {
-            width: 100%;
-            margin-bottom: 0.2rem;
-        }
-
-        input,
-        textarea {
-            font-family: "Roboto";
-            border-radius: 0.25rem;
-            font-size: 1rem;
-            padding: 0.2rem 0.4rem;
-            border: 2px solid #d6cee1;
-            box-shadow: none;
-            background-color: #d6cee1;
-            color: black;
-            resize: none;
-
-            &::placeholder {
-                font-family: "Roboto";
-                font-style: italic;
-            }
-
-            &:focus {
-                outline: #00ffa3;
-            }
-        }
-
-        textarea {
-            min-height: 1.8rem;
-        }
-
-        .error,
-        .err-end {
-            font-size: 0.7rem;
-            color: red;
-            font-style: italic;
-        }
-
-        .success {
-            font-size: 0.7rem;
-            color: $dugme_bela;
-            font-style: italic;
-        }
-        .button {
-            font-size: 1rem;
-            padding: 0.6rem;
-            //margin-top: 0.6rem;
-            opacity: 0;
-        }
-
-        .button-show {
-            .button {
-                animation: show 0.5s;
-                animation-fill-mode: forwards;
-                animation-delay: 0.8s;
-            }
-        }
+    .envelope-heading {
+      font-size: 1.3rem;
+      color: black;
     }
 
-    .letter-show {
-        animation: zAnimate 1s;
+    .envelope-underline {
+      width: 8ch;
+      border-bottom: 0.2rem solid;
+      margin-bottom: 0.5rem;
+      border-color: $btn_purple;
+      align-self: flex-start;
+    }
+
+    * {
+      width: 100%;
+      margin-bottom: 0.2rem;
+    }
+
+    input,
+    textarea {
+      font-family: "Roboto";
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      padding: 0.2rem 0.4rem;
+      border: 2px solid #d6cee1;
+      box-shadow: none;
+      background-color: #d6cee1;
+      color: black;
+      resize: none;
+
+      &::placeholder {
+        font-family: "Roboto";
+        font-style: italic;
+      }
+
+      &:focus {
+        outline: #00ffa3;
+      }
+    }
+
+    textarea {
+      min-height: 1.8rem;
+    }
+
+    .error,
+    .err-end {
+      font-size: 0.7rem;
+      color: red;
+      font-style: italic;
+    }
+
+    .success {
+      font-size: 0.7rem;
+      color: $btn_purple;
+      font-style: italic;
+    }
+    .button {
+      font-size: 1rem;
+      padding: 0.6rem;
+      //margin-top: 0.6rem;
+      opacity: 0;
+    }
+
+    .button-show {
+      .button {
+        animation: show 0.5s;
         animation-fill-mode: forwards;
-        animation-delay: 1s;
+        animation-delay: 0.8s;
+      }
     }
+  }
 
-    .envelope {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-top: 5rem solid transparent;
-        border-bottom: 5rem solid #00ffa3;
-        border-left: 7rem solid #02ec96;
-        border-right: 7rem solid #00ffa3;
-        border-radius: 0 0 0.5rem 0.5rem;
-        z-index: 3;
+  .letter-show {
+    animation: zAnimate 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+
+  .envelope {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 5rem solid transparent;
+    border-bottom: 5rem solid #00ffa3;
+    border-left: 7rem solid #02ec96;
+    border-right: 7rem solid #00ffa3;
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 3;
+  }
+
+  .lid {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 5rem solid transparent;
+    border-left: 7rem solid transparent;
+    border-right: 7rem solid transparent;
+    border-radius: 0.5rem;
+
+    transform-origin: top;
+    transition: transform 0.25s linear;
+  }
+
+  .lid.one {
+    border-top: 5rem solid #01c07a;
+    transform: rotateX(0deg);
+    z-index: 3;
+  }
+
+  .lid.two {
+    border-top: 5rem solid #00a769;
+    border-radius: 0rem;
+    transform: rotateX(90deg);
+    z-index: 1;
+  }
+
+  @keyframes zAnimate {
+    0% {
+      z-index: 2;
     }
-
-    .lid {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-bottom: 5rem solid transparent;
-        border-left: 7rem solid transparent;
-        border-right: 7rem solid transparent;
-        border-radius: 0.5rem;
-
-        transform-origin: top;
-        transition: transform 0.25s linear;
+    100% {
+      z-index: 4;
     }
+  }
 
-    .lid.one {
-        border-top: 5rem solid #01c07a;
-        transform: rotateX(0deg);
-        z-index: 3;
+  @keyframes show {
+    0% {
+      opacity: 0;
     }
-
-    .lid.two {
-        border-top: 5rem solid #00a769;
-        border-radius: 0rem;
-        transform: rotateX(90deg);
-        z-index: 1;
+    100% {
+      opacity: 1;
     }
-
-    @keyframes zAnimate {
-        0% {
-            z-index: 2;
-        }
-        100% {
-            z-index: 4;
-        }
-    }
-
-    @keyframes show {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+  }
 }

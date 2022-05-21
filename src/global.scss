@@ -1,14 +1,14 @@
 //boje
-$naslov_bela: #0d1117;
-$tekst_bela: #10151d;
-$dugme_bela: #795298;
+$heading_dark: #0d1117;
+$text_dark: #10151d;
+$btn_purple: #795298;
 
-$naslov_tamna: #fff;
-$tekst_tamna: #c9d1d9;
-$dugme_tamna: #00ffa3;
+$heading_white: #fff;
+$text_white: #c9d1d9;
+$btn_green: #00ffa3;
 
-$pozadina_tamna: #0d1117;
-$pozadina_bela: #fff;
+$bg_dark: #0d1117;
+$bg_white: #fff;
 
 //mixins
 @mixin box-center($direction: row, $justify: center) {

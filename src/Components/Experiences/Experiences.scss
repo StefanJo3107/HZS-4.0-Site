@@ -1,0 +1,70 @@
+@import "../../global.scss";
+
+@mixin container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: $bg_white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+@mixin wrapper {
+  @include box-center(row, space-around);
+  flex: 1;
+  margin-top: 5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+@mixin subheading {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #795298;
+}
+
+.iskustva {
+  @include container();
+  padding-top: 4rem;
+  .iskustva-subheading {
+    @include subheading();
+  }
+
+  .iskustva-wrapper {
+    @include wrapper();
+  }
+}
+
+.rekli-su {
+  @include container();
+  padding-bottom: 3rem;
+
+  .rekli-su-subheading {
+    @include subheading();
+  }
+
+  .rekli-su-wrapper {
+    @include wrapper();
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .iskustva-wrapper,
+  .rekli-su-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .iskustva,
+  .rekli-su {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}

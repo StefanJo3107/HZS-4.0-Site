@@ -1,0 +1,221 @@
+@import "../../global.scss";
+
+.reminder {
+  @include box-center(column, center);
+  background-color: $bg_white;
+
+  .reminder-applications {
+    @include box-center(row, space-between);
+    align-items: flex-start;
+
+    padding: 8rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0;
+  }
+}
+
+.reminder-info {
+  .info-desc {
+    color: #a6a8ab;
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    width: 10rem;
+  }
+}
+
+.statistics {
+  background-color: $bg_white;
+  @include box-center(row, space-between);
+  transform: translateY(-80px);
+  border-radius: 2rem;
+  box-shadow: 0px 15px 15px 0px #caccd398;
+  width: 90%;
+  min-height: 10rem;
+
+  .statistics-item {
+    @include box-center(row, center);
+    flex: 1;
+    border-right: 2px solid #eeeff2;
+    padding: 2rem;
+
+    .statistics-icon {
+      background-color: #d5cbde;
+      color: $btn_purple;
+      flex-shrink: 0;
+      border-radius: 50%;
+    }
+
+    .statistics-text {
+      margin-left: 2rem;
+    }
+
+    .statistics-broj {
+      font-family: "Archivo Black";
+      font-size: 2rem;
+    }
+
+    .statistics-desc {
+      color: #575b60;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  .statistics-item:last-child {
+    border: none;
+  }
+}
+
+.reminder-calendar {
+  display: grid;
+}
+
+.calendar-wrapper {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.calendar {
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 20px 10px #caccd398;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  .calendar-header {
+    border-radius: 1.5rem 1.5rem 0 0;
+    background-color: $bg_white;
+    padding: 0.2rem;
+    padding-top: 1rem;
+
+    .month-year {
+      @include box-center(row, space-evenly);
+      padding-bottom: 1rem;
+    }
+
+    .month,
+    .year {
+      background-color: $btn_purple;
+      color: white;
+      padding: 0.2rem 1rem 0.2rem 1rem;
+      border-radius: 0.7rem;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 3rem);
+      justify-items: center;
+      align-items: center;
+      color: $btn_purple;
+    }
+  }
+
+  .calendar-body {
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0.2rem;
+    display: grid;
+    grid-template-columns: repeat(7, 3rem);
+    grid-template-rows: repeat(5, 3rem);
+    justify-items: center;
+    align-items: center;
+    background-color: #eeeff2;
+
+    .day-of-project {
+      background-color: $btn_purple;
+      color: white;
+      border-radius: 0.6rem;
+      padding: 0.3rem;
+    }
+
+    .past-dates,
+    .upcoming-dates {
+      color: #d5cbde;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .reminder-applications {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 4rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-top: 0 !important;
+  }
+
+  .reminder-info {
+    @include box-center(column, flex-start);
+    align-items: center;
+    margin-bottom: 2.5rem;
+    .section-title {
+      align-self: flex-start;
+    }
+  }
+
+  .button {
+    align-self: center;
+  }
+
+  .info-desc {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .statistics {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .statistics-broj {
+    font-size: 1.5rem !important;
+  }
+
+  .statistics-desc {
+    font-size: 1rem !important;
+  }
+
+  .statistics-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .statistics {
+    @include box-center(column, space-between);
+    border-radius: 2rem;
+    width: 90%;
+  }
+
+  .statistics-broj {
+    font-size: 2rem !important;
+    margin-right: 1rem;
+  }
+
+  .statistics-desc {
+    font-size: 1.2rem !important;
+    display: inline-block;
+  }
+
+  .statistics-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .statistics-item {
+    border-right: 0px !important;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .statistics-text {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../global.scss";
+
+.partners {
+  padding: 4rem;
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+
+  .general-sponsor,
+  .general,
+  .natural,
+  .medijski {
+    @include box-center(column, center);
+  }
+
+  .general-title {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .natural-title,
+  .medijskiNaslov {
+    margin-top: 2.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.slick-slide > :first-child {
+  @include box-center(row, center);
+}

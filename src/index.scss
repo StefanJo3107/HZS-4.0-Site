@@ -5,7 +5,7 @@ body {
   font-family: "Roboto", "Archivo Black", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $pozadina_tamna;
+  background-color: $bg_dark;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -48,11 +48,11 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $dugme_tamna;
+  background: $btn_green;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken($dugme_tamna, 20);
+  background: darken($btn_green, 20);
 }

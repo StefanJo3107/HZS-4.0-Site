@@ -1,146 +1,146 @@
 @import "../../global.scss";
 
 nav {
-    @include box-center($justify: space-between);
-    position: fixed;
-    z-index: 100;
-    padding: 1rem 2rem;
-    width: 100vw;
-    background: transparent;
+  @include box-center($justify: space-between);
+  position: fixed;
+  z-index: 100;
+  padding: 1rem 2rem;
+  width: 100vw;
+  background: transparent;
 }
 
 .logo-wrapper {
-    z-index: 100;
-    min-width: 5rem;
-    max-width: 7rem;
-    img {
-        @include fit-image;
-    }
+  z-index: 100;
+  min-width: 5rem;
+  max-width: 7rem;
+  img {
+    @include fit-image;
+  }
 }
 
 .links-wrapper {
-    ul {
-        @include box-center;
+  ul {
+    @include box-center;
+  }
+  li {
+    padding: 0 1rem;
+    white-space: nowrap;
+    color: $text_white;
+    cursor: pointer;
+    position: relative;
+    a {
+      color: $btn_green;
+      border: 3px solid $btn_green;
+      border-radius: 2rem;
+      padding: 0.2rem 1.2rem;
     }
-    li {
-        padding: 0 1rem;
-        white-space: nowrap;
-        color: $tekst_tamna;
-        cursor: pointer;
-        position: relative;
-        a {
-            color: $dugme_tamna;
-            border: 3px solid $dugme_tamna;
-            border-radius: 2rem;
-            padding: 0.2rem 1.2rem;
-        }
-    }
+  }
 }
 
 .hamburger-menu {
-    @include box-center($direction: column, $justify: space-between);
-    z-index: 100;
-    height: 1rem;
-    cursor: pointer;
-    .line {
-        width: 1.8rem;
-        height: 0.2rem;
-        border-radius: 0.2rem;
-        background-color: $tekst_tamna;
-    }
+  @include box-center($direction: column, $justify: space-between);
+  z-index: 100;
+  height: 1rem;
+  cursor: pointer;
+  .line {
+    width: 1.8rem;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    background-color: $text_white;
+  }
 }
 
 .menu {
-    @include box-center($direction: column);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 51;
-    background-color: $pozadina_tamna;
-    ul {
-        @include box-center($direction: column, $justify: space-between);
-        height: 70%;
-        li {
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            padding: 0.8rem 0;
-            color: $tekst_tamna;
-            cursor: pointer;
-            position: relative;
-            font-weight: 600;
-            a {
-                color: $dugme_tamna;
-                border: 3px solid $dugme_tamna;
-                border-radius: 2rem;
-                padding: 0.2rem 1.2rem;
-            }
-        }
+  @include box-center($direction: column);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 51;
+  background-color: $bg_dark;
+  ul {
+    @include box-center($direction: column, $justify: space-between);
+    height: 70%;
+    li {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      padding: 0.8rem 0;
+      color: $text_white;
+      cursor: pointer;
+      position: relative;
+      font-weight: 600;
+      a {
+        color: $btn_green;
+        border: 3px solid $btn_green;
+        border-radius: 2rem;
+        padding: 0.2rem 1.2rem;
+      }
     }
+  }
 }
 
 .links-wrapper {
-    li::before {
-        left: 1rem !important;
-    }
-    li:hover::before {
-        width: 70% !important;
-    }
+  li::before {
+    left: 1rem !important;
+  }
+  li:hover::before {
+    width: 70% !important;
+  }
 }
 
 .menu,
 .links-wrapper {
-    li::before {
-        content: attr(datacontent);
-        position: absolute;
-        border-bottom: 3px solid $dugme_tamna;
-        top: 50%;
-        transform: translateY(-50%) translateY(1.5px);
-        left: 0;
-        color: $dugme_tamna;
-        width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        transition: width 0.7s ease-in-out;
-    }
-    li:hover::before {
-        width: 100%;
-    }
-    li:last-child {
-        transition: all 0.4s ease-in-out;
-    }
-    li:last-child::before {
-        border-bottom: none;
-    }
-    li:hover:last-child {
-        transform: scale(1.05);
-    }
+  li::before {
+    content: attr(datacontent);
+    position: absolute;
+    border-bottom: 3px solid $btn_green;
+    top: 50%;
+    transform: translateY(-50%) translateY(1.5px);
+    left: 0;
+    color: $btn_green;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out;
+  }
+  li:hover::before {
+    width: 100%;
+  }
+  li:last-child {
+    transition: all 0.4s ease-in-out;
+  }
+  li:last-child::before {
+    border-bottom: none;
+  }
+  li:hover:last-child {
+    transform: scale(1.05);
+  }
 }
 
 .menu li:last-child {
-    padding-top: 1.2rem;
+  padding-top: 1.2rem;
 }
 
 .bg-container {
-    min-height: 4rem;
-    width: 100vw;
-    background: $pozadina_tamna;
-    z-index: 25;
-    position: fixed;
-    top: 0;
-    left: 0;
+  min-height: 4rem;
+  width: 100vw;
+  background: $bg_dark;
+  z-index: 25;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @media only screen and (max-width: 1100px) {
-    .links-wrapper {
-        display: none;
-    }
+  .links-wrapper {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
-    .hamburger-menu,
-    .menu {
-        display: none;
-    }
+  .hamburger-menu,
+  .menu {
+    display: none;
+  }
 }

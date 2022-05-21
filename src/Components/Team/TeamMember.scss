@@ -1,0 +1,65 @@
+@import "../../global.scss";
+
+.team-member {
+  position: relative;
+  img {
+    @include fit-image;
+    width: 16rem;
+    height: 19rem;
+    border-radius: 1rem;
+  }
+  .member-info {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    @include box-center(column, flex-end);
+    text-align: center;
+    padding-bottom: 1rem;
+    .name-position {
+      background: rgba(158, 158, 158, 0.575);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(13.5px);
+      -webkit-backdrop-filter: blur(13.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      min-height: 4rem;
+      @include box-center(column, center);
+      .member-position {
+        color: $btn_green;
+        width: 75%;
+        font-size: 1rem;
+      }
+      .member-name {
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 1.1rem;
+      }
+    }
+    .member-desc {
+      z-index: 10;
+
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+
+      background: rgba(158, 158, 158, 0.575);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(13.5px);
+      -webkit-backdrop-filter: blur(13.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      color: #fff;
+      padding: 1rem;
+
+      @include box-center(column, center);
+    }
+  }
+}

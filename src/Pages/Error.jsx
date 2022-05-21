@@ -7,7 +7,7 @@ const Error = () => {
   return (
     <div className="error">
       <Link to="/">
-        <CustomButton variant="tamna">Početna</CustomButton>
+        <CustomButton variant="dark">Početna</CustomButton>
       </Link>
       <div class="wrapper">
         <div class="composition">

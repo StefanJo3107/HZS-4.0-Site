@@ -1,0 +1,129 @@
+@import "../../global.scss";
+
+.lecture {
+  @include box-center($justify: space-around);
+  color: $text_white;
+  height: 70vh;
+  width: 100%;
+  background: #35363a;
+  border-radius: 0.5rem;
+  h4 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .lecture-info {
+    opacity: 1;
+    width: 40%;
+    height: 100%;
+    @include box-center($direction: column);
+    align-items: flex-start;
+    .lecture-description {
+      margin-bottom: 2rem;
+    }
+    &.hide {
+      display: flex;
+    }
+  }
+  .lecturer {
+    opacity: 1;
+
+    padding: 0 1rem;
+    margin-top: 2rem;
+    height: 80%;
+    @include box-center($direction: column);
+    width: 40%;
+    background: #202124;
+    border-radius: 1rem;
+    box-shadow: 0 2px 15px #000;
+    &.hide {
+      display: flex;
+    }
+    .lecturer-wrapper {
+      @include box-center($direction: column);
+    }
+    .lecturer-name {
+      color: $heading_white;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .lecturer-img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+  h5 {
+    color: $heading_white;
+    font-size: 1.1rem;
+  }
+  .technologies-list {
+    @include box-center($justify: space-around);
+    margin-top: 1rem;
+    li {
+      margin-right: 0.5rem;
+    }
+  }
+  .about-lecturer {
+    text-align: center;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .lecturer {
+    width: 90% !important;
+    opacity: 1 !important;
+    &.hide {
+      display: none !important;
+    }
+    .lecturer-img {
+      width: 7rem !important;
+      height: 7rem !important;
+    }
+    .about-lecturer {
+      font-size: 0.9rem;
+    }
+    transition: all 0.5s;
+  }
+
+  .lecture-info {
+    width: 80% !important;
+    opacity: 1 !important;
+    &.hide {
+      display: none !important;
+    }
+
+    .section-title .underline {
+      margin-bottom: 1rem !important;
+    }
+
+    align-items: center !important;
+    transition: all 0.5s;
+    .lecture-description {
+      font-size: 0.9rem !important;
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  .mobile {
+    display: block !important;
+    margin-top: 1rem;
+    width: 10rem;
+  }
+}
+
+@keyframes opacity-fadeout {
+  0% {
+    opacity: 1 !important;
+  }
+  100% {
+    opacity: 0 !important;
+  }
+}

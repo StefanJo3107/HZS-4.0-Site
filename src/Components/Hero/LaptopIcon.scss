@@ -4,7 +4,7 @@
   position: absolute;
   width: 10rem;
   height: 3rem;
-  background: $tekst_tamna;
+  background: $text_white;
   border-radius: 1rem;
   @include box-center($justify: space-around);
   padding-left: 1rem;
@@ -12,7 +12,7 @@
     width: 80%;
     text-align: center;
     font-size: 1rem;
-    color: $tekst_bela;
+    color: $text_dark;
   }
   .icon-wrapper {
     width: 2rem;

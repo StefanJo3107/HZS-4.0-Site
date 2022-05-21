@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import Logo from "../../Assets/Images/hzs-logo-transparentno.png";
 import FonisLogo from "../../Assets/Images/fonis_logo.png";
-import SporedniLogo from "../../Assets/Images/hzs-sporednilogo.png";
+import SecondaryLogo from "../../Assets/Images/hzs-sporednilogo.png";
 import { scrollFunc } from "../Navbar/Navbar";
 import LayeredWaves from "../../Assets/Images/layered-waves3.svg";
 import Envelope from "./Envelope";
@@ -16,7 +16,7 @@ const Footer = (props) => {
     "Agenda",
     "FAQ",
     "Iskustva",
-    "Tim",
+    "Team",
     "Partneri",
   ];
 
@@ -39,7 +39,7 @@ const Footer = (props) => {
   return (
     <>
       <footer>
-        {props.tranzicija && (
+        {props.transition && (
           <img
             src={LayeredWaves}
             className="section-transition"
@@ -48,18 +48,18 @@ const Footer = (props) => {
         )}
 
         <div className="footer">
-          <div className="hzs-logoi">
-            <img src={Logo} className="hzs-strelica" alt="HZS Logo strelica" />
+          <div className="hzs-logos">
+            <img src={Logo} className="hzs-arrow" alt="HZS Logo strelica" />
             <img
-              src={SporedniLogo}
-              className="hzs-sporedni-logo"
+              src={SecondaryLogo}
+              className="hzs-secondary-logo"
               alt="HZS logo inicijali"
             />
           </div>
           <div className="footer-info">
-            <h3 className="footer-naslov">Informacije</h3>
+            <h3 className="footer-heading">Informacije</h3>
             <div className="footer-underline"></div>
-            <div className="footer-tekst">
+            <div className="footer-text">
               <span style={{ fontWeight: "bold" }}>Adresa:</span>
               <br />
               Fakultet organizacionih nauka
@@ -96,11 +96,11 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          {props.navigacija && (
-            <div className="footer-info footer-navigacija">
-              <h3 className="footer-naslov">Navigacija</h3>
+          {props.navigation && (
+            <div className="footer-info footer-navigation">
+              <h3 className="footer-heading">Navigacija</h3>
               <div className="footer-underline"></div>
-              <div className="footer-tekst footer-nav">{linksList}</div>
+              <div className="footer-text footer-nav">{linksList}</div>
             </div>
           )}
           <div className="footer-info">
